@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>淡入淡出轮播</title>
+  <script src="jquery-1.7.2.min.js"></script>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .out {
+      width: 400px;
+      height: 400px;
+      margin: auto;
+      position: relative;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      width: 400px;
+      height: 400px;
+    }
+
+    .out .img li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    .out .num {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      font-size: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    .out .num li {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: red;
+      color: #000;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 16px;
+      margin: 0 2px;
+    }
+
+    .out .num .active {
+      background: blue;
+    }
+
+    .out .btn {
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 40px;
+      margin-top: -20px;
+      background: rgba(0, 0, 0, 0.37);
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      line-height: 40px;
+      display: none;
+      cursor: pointer;
+    }
+
+    .out:hover .btn {
+      display: block;
+    }
+
+    .out .left {
+      left: 0;
+    }
+
+    .out .right {
+      right: 0;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var size = $(".img li").size();
+      for (var i = 1; i <= size; i++) {
+        var li = "<li>" + i + "</li>";
+        $(".num").append(li);
+      }
+      //手动控制轮播
+      $(".img li").eq(0).show();
+      $(".num li").eq(0).addClass("active");
+      $(".num li").mouseover(function() {
+        $(this).addClass("active").siblings().removeClass("active");
+        var index = $(this).index();
+        i = index;
+
+        $(".img li").eq(index).stop().fadeIn(300).siblings().stop().fadeOut(300);
+      });
+
+      //自动控制轮播
+      var i = 0;
+      var time = setInterval(move, 2000);
+      //核心向左运动函数
+      function moveLeft() {
+        i--;
+        if (i == -1) {
+          i = size - 1;
+        };
+        $(".num li").eq(i).addClass("active").siblings().removeClass("active");
+        $(".img li").eq(i).fadeIn(300).siblings().fadeOut(300);
+      }
+      //核心向右运动函数
+      function move() {
+        i++;
+        if (i == size) {
+          i = 0;
+        };
+        $(".num li").eq(i).addClass("active").siblings().removeClass("active");
+        $(".img li").eq(i).fadeIn(300).siblings().fadeOut(300);
+      }
+      //左边按钮点击事件
+      $(".out .left").click(function() {
+        moveLeft();
+      });
+      //又边按钮点击事件
+      $(".out .right").click(function() {
+          move();
+        })
+        //定时器开始与结束
+      $(".out").hover(function() {
+        clearInterval(time)
+      }, function() {
+        time = setInterval(move, 1500);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="out">
+    <ul class="img">
+      <li>
+        <a href="#"><img src="1.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="2.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="3.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="4.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="5.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="6.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="7.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="8.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="9.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="10.png" alt="" /></a>
+      </li>
+    </ul>
+    <ul class="num">
+
+    </ul>
+    <div class="left btn">
+      <</div>
+        <div class="right btn">></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.nav{
+  height: 40px;
+  background: #222;
+  overflow: hidden;
+  margin-top: 100px;
+}
+.list{
+  width: 1000px;
+  margin:0 auto;
+}
+li{
+  list-style: none;
+  float: left;
+
+  line-height: 40px;
+  text-align: center;
+}
+li a{
+  display: inline-block;
+  text-decoration: none;
+  /*transition: .5s;*/
+  color: #fff;
+  padding: 0 30px;
+}
+li a:hover{
+  /*margin-top: -40px;*/
+  background: #333;
+}
+b{
+  font-weight: normal;
+  display: block;
+}
+i{
+  font-style: normal;
+  display: block;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    //浏览器渲染完HTML加载
+    window.onload = function() {
+      //获取返回按钮
+      var btn = document.getElementById("btn");
+      //获取页面可视区的高度
+      var clientHeight = document.documentElement.clientHeight;
+      //定时器默认为空
+      var time = null;
+      var isTop = true;
+      //滚动条滚动时触发
+      window.onscroll = function() {
+          var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+          if (osTop>=clientHeight) {
+             btn.style.display = "block";
+          }else{
+             btn.style.display = "none";
+          }
+
+        //默认情况(!isTop)为false,当人为点击后执行isTop = false;(!isTop)为true,执行if语句;
+          if (!isTop) {
+            clearInterval(time);
+          }
+          isTop = false;
+        }
+        //返回按钮绑定事件
+      btn.onclick = function() {
+        //设置定时器
+        time = setInterval(function() {
+          //获取滚动条距离顶部的高度（谷歌和IE的兼容问题解决）
+          var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+          //由于数值的不断减少，做到回滚速度逐渐变慢，Math.floor()取整
+          var ispeed = Math.floor(-osTop / 6);
+          //每点击一次滚动条回滚的距离
+          document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
+          isTop = true;
+          if (osTop == 0) {
+            //清除定时器
+            clearInterval(time);
+          }
+        }, 30);
+
+
+      }
+    }
+
+
+    window.onload = function(){
+    var obtn = document.getElementById('btn');
+	//获取页面可视区的高度
+	var clientHeight = document.documentElement.clientHeight;
+	var timer = null;
+	var isTop = true;
+
+	obtn.onclick = function(){
+
+		//设置定时器
+		timer = setInterval(function(){
+			//获取滚动条距离顶部的高度
+  var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (osTop >= clientHeight){
+    	obtn.style.diaplay="block";
+		}else {
+		    	obtn.style.diaplay="none";
+		}
+		if (!isTop){
+			clearInterval(timer);
+		}
+		isTop = false;
+	}
+			var ispeed = Math.floor(-osTop / 6);
+			document.documentElement.scrollTop = document.body.scrollTop = osTop +ispeed;
+
+			isTop = true;
+			console.log(osTop -ispeed);
+			if (osTop == 0){
+				clearInterval(timer);
+			}
+		},30);
+	}
+
+}
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

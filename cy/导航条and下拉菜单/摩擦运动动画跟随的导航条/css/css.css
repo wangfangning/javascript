@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.nav{
+  width: 100%;
+  margin-top: 100px;
+  height: 40px;
+  background: #999;
+}
+.nav_on {
+  width: 1000px;
+  height: 40px;
+  margin:0 auto;
+  position: relative;
+}
+.nav_on li{
+  float: left;
+}
+.nav_on li a{
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  color: #333;
+}
+.nav_on li a:hover,.nav_on li a.on{
+  color: #fff;
+}
+
+.nav_on .line{
+  height: 2px;background: #000;
+  width: 150px;
+  position: absolute;
+  top: 40px;left: 0;
+}
