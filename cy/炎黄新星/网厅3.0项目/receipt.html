@@ -1,0 +1,510 @@
+
+<!--#include virtual="/include/header2.html"-->
+<!--#include virtual="/include/user.html"-->
+<div class="transact_tc_box" id="arry2" style=" display:none;">
+     <div class="transact_tc_t">
+          <dl class="close_t">
+              <dt>办理通知</dt>
+              <dd><a href="javascript:;"  title="关闭" class="closeTransact"></a></dd>
+          </dl>
+     </div>
+     <div class="transact_tc_c">
+          <dl class="transact_success">
+              <dt></dt>
+              <dd>
+                  <p>尊敬的用户，业务办理成功，将立即生效，感谢您的使用！</p>
+              </dd>
+          </dl>
+          <div class="space-20"></div>
+
+          <dl class="transact_assess">
+               <dt>请您对此次业务办理进行评价：</dt>
+               <dd>
+                   <span class="on"></span>
+                   <span class="on"></span>
+                   <span class="on"></span>
+                   <span class="on"></span>
+                   <span class="on"></span>
+               </dd>
+          </dl>
+          <div class="space-20"></div>
+          <ul class="transact_assess2" style=" display:none;">
+              <li class="on">业务界面难看<i></i></li>
+              <li>业务流程复杂<i></i></li>
+              <li>业务办理失败<i></i></li>
+              <li>其他<i></i></li>
+          </ul>
+          <div class="clr"></div>
+
+          <div class="other_text" style=" display:none;">
+               <textarea></textarea>
+          </div>
+
+
+          <div class="space-20"></div>
+          <div class="submit_btn">
+               <input class="btn_save closeTransact" type="button" value="提&nbsp;交"  />
+          </div>
+     </div>
+</div>
+<div class="transact_tc_box"  id="arry">
+     <div class="transact_tc_t">
+          <dl class="close_t">
+              <dt>办理信息确认</dt>
+              <dd><a href="javascript:;"  title="关闭" class="closeTransact"></a></dd>
+          </dl>
+     </div>
+     <div class="transact_tc_c">
+          <div class="space-30"></div>
+          <h3 style=" width:360px; margin:10px auto; text-align:center; font-size:16px;">尊敬的用户，您开具的发票累计金额XXXX.XX元。</h3>
+          <div class="transact_sure_list">
+
+              <dl class="transact_sure">
+                  <dt>办理时间：</dt>
+                  <dd>2016年4月1日</dd>
+              </dl>
+               <div class="space-10"></div>
+              <dl class="transact_sure">
+                   <dt>业务类型：</dt>
+                   <dd>
+                      办理电子发票
+                   </dd>
+               </dl>
+              <div class="space-10"></div>
+              <dl class="transact_sure">
+                  <dt>生效时间：</dt>
+                  <dd>
+                      立即生效
+                  </dd>
+              </dl>
+
+          </div>
+          <div class="space-30"></div>
+          <div class="transact_sure_btn">
+               <input class="sure_btn" type="button" value="确认办理"  />
+               <input class="off_btn closeTransact" type="button" value="重新选择"  />
+          </div>
+
+     </div>
+</div>
+
+
+<div class="wapContent" >
+     <!--#include virtual="/include/leftnav.html"-->
+
+
+     <div class="wapContent_r">
+
+          <div class="query_main">
+               <div class="query_zl">电子发票查询</div>
+              <div class="space-10"></div>
+              <div class="newMain">
+              	<div class="newLeft">
+                <div class="reTab clearfix">
+                  <ul>
+                    <li class="on" onclick="ShowContent(1,3)" >营业发票</li>
+                    <li  onclick="ShowContent(2,3)"  style="border-left:none;">实缴发票</li>
+                    <li  onclick="ShowContent(3,3)" style="border-left:none;">月结发票</li>
+                  </ul>
+
+                </div>
+                <div class="space-10"></div>
+                <div class="reTabMenu">
+                  <div class="reCheck" style="display:none">
+                    <img src="../images/reCheckFalse.gif" />全选
+                  </div>
+                  <button>开发票</button>
+                </div>
+                <div class="space-10"></div>
+
+                <div class="scroll_content" id="ShowContent1" style=" height:490px; overflow-y:scroll; *position:relative;*left:0;*top:0;">
+
+               	  <h3 class="title">2012年2月电子发票</h3>
+
+                    <div class="receipt">
+
+                    	<div class="dd on">
+                          <div class="reRadio on"></div>
+                        	<div class="reLeft">
+                            	<p>XX月XX日 XX：XX：XX</p>
+                              <p>流水号：1111111111</p>
+                               <p>营业类</p>
+                            </div>
+                            <div class="reRight">
+                            	<p>金额：<em>1280.00</em>元</p>
+                            </div>
+
+                            <div class="allowDown">
+                            	可下载
+                            </div>
+                        </div>
+
+
+                    	<div class="dd">
+                          <div class="reRadio"></div>
+                        	<div class="reLeft">
+                              <p>XX月XX日 XX：XX：XX</p>
+                            	<p>流水号：1111111111</p>
+                                <p>营业类</p>
+                            </div>
+                            <div class="reRight">
+                            	<p>金额：<em>1280.00</em>元</p>
+                            </div>
+                            <div class="allowDown">
+                              可下载
+                            </div>
+                        </div>
+
+
+                    	<div class="dd">
+                           <div class="reRadio"></div>
+                        	<div class="reLeft">
+                              <p>XX月XX日 XX：XX：XX</p>
+                            	<p>流水号：1111111111</p>
+                              <p>营业类</p>
+                            </div>
+                            <div class="reRight">
+                            	<p>金额：<em>1280.00</em>元</p>
+                            </div>
+                            <div class="allowDown">
+                              可下载
+                            </div>
+                        </div>
+
+
+                    	<div class="dd">
+                        	<div class="reRadio"></div>
+                          <div class="reLeft">
+                            	<p>XX月XX日 XX：XX：XX</p>
+                              <p>流水号：1111111111</p>
+                              <p>营业类</p>
+                            </div>
+                            <div class="reRight">
+                            	<p>金额：<em>1280.00</em>元</p>
+                            </div>
+                            <div class="allowDown">
+                              可下载
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="title">2012年1月电子发票</h3>
+                    <div class="receipt">
+
+                    	<div class="dd">
+                        	<div class="reRadio"></div>
+                          <div class="reLeft">
+                            	<p>XX月XX日 XX：XX：XX</p>
+                              <p>流水号：1111111111</p>
+                                <p>营业类</p>
+                            </div>
+                            <div class="reRight">
+                            	<p>金额：<em>1280.00</em>元</p>
+                            </div>
+
+                            <div class="allowDown">
+                            	可下载
+                            </div>
+                        </div>
+
+
+                    	<div class="dd">
+                        	<div class="reRadio"></div>
+                          <div class="reLeft">
+                            	<p>XX月XX日 XX：XX：XX</p>
+                              <p>流水号：1111111111</p>
+                                <p>营业类</p>
+                            </div>
+                            <div class="reRight">
+                            	<p>金额：<em>1280.00</em>元</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="space-20"></div>
+                    <div class="loading2" style=" display:none;margin:0 auto; text-align:center">
+               	    <img src="../images/loading2.gif" width="30" height="30" /> </div>
+                  </div>
+
+
+
+
+                  <div class="scroll_content" id="ShowContent2" style=" display:none; height:490px; overflow-y:scroll; *position:relative;*left:0;*top:0;">
+
+                 222222222222222
+                  </div>
+
+
+                  <div class="scroll_content" id="ShowContent3" style=" display:none; height:490px; overflow-y:scroll; *position:relative;*left:0;*top:0;">
+
+                 33333333333333
+                  </div>
+
+
+                   <div class="space-20"></div>
+
+                   <button class="rec_btn" id="jiaoyan" onclick="window.location.href='receipt1.html'">电子发票校验</button>
+                   <button class="rec_btn" id="kaiju" style="display:none" disabled="disabled">开具电子发票</button>
+                   <div class="space-20"></div>
+                   <a href="receiptError.html">报错页面</a>
+
+                </div>
+                <div class="newRight">
+                	<div class="space-20"></div>
+                      <div class="tips_list">
+                        <p class="title">温馨提示：</p>
+                        <p>1、本月应交费用为截止到4月30日，扣除您账户中可抵扣的金额后，您仍需交纳的费用。</p>
+                        <p>2、此服务为每月3日起开始提供查询功能。</p>
+                        <p>3、本页面相关数据仅供参考使用。</p>
+                      </div>
+
+                      <div class="fpxq" style="display:none">
+                      	<div class="title">发票金额</div>
+                        <div class="price"><em>1280.00</em>元</div>
+                        <div class="fpCont">
+                        	<p>发票代码：112358000000</p>
+                            <p>发票号码： 1892039820930293</p>
+                            <p>缴费时间：YYYYMMDDHH24MISS</p>
+                            <p>缴费流水号：1231111111111</p>
+                            <p>缴费金额：XX.XX元</p>
+							<p>是否打印过此发票：是/否</p>
+                        </div>
+                        <div class="rec_btn" style="margin-top:30px;">下载电子发票</div>
+                      </div>
+
+
+                      <div class="reMessage" style="display:none">
+                        <h2><em></em>请输入发票抬头、发票项和短信接收电话号码</h2>
+                         <div class="fpjy wb">
+                          <div class="fpjy_t wb"><em>*</em>发票项目</div>
+                          <div class="fpjy_c wb" style="border:0px;">
+                              <select>
+                                <option>电子业务费</option>
+                                <option>培训费</option>
+                                <option>印刷费</option>
+                              </select>
+                          </div>
+                         </div>
+                          <div class="clr"></div>
+                        <div class="fpjy wb">
+                          <div class="fpjy_t wb"><em>*</em>发票抬头</div>
+                            <div class="fpjy_c wb"><input type="text" placeholder="请输入个人或公司名称" /></div>
+                       </div>
+                        <div class="clr"></div>
+                          <div class="fpjy wb">
+                            <div class="fpjy_t wb"><em>*</em>短信接收号码</div>
+                              <div class="fpjy_c wb"><input type="text"/></div>
+                         </div>
+                          <div class="clr"></div>
+                         <button id="isread-text" class="rec_btn" style="width:70%; margin:30px 0 0 50px;">下一步</button>
+                      </div>
+
+                </div>
+              </div>
+
+
+
+          </div>
+     </div>
+     <div class="clr"></div>
+</div>
+<!--#include virtual="/include/footer.html"-->
+<!--#include virtual="/include/an_footer.html"-->
+
+<script>
+$(function(){
+
+  $(".reTab ul li").click(function(event) {
+    $(this).addClass('on').siblings('li').removeClass('on')
+  });
+
+
+	$("#searchType").find('li').click(function(){
+		$("#searchType").find('li').each(function(){
+			$(this).removeClass("on");
+		});
+		$(this).addClass("on");
+	});
+	$(".query_flow_min li").click(function(){
+		$(this).addClass("on").siblings().removeClass("on")
+	})
+
+
+	//点击电子发票
+  $(".receipt .dd").on("click",function(){
+		$(".receipt .dd").each(function(index, element) {
+            $(this).removeClass("on")
+
+
+        });
+    //前边小圆点
+
+    if($(this).find('.reRadio').hasClass('on'))
+    {
+       $(this).find('.reRadio').removeClass('on')
+    }
+    else
+    {
+       $(this).find('.reRadio').addClass('on');
+    }
+
+		$(this).addClass("on");
+
+		 var reTxt = $(".reTabMenu button").text()
+     console.info(reTxt)
+    if(reTxt == "取消")  //开票状态
+    {
+
+        $(".tips_list").show();
+        $(".fpxq").hide();
+         $(".reMessage").hide();
+    }
+    else
+    {
+
+       $(".tips_list").hide();
+       $(".fpxq").show();
+       $(".reMessage").hide();
+    }
+	})
+
+	//$('.scroll_content').niceScroll();
+
+	$(".scroll_content").scroll(function(){
+         var $this =$(this),
+         viewH =$(this).height(),//可见高度
+         contentH =$(this).get(0).scrollHeight,//内容高度
+         scrollTop =$(this).scrollTop();//滚动高度
+        //if(contentH - viewH - scrollTop <= 100) { //到达底部100px时,加载新内容
+        if(scrollTop/(contentH -viewH)>=0.95){ //到达底部100px时,加载新内容
+        	//alert("到达底部了")
+			$(".loading2").show();
+        }
+     });
+
+
+//全选按钮
+     var reCheckFlag = 0;
+   $(".reCheck img").on('click', function(event) {
+      if(reCheckFlag == 0)
+      {
+        reCheckFlag = 1;
+        $(this).attr("src","../images/reCheckTrue.gif");
+        $('.reRadio').each(function(index, el) {
+           $(this).addClass('on')
+        });
+
+      }
+      else if(reCheckFlag == 1)
+      {
+        reCheckFlag = 0;
+        $(this).attr("src","../images/reCheckFalse.gif")
+        $('.reRadio').each(function(index, el) {
+           $(this).removeClass('on')
+        });
+      }
+
+   });
+
+   //点击开发票
+   //
+   //
+   $(".reTabMenu button").on('click', function(event) {
+
+
+        if($(this).text() == "开发票")
+        {
+             $(".reCheck").show();
+              $('.reRadio').show()
+               $("#kaiju").show().siblings('#jiaoyan').hide();
+              $(this).text("取消");
+              $(".tips_list").show(); //只让温馨提示显示
+             $(".fpxq").hide();
+             $(".reMessage").hide();
+
+        }
+        else if($(this).text() == "取消")
+        {
+              $(".reCheck").hide();
+              $('.reRadio').hide()
+              $("#jiaoyan").show().siblings('#kaiju').hide()
+              $(this).text("开发票");
+        }
+
+   });
+
+
+
+   //点击开具发票
+   //
+    $("#kaiju").on('click', function(event) {
+        $(".tips_list").hide();
+        $(".fpxq").hide();
+        $(".tips_list").hide()
+        $(".reMessage").show();
+    });
+
+
+
+});
+function ShowContent(NowNum,MaxNum){
+	for (var i=1;i<MaxNum+1;i++)
+	{
+		$("#ShowContent" + i).hide();
+	}
+	$("#ShowContent" + NowNum).show();
+
+};
+
+//弹层
+(function(){
+  jqPopup = function(popupBtn,popupCon){
+    $(popupBtn).click(function(){
+      cleanUp();
+      $(popupCon).fadeIn().siblings('.transact_tc_box').hide();
+    });
+  };
+  jqPopup('','#arry');
+  jqPopup('.sure_btn','#arry2');
+
+  $('.closeTransact,#layer').click(function(){
+    cleanUp();
+    $(this).parents('.transact_tc_box').fadeOut();
+    $('div#layer').remove();
+  });
+})();
+
+function cleanUp(){
+  $("#arry2").find("span").each(function(){
+      $(this).attr("class","on");
+    $('.transact_assess2').hide();
+  });
+}
+// window.onload = function() {
+//   var btn = document.getElementById("kaiju");
+//   btn.onclick = function() {
+//     //设置定时器
+//     time = setInterval(function() {
+//       //获取滚动条距离顶部的高度（谷歌和IE的兼容问题解决）
+//       var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+//       //由于数值的不断减少，做到回滚速度逐渐变慢，Math.floor()取整
+//       var ispeed = Math.floor(-osTop / 3);
+//       //每点击一次滚动条回滚的距离
+//       document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
+//       isTop = true;
+//       if (osTop == 0) {
+//         //清除定时器
+//         clearInterval(time);
+//       }
+//     }, 30);
+//
+//
+//   }
+// }
+
+
+</script>

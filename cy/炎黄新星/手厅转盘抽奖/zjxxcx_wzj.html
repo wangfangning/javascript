@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>中奖信息查询-无中奖</title>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+	<link rel="stylesheet" href="css/zjinfo.css" />
+	</head>
+	<body>
+	<script>
+		$(function(){
+
+		 if($('.bg').height()<$(window).height())
+		 {$('.bg').height($(window).height());}
+			if($(window).height()==480){
+				$('.bg').height($('.bg').height()+100);
+			}
+		})
+	</script>
+	<div class="bg">
+
+		<div class="zjinfo_box">
+			<div class="zjinfo_con">
+				<p class="mt30">
+					<img src="images/zj3.png" style="width:70%"/>
+				</p>
+				<p class="line"></p>
+
+				<p class="mb20 mt20" style="font-size:20px;">亲，您还没有中过奖~<br>再接再厉哦</p>
+				<p class="line"></p>
+
+				<!-- <p class="mt50">
+					<a href="dazhanpan.htm"><img style="width: 40%;" src="images/zj10.png"></a>
+				</p> -->
+				<p class=" mt20">
+					<a href="#"><img style="width: 40%;" src="images/zj11.png"></a>
+				</p>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

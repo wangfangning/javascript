@@ -1,0 +1,116 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+*{
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+li{list-style: none;}
+fieldset, img, a img {
+    border: 0 none;
+}
+.fleft{float: left;}
+.fright{float: right;}
+.clear{clear: both;}
+.mt20{margin-top: 20px;}
+.mt30{margin-top: 30px;}
+.mb50{margin-bottom: 50px;}
+.mt50{margin-top:50px}
+.mb20{margin-bottom: 20px;}
+.mt20{margin-top:20px}
+.orange{color: #f9e692;}
+a:focus {
+    outline:none;
+    background: none;
+}
+
+/*中奖信息异常开始*/
+
+.zjinfo_box{width: 100%;min-width: 320px;max-width: 640px;padding: 15px 0;margin: 0 auto;}
+.zjinfo_con{padding: 15px;}
+.zjinfo_con p{color: #fff;text-align: center;font-size:15px;line-height:30px;word-break: break-all;}
+.zjinfo_con p img{width: 100%;}
+.zjinfo_con p.see img{width: 60%;margin-top: 20px;}
+.zjinfo_con p.tleft{text-align: left;}
+.zjinfo_con p.yellow{color: #f9e692;font-size: 18px;line-height: 40px;}
+.zjinfo_con p input{width: 90%;background: none;border: 0;color: #c2c2c2;font-size: 16px;}
+.zjinfo_con p.line{border-bottom:1px dashed #fff;margin:10px auto;}
+.zjinfo_con p .green{color:#fff;font-size:13px}
+
+.input_box{background: url(../images/zj8.png) no-repeat center center;background-size: 100% 100%;position: relative;}
+.zjinfo_con p.phone{position: absolute;top: 0;left: 0;height: 30%;width: 100%;}
+.zjinfo_con p.yzm{width:100%;text-align:left;position: absolute;top: 60%;left: 0;height: 30%;}
+.zjinfo_con p.yzm input{width: 60%;float: left;padding-left:5%;position: absolute;top:25%;left: 0;}
+.zjinfo_con p.yzm button{width: 27%;float: left;background: none;border: 0;color: #fff;cursor: pointer;position: absolute;left: 64%;}
+.zjinfo_con p.yzm span{position: absolute;right: 0;font-size: 12px;}
+@media only screen and (min-width: 280px) and (max-width: 360px) {
+	.zjinfo_con p.phone{top:5%}
+	.zjinfo_con p.yzm{top: 61%;}
+	.zjinfo_con p.yzm button{padding-top: 7px;}
+	.zjinfo_con p.yzm span{right:4%;top: 35px;}
+}
+@media only screen and (min-width: 361px) and (max-width: 400px) {
+	.zjinfo_con p.phone{top:8%}
+	.zjinfo_con p.yzm{top: 63%;}
+	.zjinfo_con p.yzm button{padding-top: 7px;}
+	.zjinfo_con p.yzm span{right:7%;top: 40px;}
+	.zjinfo_con p{font-size:16px;}
+	.zjinfo_con p .green{font-size:14px}
+}
+@media only screen and (min-width: 401px) and (max-width: 450px) {
+	.zjinfo_con p.phone{top:10%}
+	.zjinfo_con p.yzm{top: 63%;}
+	.zjinfo_con p.yzm button{padding-top: 9px;}
+	.zjinfo_con p.yzm span{right:8%;top: 42px;}
+	.zjinfo_con p{font-size:17px;}
+	.zjinfo_con p .green{font-size:15px}
+}
+@media only screen and (min-width: 451px) and (max-width: 500px) {
+	.zjinfo_con p.phone{top:7%}
+	.zjinfo_con p.yzm{top: 66%;}
+	.zjinfo_con p.yzm button{padding-top: 2%;}
+	.zjinfo_con p.yzm span{right:9%;top: 77%;}
+	.zjinfo_con p{font-size:18px;}
+	.zjinfo_con p .green{font-size:16px}
+}
+@media only screen and (min-width: 501px) and (max-width: 550px) {
+	.zjinfo_con p.phone{top:8%}
+	.zjinfo_con p.yzm{top: 68%;}
+	.zjinfo_con p.yzm button{padding-top: 1%;}
+	.zjinfo_con p.yzm span{right:10%;top: 77%;}
+	.zjinfo_con p{font-size:19px;}
+	.zjinfo_con p .green{font-size:17px}
+}
+@media only screen and (min-width: 551px) and (max-width: 600px) {
+	.zjinfo_con p.phone{top:9%}
+	.zjinfo_con p.yzm{top: 66%;}
+	.zjinfo_con p.yzm button{padding-top: 1%;}
+	.zjinfo_con p.yzm span{right:11%;top: 77%;}
+	.zjinfo_con p{font-size:20px;}
+	.zjinfo_con p .green{font-size:18px}
+}
+@media only screen and (min-width: 601px) and (max-width: 650px) {
+	.zjinfo_con p.phone{top:10%}
+	.zjinfo_con p.yzm{top: 67%;}
+	.zjinfo_con p.yzm button{padding-top: 1%;}
+	.zjinfo_con p.yzm span{right:12%;top: 77%;}
+	.zjinfo_con p{font-size:20px;}
+	.zjinfo_con p .green{font-size:18px}
+}
+@media only screen and (min-width: 650px){
+	.zjinfo_con p.phone{top:12%}
+	.zjinfo_con p.yzm{top: 68%;}
+	.zjinfo_con p.yzm button{padding-top: 1%;}
+	.zjinfo_con p.yzm span{right:13%;top: 77%;}
+	.zjinfo_con p{font-size:20px;}
+	.zjinfo_con p .green{font-size:18px}
+}
+.zjinfo_con p.sure img{width: 40%;}
+/*中奖信息异常结束*/
+.bg{background:#53b373 url("../images/bg_z.png") no-repeat; background-size:100% 100%; position: relative;
+    max-width: 100%; min-width: 320px;
+  margin: 0px auto;
+    }

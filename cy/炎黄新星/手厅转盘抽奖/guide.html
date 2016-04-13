@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>引导页面</title>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+    body {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	.text_c{ text-align:center;}
+	.mt25{margin-top:25px;}
+	.mt15{margin-top:15px;}
+    </style>
+</head>
+<body>
+
+	<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/guide1.png" width="100%" /></div>
+            <div class="swiper-slide"><img src="images/guide2.png" width="100%" /></div>
+            <div class="swiper-slide"><img src="images/guide3.png" width="100%" /></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <p class="text_c mt25"><a href="#"><img src="images/guide_1.png" width="60%" /></a></p>
+    <p class="text_c mt15"><a href="#"><img src="images/guide_2.png" width="60%" /></a></p>
+
+<!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 30,
+    });
+    </script>
+</body>
+</html>

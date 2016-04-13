@@ -1,0 +1,266 @@
+.fl .nav{
+  border-bottom: 2px solid #e3e3e3;
+}
+.fl .nav span.biao{
+  cursor: pointer;
+  padding: 2px 32px;
+  border-top-right-radius:5px;
+    border-top-left-radius:5px;
+  border: 1px solid #e3e3e3;
+  border-bottom: none;
+  display: inline-block;
+  font-size: 14px;
+}
+.date_table{
+  width: auto;
+}
+.date_table li span{
+  font-weight: bold;
+}
+.right_1 span a{
+  font-weight: normal;
+}
+.topic_solo input{
+
+  padding-left: 5px;
+font-size: 12px;
+  color: #333;
+border: 1px solid #999;
+width: 165px;
+}
+/*.fl .nav span.biao:hover,.fl .nav span.biao:focus{
+  background: #e3e3e3;
+}*/
+.fl .nav span.right a{
+  color: blue;
+}
+.date_inp_outer{
+  display: inline-block;
+}
+.bulu_cx ul span.cen{
+  display: inline-block;
+  text-align: center;
+}
+.zhi{
+  display:inline-block;
+  width: 16px;
+}
+.topic_solo ul li{
+  margin: 20px auto;
+}
+.topic_solo ul li span.l{
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+}
+.topic_solo ul li span.ri{
+  width: 150px;
+  display: inline-block;
+  text-align: right;
+}
+.zhong{
+  width: 175px;
+}
+.width166{
+  width: 85px;
+}
+.text{
+  margin: 0 -1px;
+}
+.save{
+  cursor: pointer;
+  position: relative;
+}
+i.xia{
+  position: absolute;
+left: -3px;
+top: -3px;
+width: 16px;
+height: 14px;
+background-image:url("../images/u68_normal.png");
+}
+.right_1{
+  text-align: right;
+  margin-right: 30px!important;
+}
+.hide{
+  display: none;
+}
+.sanjiao{
+  margin-top: 7px;
+}
+.chaxun2 h1{
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.chaxun2{
+  height: auto;
+}
+.chaxun2 p{
+  text-align: center;
+
+  font-size: 12px;
+}
+.chaxun2 p span{
+  display: inline-block;
+  margin: 0 15px;
+  font-weight: normal;
+}
+.newProduct_main .mx_list_table th{
+  background: #f3f3f3;
+}
+.bm{
+  border: none!important;
+}
+.hj{
+  text-align: right!important;
+}
+th,td{
+  color: #333!important;
+}
+.space-20 a.dc{
+  display: inline-block;
+  padding: 5px 20px;
+  background: #fafafa;
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+.daochu{
+  height:auto;
+  margin-top: 15px;
+}
+.space-20 a.dc:hover{
+  color: #333;
+  text-decoration: none;
+}
+.class_name{
+  background: #e3e3e3;
+}
+span.daochu{
+position: absolute;
+top: 25px;
+font-weight: normal;
+
+}
+.fleft{
+  float: left;
+  overflow: hidden;
+  border: 1px solid #e3e3e3;
+/*border-bottom: none;
+border-right: none;*/
+
+}
+.bt{
+  text-align: center;
+}
+div.h{
+  height: 180px;
+}
+.table_wrp_solo{
+  border: none;
+}
+div.le{
+  border-right: 1px solid #e3e3e3;
+}
+div.bottom{
+  border-bottom: 1px solid #e3e3e3;
+}
+.table_wrp_solo table{
+  width: 950px;
+  margin: auto;
+
+  padding-bottom: 10px;
+
+}
+.table_wrp_solo .table{
+  background: #fff;
+  margin-top: 10px;
+
+}
+.newProduct_main th{
+  padding: 5px 0;
+  text-align: center;
+}
+
+td a:hover{
+  color: red;
+}
+.fleft p{
+  padding-left: 5px;
+}
+.biaodan1,.biaodan2,.biaodan3,.biaodan4{
+  padding-bottom: 10px;
+}
+.postList_main td{
+  text-align:left;
+  padding-left: 5px;
+}
+table{
+  border-radius: 5px;
+}
+table tr:first-child{
+border-bottom: 1px solid #e3e3e3;
+}
+.bgc{
+  background: rgb(166, 244, 218);
+  padding-bottom: 15px;
+}
+
+td a{
+  text-decoration: underline;
+  color: blue;
+
+  text-align: center;
+}
+.you{
+  text-align: center!important;
+  padding-left: 0!important;
+}
+.newProduct_main td{
+  line-height: 20px;
+
+}
+#shangwang td,#liuliang td{
+  text-align: center;
+}
+td .kz{
+
+  padding:1px 10px;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  background: yellow;
+  font-size: 10px!important;
+}
+.table td{
+  text-align: center;
+  padding: 2px 0;
+}
+.table td{
+  border: none;
+}
+.cxys{
+  display: inline-block;
+  text-decoration: none;
+  padding: 1px 2px ;
+  background: #e3e3e3;
+  border: 1px solid #999999;
+  color: #333;
+}
+.cxys:hover{
+  color: #333;
+}
+tbody tr th{
+  font-size: 12px;
+  line-height: 16px;
+}
+.xi:hover,.sh:hover{
+  cursor: pointer;
+}
+.xi,.sh{
+  font-weight: normal!important;
+}
+.table_dp tr:first-child{
+  border: none!important;
+}

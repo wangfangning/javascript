@@ -1,0 +1,623 @@
+<!--#include virtual="/include/header2.html"-->
+<!--#include virtual="/include/user.html"-->
+
+<!--消费提醒定制弹层-->
+<style media="screen">
+#wapContent{
+  overflow: hidden;
+}
+.familyNmb .hm{
+  display: inline-block;
+  background-color: #f2f2f2;
+  padding: 8px ;
+  width:92px;
+}
+li.value_q{
+  margin-left: 130px;
+  margin-bottom: 6px;
+  position: relative;
+}
+  .inputNone1 {
+    border: 1px solid #999999;
+    color: #999;
+    text-align: left;
+    width: 200px;
+    height: auto;
+    padding-left: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .inputNone2,
+  .inputNone3 {
+    text-align: left;
+    padding-left: 5px;
+    width: 200px;
+    height: auto;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid #999999;
+    color: #999;
+  }
+
+  input.sty {
+    border: 1px solid #666;
+    color: #666;
+  }
+
+  #jiabian {
+    border: 1px solid #ff0000;
+  }
+
+  .btn_bl {
+    cursor: default;
+    background: #999;
+  }
+
+  .bg_color {
+    background: #ff6600;
+    cursor: pointer;
+  }
+  /*.resettingBtn1{
+    color: #666666;
+  }*/
+
+  ul li .resettingBtn1 {
+    color: #ff0000;
+  }
+
+  .sl-delect {
+    cursor: pointer;
+    display: none;
+    font-size: 14px;
+    height: 18px;
+    position: absolute;
+    left: 185px;
+    top: -4px;
+    text-align: center;
+    margin-top: 10px;
+    width: 18px;
+    z-index: 2;
+    background-image: url("../images/X.png");
+    background-repeat: no-repeat;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .table th {
+    background: #ffd6d6;
+  }
+
+  .table th,
+  .table td {
+    text-align: center;
+    font-size: 16px;
+    width: 150px;
+    border: 1px solid #797979;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #666666;
+  }
+
+  .table {
+    width: 450px;
+    margin: auto;
+  }
+
+  .transact_tc_box h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #666666;
+  }
+
+  .max_p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.6;
+    width: 450px;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .transact_plans_r {
+    padding-left: 30px;
+  }
+</style>
+<!-- <div class="transact_tc_box" style=" display:none;" id="arrySms">
+     <div class="transact_tc_t">
+          <dl class="close_t">
+              <dt>亲情号码查询</dt>
+              <dd><a href="javascript:;"  title="关闭" class="closeTransact"></a></dd>
+          </dl>
+     </div>
+     <div class="transact_tc_c">
+          <div class="space-30"></div>
+          <div class="familyBox">
+               <dl class="familyBoxL">
+                   <dt>当月使用亲情号码</dt>
+                   <dd>18666666666</dd>
+                   <dd>010-88888888</dd>
+                   <dd>未设置</dd>
+               </dl>
+               <dl class="familyBoxL familyBoxLR">
+                   <dt>次月生效亲情号码</dt>
+                   <dd>18666666666</dd>
+                   <dd>010-88888888</dd>
+                   <dd>未设置</dd>
+               </dl>
+          </div>
+          <div class="clr"></div>
+          <div class="space-30"></div>
+          <div class="submit_btn">
+               <input class="btn_save closeTransact" type="button" value="确&nbsp;定"  />
+          </div>
+     </div>
+</div> -->
+<div class="transact_tc_box" style=" display:none;" id="arry">
+  <div class="transact_tc_t">
+    <dl class="close_t">
+      <dt>亲情号码设置</dt>
+      <dd>
+        <a href="javascript:;" title="关闭" class="closeTransact"></a>
+      </dd>
+    </dl>
+  </div>
+  <div class="transact_tc_c">
+    <h1 style="padding:10px;font-size:16px;color:#666666;">尊敬的客户，您申请的亲情号码如下：</h1>
+    <table class="table" cellspacing="0">
+
+      <tr>
+        <th>
+          当前号码
+        </th>
+        <th>
+          变更后号码
+        </th>
+        <th>
+          生效方式
+        </th>
+      </tr>
+      <tr>
+        <td>
+          0371-6601344
+        </td>
+        <td>
+          12345678901
+        </td>
+        <td>
+-
+</td>
+
+      </tr>
+      <tr>
+        <td>
+          18666666668
+        </td>
+        <td>
+          12345678901
+        </td>
+        <td>
+          次月生效
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          18666666669
+        </td>
+        <td>
+          12345678901
+        </td>
+        <td>
+          立即生效
+        </td>
+
+      </tr>
+
+    </table>
+    <p class="max_p">
+      注：您每月最多可办理3次亲情号码设置，变更次月生效；新增号码为立即生效！
+    </p>
+    <p class="max_p" style="text-align:right;">
+      办理时间:2014年01月20日
+    </p>
+
+    <div class="space-10"></div>
+
+    <div class="clr"></div>
+    <div class="space-30"></div>
+    <div class="transact_sure_btn">
+      <input class="sure_btn " type="button" value="确认办理" />
+      <input class="off_btn closeTransact" type="button" value="取消办理" />
+    </div>
+  </div>
+</div>
+<div class="transact_tc_box" id="arry2" style=" display:none;">
+  <div class="transact_tc_t">
+    <dl class="close_t">
+      <dt>办理通知</dt>
+      <dd>
+        <a href="javascript:;" title="关闭" class="closeTransact"></a>
+      </dd>
+    </dl>
+  </div>
+  <div class="transact_tc_c">
+    <dl class="transact_success">
+      <dt></dt>
+      <dd>
+        <p>尊敬的18611643715用户，您已成功办理<i>共享成员管理</i>业务。业务立即生效，繁忙时段生效时间可能会有延迟，请耐心等待。</p>
+
+      </dd>
+    </dl>
+    <div class="space-20"></div>
+    <dl class="transact_assess">
+      <dt>请您对此次业务办理进行评价：</dt>
+      <dd>
+        <span class="on"></span>
+        <span class="on"></span>
+        <span class="on"></span>
+        <span class="on"></span>
+        <span class="on"></span>
+      </dd>
+    </dl>
+    <div class="space-20"></div>
+    <ul class="transact_assess2" style="display:none;">
+      <li class="on">业务界面难看<i></i></li>
+      <li>业务流程复杂<i></i></li>
+      <li>业务办理失败<i></i></li>
+      <li>其他<i></i></li>
+    </ul>
+    <div class="clr"></div>
+    <div class="space-10"></div>
+    <div class="other_text" style=" display:none;">
+      <textarea></textarea>
+    </div>
+    <div class="space-30"></div>
+    <div class="submit_btn">
+      <input class="btn_save closeTransact" type="button" value="提&nbsp;交" />
+    </div>
+  </div>
+</div>
+
+<div class="wapContent">
+  <!--#include virtual="/include/leftnav.html"-->
+  <div class="wapContent_r">
+    <div class="query_main">
+      <div class="query_zl">亲情号码管理</div>
+      <div class="score_content">
+        <div class="space-40"></div>
+        <div class="transact_plans">
+          <div class="transact_plans_t">
+            <div class="transact_plans_l">
+              <div class="plans_img">
+                <img src="/images/family_member.png" />
+
+              </div>
+              <div class="space-20"></div>
+              <dl class="plans_pj">
+                <dt><i>用户评价：</i><img src="/images/plans_pj_img.jpg" /><img src="/images/plans_pj_img.jpg" /><img src="/images/plans_pj_img.jpg" /><img src="/images/plans_pj_img.jpg" /><img src="/images/plans_pj_img.jpg" /></dt>
+                <dd>4.5</dd>
+              </dl>
+              <div class="space-15"></div>
+              <dl class="plans_share">
+                <dt>分享到：</dt>
+                <dd>
+                  <a href="javascript:;"><img src="/images/weibo_img1.jpg" /></a>
+                  <a href="javascript:;"><img src="/images/weibo_img2.jpg" /></a>
+                  <a href="javascript:;"><img src="/images/weibo_img3.jpg" /></a>
+                  <a href="javascript:;"><img src="/images/weibo_img4.jpg" /></a>
+                  <a href="javascript:;"><img src="/images/weibo_img5.jpg" /></a>
+                  <a href="javascript:;"><img src="/images/weibo_img6.jpg" /></a>
+                  <a href="javascript:;"><img src="/images/weibo_img7.jpg" /></a>
+                </dd>
+              </dl>
+            </div>
+            <div class="transact_plans_r">
+              <p class="plans_text clear">
+                <span>资费标准：</span>
+                <span><i style="font-size:20px;color:#ff6600;">0</i>元/月</span>
+              </p>
+              <div class="space-20"></div>
+              <p class="plans_text clear">
+                <span>适合用户：</span>
+                <span>2、3G沃派套餐用户</span>
+              </p>
+              <div class="space-20"></div>
+              <p class="plans_text clear">
+                <span>生效方式：</span>
+                <span>新增&nbsp;立即生效/变更&nbsp;次月生效</span>
+              </p>
+              <div class="space-20"></div>
+              <p class="familyNmb" style="width:470px;">
+                <span style="color: #666">本月使用亲情号码：</span>
+                <span  class="hm">18666666666</span>
+                <span class="hm"style="padding: 8px 0 ;width:108px;text-align:center;">010-88888888</span>
+                <span class="hm">18666666666</span>
+              </p>
+
+              <ul class="familyNmb2">
+                <li style="padding-bottom: 8px;position: relative;">
+                  <span style="width:130px;float: left;">下月生效亲情号码：</span>
+
+
+                  <input type="text" id="" value="18666666666" onchange="upperCase()" class="inputNone1" maxlength=" 20 " autocomplete="off " disabled="disabled" />
+                  <span class="sl-delect" style="left: 315px;"></span>
+                  <a href="javascript:;" class="resettingBtn1" id="add1">变更</a>
+                  <p style="font-size:13px;margin-bottom:5px;color:#ff0000;width: 300px; margin-left: 130px;display:none;" class="zhengze">
+                    请输入正确的联通号码
+                  </p>
+                </li>
+                <li class="value_q">
+                  <input type="text" value="例：13112345678/010-12345678" class="inputNone2" onchange="upperCase()"  maxlength="20 " autocomplete="off " disabled="disabled" />
+                  <span class="sl-delect"></span>
+                  <a href="javascript:;" class="resettingBtn1" id="edit2">新增</a>
+                  <a href="javascript:;" class="resettingBtn2" id="del2" style="display:none;">删除</a>
+
+                </li>
+                <li class="value_q">
+
+                  <input type="text" value="例：13112345678/010-12345678" onchange="upperCase()" class="inputNone3"  maxlength="20 " autocomplete="off " disabled="disabled" />
+                  <span class="sl-delect" style=""></span>
+                  <a href="javascript:;" class="resettingBtn1" id="edit3">新增</a>
+                  <a href="javascript:;" class="resettingBtn3" id="del3" style="display:none;">删除</a>
+
+                </li>
+
+              </ul>
+
+              <div class="familyText" style="margin-left: 110px;text-align:left;">注：您每月最多可办理3次亲情号码设置，变更次月生效；新增号码为立即生效！</div>
+              <div class="clr"></div>
+              <div class="space-30"></div>
+              <div class="transact_btn" style="margin-left: 148px;">
+                <button type="button" name="button" id="isread-text" style="color:#fff;outline: none;border: none;padding: 10px 15px;font-size: 16px;" class="btn_bl" disabled="disabled">立&nbsp;即&nbsp;办&nbsp;理</button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="clr"></div>
+      <div class="space-40"></div>
+      <div class="transact_plans_b">
+        <div class="transact_list_t">
+          <ul class="transact_list" id="searchType">
+            <li onclick="ShowContent(1,3)" class="on"><a href="javascript:;" id="lj_bl">业务介绍</a></li>
+            <li onclick="ShowContent(2,3)"><a href="javascript:;">温馨提示</a></li>
+            <li onclick="ShowContent(3,3)"><a href="javascript:;">常见问题</a></li>
+          </ul>
+        </div>
+        <div class="space-30"></div>
+        <div class="transact_list_b" id="ShowContent1" style=" display:block;">
+          <div class="call_text">
+            <p><span>呼叫等待</span>是中国联通为用户提供的一项基础服务，可为您提供接入号码等待服务，您正使用手机通话时，再接听第二个电话，同时第一个电话也不会被挂断，并且还可以在两个通话间自由的转换，防止电话漏接，避免您错过重要来电。</p>
+          </div>
+          <div class="clr"></div>
+          <div class="space-50"></div>
+        </div>
+        <div class="transact_list_b" id="ShowContent2" style=" display:none;">
+          <dl class="tips_list">
+            <dt>温馨提示：</dt>
+            <dd>1、本月应交费用为截止到4月30日，扣除您账户中可抵扣的金额后，您仍需交纳的费用。</dd>
+            <dd>2、此服务为每月3日起开始提供查询功能。</dd>
+            <dd>3、本页面相关数据仅供参考使用。</dd>
+          </dl>
+        </div>
+        <div class="transact_list_b" id="ShowContent3" style=" display:none;">
+          <div class="common_problem_list">
+            <div class="common_problem">
+              <p><i></i><span>网上营业厅能提供哪些固网查询服务？</span></p>
+              <div class="clr"></div>
+              <div class="space-10"></div>
+              <dl>
+                <dt>答：</dt>
+                <dd>网上营业厅目前提供固定电话、小灵通、宽带（ADSL）、宽带（LAN）等固网业务的查询服务。包括帐单查询（当月话费、历史帐单、历史欠费）、详单查询（通话详单、宽带上网详单等）、帐户查询（可用余额、个人信息、密码修改）等功能。</dd>
+              </dl>
+            </div>
+            <div class="common_problem">
+              <p><i></i><span>网上营业厅能提供哪些固网查询服务？</span></p>
+              <div class="clr"></div>
+              <div class="space-10"></div>
+              <dl>
+                <dt>答：</dt>
+                <dd>网上营业厅目前提供固定电话、小灵通、宽带（ADSL）、宽带（LAN）等固网业务的查询服务。包括帐单查询（当月话费、历史帐单、历史欠费）、详单查询（通话详单、宽带上网详单等）、帐户查询（可用余额、个人信息、密码修改）等功能。</dd>
+              </dl>
+            </div>
+            <div class="common_problem">
+              <p><i></i><span>网上营业厅能提供哪些固网查询服务？</span></p>
+              <div class="clr"></div>
+              <div class="space-10"></div>
+              <dl>
+                <dt>答：</dt>
+                <dd>网上营业厅目前提供固定电话、小灵通、宽带（ADSL）、宽带（LAN）等固网业务的查询服务。包括帐单查询（当月话费、历史帐单、历史欠费）、详单查询（通话详单、宽带上网详单等）、帐户查询（可用余额、个人信息、密码修改）等功能。</dd>
+              </dl>
+            </div>
+            <div class="common_problem">
+              <p><i></i><span>网上营业厅能提供哪些固网查询服务？</span></p>
+              <div class="clr"></div>
+              <div class="space-10"></div>
+              <dl>
+                <dt>答：</dt>
+                <dd>网上营业厅目前提供固定电话、小灵通、宽带（ADSL）、宽带（LAN）等固网业务的查询服务。包括帐单查询（当月话费、历史帐单、历史欠费）、详单查询（通话详单、宽带上网详单等）、帐户查询（可用余额、个人信息、密码修改）等功能。</dd>
+              </dl>
+            </div>
+            <div class="common_problem">
+              <p><i></i><span>网上营业厅能提供哪些固网查询服务？</span></p>
+              <div class="clr"></div>
+              <div class="space-10"></div>
+              <dl>
+                <dt>答：</dt>
+                <dd>网上营业厅目前提供固定电话、小灵通、宽带（ADSL）、宽带（LAN）等固网业务的查询服务。包括帐单查询（当月话费、历史帐单、历史欠费）、详单查询（通话详单、宽带上网详单等）、帐户查询（可用余额、个人信息、密码修改）等功能。</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="clr"></div>
+          <div class="space-20"></div>
+          <div class="score_page">
+            <div class="score_page_l">上一页</div>
+            <div class="score_page_c">
+              <select class="score_select">
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="score_page_r">下一页</div>
+          </div>
+          <div class="space-50"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="space-20"></div>
+</div>
+</div>
+<div class="clr"></div>
+</div>
+<!--#include virtual="/include/footer.html"-->
+<!--#include virtual="/include/an_footer.html"-->
+
+<script>
+  $('.callWait_list').find('li').click(function() {
+    $(this).addClass('on').siblings().removeClass('on');
+  });
+  $('.callWait_list2').find('li').click(function() {
+    $(this).toggleClass('on');
+  });
+
+  //弹层
+  (function() {
+    jqPopup = function(popupBtn, popupCon) {
+      $(popupBtn).click(function() {
+        cleanUp();
+        $(popupCon).fadeIn().siblings('.transact_tc_box').hide();
+      });
+    };
+    jqPopup('', '#arry');
+    jqPopup('.sure_btn', '#arry2');
+    jqPopup('.sure_btn2', '#arry4');
+
+    $('.closeTransact,#layer').click(function() {
+      cleanUp();
+      $(this).parents('.transact_tc_box').fadeOut();
+      $('div#layer').remove();
+    });
+
+  })();
+
+  function cleanUp() {
+    $("#arry").find("input").each(function() {
+      $(this).removeAttr("checked");
+      $("p a").css("color", "#ff0000");
+    });
+    $("#arry2").find("span").each(function() {
+      $(this).attr("class", "on");
+      $('.transact_assess2').hide();
+    });
+  }
+
+  //资费介绍
+  $(function() {
+    $("#searchType").find('li').click(function() {
+      $("#searchType").find('li').each(function() {
+        $(this).removeClass("on");
+      });
+      $(this).addClass("on");
+    });
+  });
+
+  function ShowContent(NowNum, MaxNum) {
+    for (var i = 1; i < MaxNum + 1; i++) {
+      $("#ShowContent" + i).hide();
+    }
+    $("#ShowContent" + NowNum).show();
+
+  };
+
+  /*$('.resettingBtn1').click(function(){
+  	$('.inputNone1:text').val('');
+  	$(this).css("color","#666");
+  })*/
+  $('.resettingBtn2').click(function() {
+    $('.inputNone2:text').val('');
+    $(this).css("color", "#666");
+  })
+  $('.resettingBtn3').click(function() {
+    $('.inputNone3:text').val('');
+    $(this).css("color", "#666");
+  })
+
+  //弹出层输入框
+
+  $(function() {
+    $("#add1").click(function() {
+      $(this).siblings("input").attr("disabled", false)
+    })
+
+    $("#del2,#del3").click(function() {
+      $(this).siblings("input").val("")
+      $(this).siblings("input").attr("disabled", true)
+    })
+
+    $("#edit2,#edit3").click(function() {
+      $(this).siblings("input").attr("disabled", false)
+    })
+  })
+
+
+
+  $(document).ready(function() {
+    // $(".inputNone1").click(function() {
+    //   $(this).attr("id", "jiabian");
+    //   $(".zhengze").show();
+    // });
+
+    $("input").keypress(function() {
+      $(".btn_bl").removeAttr("disabled").addClass("bg_color");
+      // var val=$(this).val()
+      // if ($(this).val().length>11) {
+      //     $(".inputNone1").attr("id", "jiabian");
+      //     $(".zhengze").show();
+      // };
+      // if($(this).val() == ""){
+      //   $(".inputNone1").removeAttr("id");
+      //   $(".zhengze").hide();
+      // }
+    });
+
+    $(".value_q input").focus(function() {
+      if ($(this).val() == this.defaultValue) {
+        $(this).val("");
+      };
+    }).blur(function() {
+      if ($(this).val() == '') {
+        $(this).val(this.defaultValue);
+      };
+    });
+    $("ul li .resettingBtn1").click(function() {
+      $(this).removeAttr("href").css('color', '#999');
+      $(this).siblings('input').addClass('sty');
+      $(".sl-delect").click(function() {
+        $(this).siblings('input').val("");
+        $(".btn_bl").removeAttr("disabled").addClass("bg_color");
+      });
+    });
+
+    $(".sl-delect").click(function() {
+      $(this).css('display', 'none');
+    });
+    $("ul input").focus(function() {
+      if ($(this).val() == this.defaultValue) {
+        $(this).siblings('.sl-delect').css("display", "block");
+      };
+    })
+    $("ul input").keydown(function() {
+      $(this).siblings('.sl-delect').css("display", "block");
+      if ($(this).val() == -1) {
+        $(this).siblings('.sl-delect').css("display", "none");
+      };
+    });
+
+  });
+</script>

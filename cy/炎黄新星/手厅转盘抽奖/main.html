@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/base.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="bg">    
+    <div class="mengceng" id="mengceng"></div>
+    <!--请输入手机号-->
+    <div class="wbPop phone">
+      <div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+      <div class="wbPopCenter"><img src="images/wb1.png"></div>
+      <div class="wbPopCenter_txt1 wbBox">手机号码是中奖后与您联系的唯一方式<br />请确保号码正确无误</div>
+      <div class="wb_pn wbBox">
+            <input id="phoneNumber" type="text" class="wbInp" value="请输入您的联通手机号码">
+        </div>
+      <div class="error_tip wbBox">请输入正确的联通手机号码</div>
+      <div class="wbBox">
+          <div class="yzm1"><input class="wbInp" type="text" value="请输入图形码"></div>
+          <div class="yzm2"><img src="images/wb4.png" width="75" height="35"></div>
+        </div>
+
+      <div class="wbBox">
+          <div class="yzm3"><input class="wbInp" type="text" value="请输入验证码"></div>
+            <div class="yzm4">
+                <img src="images/wb6.png" width="81" height="45">
+                <p>重新发送(<em>59</em>秒)</p>
+            </div>
+        </div>
+        <div class="wbPopCenter confirm" style="margin-top:30px;"><img src="images/qr1.png"></div>
+        <div class="wbPopCenter wb_txt2" style="margin-top:30px;">您还可以直接去参加：<a>分享赚流量活动</a></div>
+    </div>
+    <!--ready go-->
+   	<div class="wbPopCenter middle readygo display-none">
+    	<img src="images/readyGo.png">
+        <img src="images/readyGo2.png"> 
+    </div>
+    
+    <!--参加过了-->
+    <div class="wbPop already">
+      <div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+      <div class="space-40"></div>
+      <div class="wbPopCenter_txt2 wbBox">该手机号码今天已参加过大转盘活动</div>
+      <div class="space-10"></div>
+      <div class="wbPopCenter_txt3 wbBox" style="width:100%; font-size:12px; line-height:20px;">温馨提示：一个联通号码一天只能中奖一次，一旦中奖<br />则当天不能继续抽奖，可改天参加大转盘抽奖。</div>
+      <div class="space-40"></div>
+       <div class="wbPopCenter_txt2 wbBox">去试试<a href="###">分享赚流量</a>活动吧</div>
+      <div class="wbPopCenter wycj" style="margin-top:30px;"><img src="images/wycj.png"></div>
+        
+    </div>
+    
+    <!--没中奖-->
+    <div class="wbPop noprize">
+      <div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+      <div class="space-20"></div>
+      <div class="wbPopCenter_txt3 wbBox" style="width:100%"><em>今天木有中奖哎</em><br />分享活动给好友，希望明天会有好运气</div>
+    
+      <div class="space-30"></div>
+      <div class="wbPopCenter share"><a href="###"><img src="images/share.png"></a></div>
+	  <div class="space-50"></div>
+      <div class="wb_star"></div>
+        
+      <div class="wbPopCenter wb_txt2" style="margin-top:30px;">还有一大波<a href="###">免费1.5G</a>省内流量包在等你哦</div>
+      <div class="wbPopCenter wycj" style="margin-top:20px;"><img src="images/wycj.png"></div>
+        
+    </div>
+    
+    <!--没中奖2次机会-->
+      <div class="wbPop noprize2">
+          <div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+          <div class="space-20"></div>
+          <div class="wbPopCenter_txt3 wbBox" style="width:100%"><em>今天木有中奖哎</em><br />您今天还剩余<span>2</span>次抽奖机会</div>
+        
+          <div class="space-30"></div>
+          <div class="wbPopCenter again"><a href="###"><img src="images/again.png"></a></div>
+          <div class="space-50"></div>
+          <div class="wb_star"></div>
+      	<div class="wbPopCenter wb_txt2" style="margin-top:30px;">还有一大波<a href="###">免费1.5G</a>省内流量包在等你哦</div>
+        <div class="wbPopCenter wycj" style="margin-top:20px;"><img src="images/wycj.png"></div>
+        
+    </div>
+    
+    <!--中奖实物-->
+    
+    <div class="wbPop prizesw">
+      <div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+  
+      <div class="wbPopCenter_txt3 wbBox" style="width:100%">
+      	<p class="cls1">哎呦，不错哦</p>
+        <p class="cls2">获得的奖品为<br /><span>XXXX</span></i></p>
+        <p class="cls3">请保持通讯畅通，<br /> 工作人员将在5个工作日内联系您~</p>
+      </div>
+    
+       <div class="space-30"></div>
+       <div class="wbPopCenter share"><a href="###"><img src="images/share.png"></a></div>
+	   <div class="space-50"></div>
+       <div class="wb_star"></div>
+      	<div class="wbPopCenter wb_txt2" style="margin-top:30px;">还有一大波<a href="###">免费1.5G</a>省内流量包在等你哦</div>
+        <div class="wbPopCenter wycj" style="margin-top:20px;"><img src="images/wycj.png"></div>
+        
+    </div>
+    
+    <!--中奖虚拟-->
+    
+    <div class="wbPop prizexn">
+      <div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+  
+      <div class="wbPopCenter_txt3 wbBox" style="width:100%">
+      	<p class="cls1">哎呦，不错哦</p>
+        <p class="cls2">获得的奖品为<br /><span>XXXX礼包</span></i></p>
+        <p class="cls3">激活码及领取方式稍后将通过短信发送到<br />您参与活动的手机号码</p>
+      </div>
+    
+     <div class="space-30"></div>
+       <div class="wbPopCenter share"><a href="###"><img src="images/share.png"></a></div>
+	   <div class="space-50"></div>
+       <div class="wb_star"></div>
+      	<div class="wbPopCenter wb_txt2" style="margin-top:30px;">
+        	好运还未结束<br />还有一大波<a href="###">免费1.5G</a>省内流量包在等你哦
+        </div>
+        <div class="wbPopCenter wycj" style="margin-top:20px;"><img src="images/wycj.png"></div>
+        
+    </div>
+    
+    <!--内容-->
+    <div class="content">        
+      <p id="phone" onClick="openMc(this.id)">输入手机号</p>
+      <br />
+      <p id="readygo" onClick="">ready go</p>
+      <br />
+      <p id="already" onClick="openMc(this.id)">参加过了</p>
+      <br />
+      <p id="noprize" onClick="openMc(this.id)">没中奖</p>
+      <br />
+      <p id="noprize2" onClick="openMc(this.id)">没中奖2次机会</p>
+      <br />
+      <p id="prizesw" onClick="openMc(this.id)">中奖实物</p>
+      <br />
+      <p id="prizexn" onClick="openMc(this.id)">中奖虚拟</p>
+       
+   </div>
+</div>
+<script>
+	function openMc(id)
+	{
+		$(".mengceng").show();
+		$("."+id).show();
+	}
+	
+	
+	$(function(){
+		
+		
+		/*ready go动画*/		
+		$(".middle img").eq(1).hide();
+		
+		$("#readygo").click(function(){
+			$(".mengceng").show().delay(2000).hide(1);			
+			$(".readygo").show().delay(2000).hide("fast");
+			$(".middle img").eq(0).show();
+			$(".middle img").eq(1).hide();
+			$(".middle img").eq(0).fadeOut(1000);
+			$(".middle img").eq(1).delay(1000).show("fast");
+			
+			/*if($(".middle img").eq(0).css("display")=="none"){
+				$(".middle img").eq(0).show();
+				$(".middle img").eq(1).hide();
+				$(".mengceng").show().delay(2000).hide(1)
+				$(".readygo").show().delay(2000).hide("fast");
+				$(".middle img").eq(0).fadeOut(1000);
+				$(".middle img").eq(1).delay(1000).show("fast").delay(1000).hide(1);
+			}
+			else{
+				$(".mengceng").show().delay(2000).hide(1)
+				$(".readygo").show().delay(2000).hide("fast");
+				$(".middle img").eq(0).fadeOut(1000);
+				$(".middle img").eq(1).delay(1000).show("fast").delay(1000).hide(1);
+			}*/
+			/*if($(".middle img").eq(1).css("display")=="none")
+			{
+				$(".middle img").eq(0).show();
+			}
+			*/
+			
+			  
+			
+		})
+		
+		
+		
+		/*关闭弹层*/
+		$(".mc_cls").click(function(){
+			$(".mengceng").hide();
+			$(this).parent(".wbPop").hide();
+		})
+		
+		
+		$(".wbInp").focus(function(){
+			if($(this).val() ==this.defaultValue){  
+					  $(this).val("");           
+				  } 
+		}).blur(function(){
+			if ($(this).val() == '') {
+					$(this).val(this.defaultValue);
+		 	 }
+		})
+		
+		/*手机号验证*/
+		var phone_flag = true; //开发判断是否为联通号码
+		$("#phoneNumber").blur(function(){
+			var text = $(this).val();
+			if(phone_flag && text.length==11)
+			{
+				$(".confirm img").attr("src","images/qr.png") ;
+				$(".error_tip").hide();
+			}
+			else
+			{
+				$(".confirm img").attr("src","images/qr1.png") ;
+				$(".error_tip").show();
+			}
+		})
+		
+		
+		/*倒计时验证码*/
+		$('.yzm4 img').click(function(){
+			
+				clearInterval(st);
+				var miao = $('.yzm4 p').find( 'em' ),
+					i = 59;
+					miao.html( i );	
+				
+				var st = setInterval(function(){		
+					i--;
+					miao.html( i );	
+					if( i == 0){
+						clearInterval(st);
+						
+					}
+				},1000)
+			
+		});
+		
+		
+	})
+</script>
+</body>
+</html>

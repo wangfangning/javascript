@@ -1,0 +1,690 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>大转盘活动</title>
+
+	<link href="dazhanpan_files/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="dazhanpan_files/awardRotate.js"></script>
+	<script type="text/javascript" src="js/turn.js"></script>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/base.css" />
+
+
+
+
+	<script type="text/javascript">
+		//已经参加过了
+		function noprize() {
+			$(".mengceng").show();
+			$(".noprize").show();
+
+		}
+		$(function() {
+			// $('.bg').height($(window).height());
+			// $('.bg').width($(window).width());
+			// $(window).resize(function(){
+			// $('.bg').height($(window).height());
+			if ($('.bg').height() < $(window).height()) {
+				$('.bg').height($(window).height());
+			}
+			if ($(window).height() == 480) {
+				$('.bg').height($('.bg').height() + 100);
+			}
+
+			/*关闭弹层*/
+			$(".mc_cls,.again").click(function() {
+				$(".mengceng").hide();
+				$(this).parent(".wbPop").hide();
+				$("html,body").css({
+					"overflow": "visible"
+				});
+				$("html,body").height("auto");
+			})
+		})
+
+
+		function openMc(id) {
+			$(".mengceng").show();
+			$("." + id).show();
+		}
+		if (/android/i.test(navigator.userAgent)) {
+			startAngle = -0.4;
+		} else {
+			startAngle = -1
+		}
+		var turnplate = {
+			restaraunts: [], //大转盘奖品名称
+			colors: [], //大转盘奖品区块对应背景颜色
+			outsideRadius: 185, //大转盘外圆的半径
+			textRadius: 165, //大转盘奖品位置距离圆心的距离
+			insideRadius: 30, //大转盘内圆的半径
+			startAngle: startAngle, //开始角度
+
+			bRotate: false //false:停止;ture:旋转
+		};
+
+		$(document).ready(function() {
+			//动态添加大转盘的奖品与奖品区域背景颜色
+			turnplate.restaraunts = ["张惠妹演唱会门票", "乐视40英寸电视", "热门游戏礼包", "乐视视频10天会员", "莫文蔚演唱会门票", "明星签名CD", "谢谢参与", "优酷视频观影劵"];
+			turnplate.colors = ["#FFF4D6", "#FFFFFF", "#FFF4D6", "#FFFFFF", "#FFF4D6", "#FFFFFF", "#FFF4D6", "#FFFFFF"];
+
+
+			var rotateTimeOut = function() {
+				$('#wheelcanvas').rotate({
+					angle: 0,
+					animateTo: 2160,
+					duration: 8000,
+					callback: function() {
+						alert('网络超时，请检查您的网络设置！');
+					}
+				});
+			};
+
+			//旋转转盘 item:奖品位置; txt：提示语;
+			var rotateFn = function(item, txt) {
+				var angles = item * (360 / turnplate.restaraunts.length) - (360 / (turnplate.restaraunts.length * 2));
+
+				if (/android/i.test(navigator.userAgent)) {
+
+					if (angles < 270) {
+						angles = 290 - angles;
+					} else {
+						angles = 360 - angles + 290;
+					}
+				} else {
+					startAngle = -1
+					if (angles < 270) {
+						angles = 290 - angles;
+					} else {
+						angles = 360 - angles + 290;
+					}
+				}
+				//alert(angles)
+				$('#wheelcanvas').stopRotate();
+				$('#wheelcanvas').rotate({
+					angle: 0,
+					animateTo: angles + 1800,
+					duration: 8000,
+					callback: function() {
+
+						//如果txt等于谢谢参与那么调用未中奖 noprize()
+						noprize()
+						turnplate.bRotate = !turnplate.bRotate;
+					}
+				});
+			};
+
+			$('.pointer').click(function() {
+				if (turnplate.bRotate) return;
+				turnplate.bRotate = !turnplate.bRotate;
+				//获取随机数(奖品个数范围内)
+				var item = rnd(1, turnplate.restaraunts.length);
+				//0=张惠妹演唱会门票，1=乐视电视,2=游戏礼包,3=乐视视频10它会员，4=莫文蔚演唱会门票，5=酷狗提供奖品，6=谢谢参与，7=优酷视频观影劵
+				item = 6;
+				//奖品数量等于8,指针落在对应奖品区域的中心角度
+				rotateFn(item, turnplate.restaraunts[item]);
+
+			});
+		});
+
+		function rnd(n, m) {
+			var random = Math.floor(Math.random() * (m - n + 1) + n);
+			return random;
+
+		}
+
+
+		//页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
+		window.onload = function() {
+			drawRouletteWheel();
+		};
+
+		function drawRouletteWheel() {
+			var canvas = document.getElementById("wheelcanvas");
+			if (canvas.getContext) {
+				//根据奖品个数计算圆周角度
+				var arc = Math.PI / (turnplate.restaraunts.length / 2);
+				var ctx = canvas.getContext("2d");
+				//在给定矩形内清空一个矩形
+				ctx.clearRect(0, 0, 422, 422);
+				//strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式
+				ctx.strokeStyle = "#FFBE04";
+				//font 属性设置或返回画布上文本内容的当前字体属性
+				ctx.font = '16px Microsoft YaHei';
+				for (var i = 0; i < turnplate.restaraunts.length; i++) {
+					var angle = turnplate.startAngle + i * arc;
+					ctx.fillStyle = turnplate.colors[i];
+					ctx.beginPath();
+					//arc(x,y,r,起始角,结束角,绘制方向) 方法创建弧/曲线（用于创建圆或部分圆）
+					ctx.arc(211, 211, turnplate.outsideRadius, angle, angle + arc, false);
+					ctx.arc(211, 211, turnplate.insideRadius, angle + arc, angle, true);
+					ctx.stroke();
+					ctx.fill();
+					//锁画布(为了保存之前的画布状态)
+					ctx.save();
+
+					//----绘制奖品开始----
+					ctx.fillStyle = "#E5302F";
+					var text = turnplate.restaraunts[i];
+					var line_height = 17;
+					//translate方法重新映射画布上的 (0,0) 位置
+					ctx.translate(211 + Math.cos(angle + arc / 2) * turnplate.textRadius, 211 + Math.sin(angle + arc / 2) * turnplate.textRadius);
+
+					//rotate方法旋转当前的绘图
+					ctx.rotate(angle + arc / 2 + Math.PI / 2);
+
+					/** 下面代码根据奖品类型、奖品名称长度渲染不同效果，如字体、颜色、图片效果。(具体根据实际情况改变) **/
+					if (text.indexOf("M") > 0) { //流量包
+						var texts = text.split("M");
+						for (var j = 0; j < texts.length; j++) {
+							ctx.font = j == 0 ? 'bold 20px Microsoft YaHei' : '16px Microsoft YaHei';
+							if (j == 0) {
+								ctx.fillText(texts[j] + "M", -ctx.measureText(texts[j] + "M").width / 2, j * line_height);
+							} else {
+								ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
+							}
+						}
+					} else if (text.indexOf("M") == -1 && text.length > 6) { //奖品名称长度超过一定范围
+						text = text.substring(0, 6) + "||" + text.substring(6);
+						var texts = text.split("||");
+						for (var j = 0; j < texts.length; j++) {
+							ctx.fillText(texts[j], -ctx.measureText(texts[j]).width / 2, j * line_height);
+						}
+					} else {
+						//在画布上绘制填色的文本。文本的默认颜色是黑色
+						//measureText()方法返回包含一个对象，该对象包含以像素计的指定字体宽度
+						ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
+					}
+					switch (i) {
+						case 0:
+							var img = document.getElementById("shan-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							ctx.rotate(45 * Math.PI / 180);
+							ctx.drawImage(img, 5, 5, 60, 63);
+							break;
+						case 1:
+							var img = document.getElementById("tv-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							//ctx.rotate(45*Math.PI/180);
+							ctx.drawImage(img, -35, 25, 65, 40);
+							break;
+						case 2:
+							var img = document.getElementById("game-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							ctx.rotate(315 * Math.PI / 180);
+							ctx.drawImage(img, -65, 0);
+							break;
+
+						case 3:
+							var img = document.getElementById("letv-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							ctx.drawImage(img, -30, 10);
+							break;
+						case 4:
+							var img = document.getElementById("cdb-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							ctx.rotate(40 * Math.PI / 180);
+							ctx.drawImage(img, 5, 5, 60, 63);
+							break;
+						case 5:
+							var img = document.getElementById("kg-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							ctx.drawImage(img, -30, 10, 60, 60);
+							break;
+						case 6:
+							var img = document.getElementById("sorry-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							ctx.drawImage(img, -15, 10);
+							break;
+						case 7:
+							var img = document.getElementById("YK-img");
+							img.onload = function() {
+								ctx.drawImage(img, -15, 10);
+							};
+							ctx.rotate(2 * Math.PI / 180);
+							ctx.drawImage(img, -30, 20);
+							break;
+
+
+					}
+					//添加对应图标
+					//alert(text)
+
+					/*if(i==0){
+			  var img= document.getElementById("shan-img");
+			  img.onload=function(){
+				  ctx.drawImage(img,-15,10);
+			  };
+			  ctx.rotate(45*Math.PI/180);
+			  ctx.drawImage(img,-10,-10);
+		  }else if(text.indexOf("谢谢参与")>=0){
+			  var img= document.getElementById("sorry-img");
+			  img.onload=function(){
+				  ctx.drawImage(img,-15,10);
+			  };
+			  ctx.drawImage(img,-15,10);
+		  }*/
+					//把当前画布返回（调整）到上一个save()状态之前
+					ctx.restore();
+					//----绘制奖品结束----
+				}
+			}
+		}
+	</script>
+</head>
+<style type="text/css">
+	img {
+		border: none
+	}
+
+	.content {
+		width: 100%;
+		margin: 0px auto;
+		position: relative;
+		max-width: 640px;
+		height: auto;
+	}
+
+	body {
+		font-size: 18px;
+	}
+
+	.wbPopCenter_txt1 {
+		font-size: 18px;
+		padding-top: 10px;
+		line-height: 30px;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+
+	.dzpgz span {
+		position: absolute;
+		color: #fff;
+		left: 18%;
+		background: #3a9d5b;
+		top: -10px;
+		font-weight: bold;
+		padding: 0 8%;
+	}
+
+	.rotatebox {
+		background: rgba(0, 0, 0, 0) url("dazhanpan_files/bg_rotate.png") no-repeat scroll 0 0 / cover;
+		overflow: hidden;
+		position: relative;
+	}
+
+	#banner .turnplate img.pointer {
+		position: absolute;
+		width: 32.5%;
+		left: 32.6%;
+		top: 20%;
+	}
+
+	#banner .turnplate img.item {
+		width: 225px;
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+
+	#banner .turnplate canvas.item {
+		width: 92%;
+		margin-left: 5px;
+		margin-top: 6px;
+	}
+
+	.turnplate {
+		min-height: 380px
+	}
+
+	.dzpgz p {
+		color: #fff;
+		font-size: 14px;
+	}
+
+	@media screen and (width:360px) {
+		.turnplate {
+			min-height: 360px
+		}
+	}
+
+	@media screen and (min-width:375px) and (max-width:413px) {
+		body {
+			font-size: 18px;
+		}
+		.turnplate {
+			min-height: 380px
+		}
+		#banner .turnplate canvas.item {
+			width: 93%;
+			margin-left: 4px;
+			margin-top: 5px;
+		}
+		#banner .turnplate img.item {
+			width: 83%;
+			margin-left: 18px;
+			margin-top: 18px;
+		}
+		.wbPopCenter_txt1 {
+			font-size: 20px;
+			padding-top: 10px;
+			line-height: 30px;
+		}
+		.dzpgz span {
+			position: absolute;
+			color: #fff;
+			left: 30%;
+			background: #3a9d5b;
+			top: -15px;
+		}
+		.dzpgz p {
+			color: #fff;
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (min-width:414px) and (max-width:640px) {
+		body {
+			font-size: 18px;
+		}
+		.turnplate {
+			min-height: 400px
+		}
+		#banner .turnplate canvas.item {
+			width: 93%;
+			margin-left: 7px;
+			margin-top: 8px;
+		}
+		#banner .turnplate img.item {
+			width: 83%;
+			margin-left: 19px;
+			margin-top: 19px;
+		}
+		.wbPopCenter_txt1 {
+			font-size: 20px;
+			padding-top: 10px;
+			line-height: 30px;
+		}
+		.dzpgz span {
+			position: absolute;
+			color: #fff;
+			left: 30%;
+			background: #3a9d5b;
+			top: -15px;
+		}
+		.dzpgz p {
+			color: #fff;
+			font-size: 14px;
+		}
+	}
+
+	.gift {
+		position: absolute;
+		z-index: 10;
+		bottom: 0%;
+		overflow: hidden;
+		left: 20%;
+	}
+
+	.gift img {
+		width: 60%
+	}
+
+	.dzpgz {
+		border-top: 1px solid #53b373;
+		position: relative;
+		width: 90%;
+		margin: 0px auto;
+	}
+
+	.dzpgz span {
+		position: absolute;
+		color: #fff;
+		left: 30%;
+		top: -10px;
+	}
+
+	.gz p {
+		line-height: 23px
+	}
+
+	.gz p i {
+		line-height: 16px;
+		margin-top: 3px;
+		width: 16px;
+		border-radius: 50%;
+		background: #fff;
+		text-align: center;
+		float: left;
+		color: #53b373;
+	}
+</style>
+
+<body>
+
+
+
+	<!--没中奖-->
+	<div class="wbPop noprize">
+		<div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+		<div class="space-20"></div>
+		<div class="wbPopCenter_txt3 wbBox" style="width:100%"><em>今天木有中奖哎</em>
+			<br />分享活动给好友，希望明天会有好运气</div>
+
+		<div class="space-30"></div>
+		<div class="wbPopCenter share">
+			<a href="###"><img src="images/share.png"></a>
+		</div>
+
+	</div>
+
+	<div class="wbPop noprize2">
+		<div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+		<div class="space-20"></div>
+		<div class="wbPopCenter_txt3 wbBox" style="width:100%"><em>好可惜 没有抽中呢</em>
+			<br />再接再厉</div>
+
+		<div class="space-30"></div>
+		<div class="space-20"></div>
+		<div class="wbPopCenter share mc_cls" style=" position:static;">
+			<a href="###"><img src="images/cjagain.png"></a>
+		</div>
+
+
+	</div>
+
+
+	<!--中奖实物-->
+
+	<div class="wbPop prizesw">
+		<div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+
+		<div class="wbPopCenter_txt3 wbBox" style="width:100%">
+			<p class="cls1">哎呦，不错哦</p>
+			<p class="cls2">获得的奖品为
+				<br /><span>XXXX</span></i>
+			</p>
+			<p class="cls3">请保持通讯畅通，
+				<br /> 工作人员将在5个工作日内联系您~</p>
+		</div>
+
+		<div class="space-30"></div>
+		<div class="wbPopCenter share">
+			<a href="###"><img src="images/share.png"></a>
+		</div>
+	</div>
+
+	<!--中奖虚拟-->
+
+	<div class="wbPop prizexn">
+		<div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+
+		<div class="wbPopCenter_txt3 wbBox" style="width:100%">
+			<p class="cls1">哎呦，不错哦</p>
+			<p class="cls2">获得的奖品为
+				<br /><span>XXXX礼包</span></i>
+			</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">激活码为：</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">领取方式：</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">（1）下载游戏：xxxxxxxx</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">（2）xxxxxxxxxxxxxxxxx</p>
+		</div>
+
+
+		<div class="space-30"></div>
+		<div class="wbPopCenter share">
+			<a href="###"><img src="images/share.png"></a>
+		</div>
+
+	</div>
+
+	<!--没中奖-->
+	<div class="wbPop noprize_2">
+		<div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+		<div class="space-20"></div>
+		<div class="wbPopCenter_txt3 wbBox" style="width:100%"><em>今天木有中奖哎</em>
+			<br />分享活动给好友，希望明天会有好运气</div>
+
+		<div class="space-30"></div>
+		<div class="wbPopCenter share">
+			<a href="###"><img src="images/share.png"></a>
+		</div>
+		<p class="tc" style="font-size:13px;margin-top:15px;">(微信分享时,点击右上角的“...”内分享功能)</p>
+
+	</div>
+
+
+	<!--中奖实物-->
+
+	<div class="wbPop prizesw_2">
+		<div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+
+		<div class="wbPopCenter_txt3 wbBox" style="width:100%">
+			<p class="cls1">哎呦，不错哦</p>
+			<p class="cls2">获得的奖品为
+				<br /><span>XXXX</span></i>
+			</p>
+			<p class="cls3">请保持通讯畅通，
+				<br /> 工作人员将在5个工作日内联系您~</p>
+		</div>
+
+		<div class="space-30"></div>
+		<div class="wbPopCenter share">
+			<a href="###"><img src="images/share.png"></a>
+		</div>
+		<p class="tc" style="font-size:13px;margin-top:15px;">(微信分享时,点击右上角的“...”内分享功能)</p>
+	</div>
+
+	<!--中奖虚拟-->
+
+	<div class="wbPop prizexn_2">
+		<div class="mc_cls"><img src="images/cls.png" width="25" height="25"></div>
+
+		<div class="wbPopCenter_txt3 wbBox" style="width:100%">
+			<p class="cls1">哎呦，不错哦</p>
+			<p class="cls2">获得的奖品为
+				<br /><span>XXXX礼包</span></i>
+			</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">激活码为：</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">领取方式：</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">（1）下载游戏：xxxxxxxx</p>
+			<p class="cls3" style="text-align:left;padding-left:10%;">（2）xxxxxxxxxxxxxxxxx</p>
+		</div>
+
+
+		<div class="space-30"></div>
+		<div class="wbPopCenter share">
+			<a href="###"><img src="images/share.png"></a>
+		</div>
+		<p class="tc" style="font-size:13px;margin-top:15px;">(微信分享时,点击右上角的“...”内分享功能)</p>
+
+	</div>
+
+	<div class="bg">
+		<div class="mengceng" id="mengceng"></div>
+		<div class="content">
+			<br>
+			<br>
+			<div class="wbPopCenter"><img src="images/wb1.png"></div>
+			<div class="wbPopCenter_txt1 wbBox">亲,您今天还有 <font color="cfee900">1</font> 次机会</div>
+			<div id="canvas_img">
+				<img src="images/mp.png" id="shan-img" style="display:none;">
+				<img src="dazhanpan_files/2.png" id="sorry-img" style="display:none;">
+				<img src="images/tv.png" id="tv-img" style="display:none;">
+				<img src="images/game.png" id="game-img" style="display:none;">
+				<img src="images/letv.png" id="letv-img" style="display:none;">
+				<img src="images/mp.png" id="cdb-img" style="display:none;">
+				<img src="images/kg.png" id="kg-img" style="display:none;">
+				<img src="images/YK.png" id="YK-img" style="display:none;">
+			</div>
+			<div id="banner">
+
+
+				<div class="rotatebox" style="width: 272px; height: 285px;background:url('images/bg_rotate.png');
+	background-size:100% 100%; margin:0px auto">
+					<div class="gift"><img src="images/gift.png"></div>
+					<div class="turnplate">
+						<!--<canvas style="transform: rotate(36deg);" class="item" id="wheelcanvas" width="422px" height="422px"></canvas>-->
+						<img src="images/dzp.png" style="transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);-o-transform: rotate(45d6g);" class="item" id="wheelcanvas">
+
+
+						<img class="pointer" src="images/start.png" style="-webkit-tap-highlight-color:rgba(0,0,0,0);" />
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="dzpgz"><span>	活动规则 </span>
+			<br>
+			<div class='gz'>
+				<p><i>1</i>&nbsp;活动时间：2016年3月29日--2016年4月12日</p>
+				<p><i>2</i>&nbsp;每个联通手机号码活动期间每天有1次抽奖机会</p>
+				<!-- <p><i>3</i>&nbsp;虚拟奖品将发送短信告知中奖者礼包码及领取方式（部分虚拟奖品有使用期限，请在有效期内及时使用）</p>
+				<p style="padding-left:16px;">&nbsp;实物奖品将在1月5日前免费寄送给中奖者</p> -->
+				<p><i>3</i>&nbsp;活动奖品为：(待补充)</p>
+				<p>&nbsp;您可以点击"<a href="zjxxcx_ehy.html" style="color: #fee900;text-decoration: underline;">中奖信息查询</a>"查看奖品详情及使用方式</p>
+				<p>&nbsp</p>
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div align="center" style="line-height:30px;">
+		<p id="noprize" onClick="openMc(this.id)">没中奖</p>
+		<p id="noprize2" onClick="openMc(this.id)">没中奖2</p>
+		<p id="prizesw" onClick="openMc(this.id)">中奖实物</p>
+		<p id="prizexn" onClick="openMc(this.id)">中奖虚拟</p>
+		<p id="noprize_2" onClick="openMc(this.id)">没中奖（微信）</p>
+		<p id="prizesw_2" onClick="openMc(this.id)">中奖实物（微信）</p>
+		<p id="prizexn_2" onClick="openMc(this.id)">中奖虚拟（微信）</p>
+		<p><a href="ycqk.html" style="color:#fff">中奖异常情况</a></p>
+		<p><a href="ycym.html" style="color:#fff">异常页面</a></p>
+	</div>
+	</div>
+</body>
+
+</html>

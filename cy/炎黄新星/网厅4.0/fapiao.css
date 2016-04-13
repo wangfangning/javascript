@@ -1,0 +1,193 @@
+h3.title.new {
+  border: none;
+}
+.receipt .dd .reLeft {
+  top: 0;
+  left: 30px;
+}
+.receipt .dd p {
+  line-height: 20px;
+  margin: 6px 0 0;
+}
+.receipt .dd .allowDown {
+  width: 65px;
+  text-align: center;
+}
+h3.title.new {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+.fpcx {
+  margin-left: 10px;
+}
+.fpcx h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.fpcx .btnn {
+  text-align: right;
+  margin-bottom: 20px;
+  position: relative;
+}
+.qxs {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.fpcx .btnn a {
+  display: inline-block;
+  margin-right: 60px;
+  padding: 5px 25px;
+  background: #fe7f05;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #797979;
+  width: 100px;
+  text-align: center;
+}
+.fpcx .btnn a:hover, .fpcx .btnn a:focus {
+  text-decoration: none;
+}
+.fptype span {
+  padding: 6px 42px;
+  border: 1px solid #00b494;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: -5px;
+  display: inline-block;
+}
+.receipt .dd {
+  width: 450px;
+  background: url("http://m2.img.10010.com:90/e4/images/zhangbg.png") 300px 5px no-repeat;
+margin: 10px 0 0 10px;
+}
+.focu {
+  background: #00b494;
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+.slimScrollDiv {
+  height: auto!important;
+}
+.dd {
+  position: relative;
+}
+.dd img {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 5px;
+}
+.btnn i {
+  font-style: normal;
+  margin-left: 10px;
+}
+.banliyemian span {
+  display: inline-block;
+  font-size: 14px;
+  padding: 2px 5px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+.xiabx {
+  border-bottom: 2px solid #f27a29;
+}
+.banliyemian {
+  border-bottom: 1px solid #dddddd;
+}
+.queren h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.queren h1 span {
+  display: inline-block;
+  height: 10px;
+  border-left: 3px solid #1ab394;
+  margin-right: 10px;
+}
+ul input, ul select {
+  width: 220px;
+  padding: 0;
+  padding: 5px 0;
+  font-size: 16px;
+}
+ul li i {
+  color: #ef646a;
+  font-size: 16px;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+.queren ul li span {
+  display: inline-block;
+  width: 120px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 600;
+}
+.queren ul {
+  text-align: center;
+  margin-top: 60px;
+}
+.queren ul li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.queren ul input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding-left: 5px;
+}
+.queren .rec_btn {
+  width: 60%;
+}
+.xiayibubtn,.ecqrbtn {
+  text-align: center;
+  margin-top: 50px;
+}
+.ecqr,.banlijieguo{
+font-size: 16px;
+}
+.erciqueern h1{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.ecqr{
+  margin-top: 40px;
+  margin-left: 60px;
+}
+.ecqrbtn{
+  text-align: center;
+}
+.ecqrbtn .rec_btn{
+  width: 40%;
+}
+.banlijieguo h1{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.banlijieguo{
+  width: 350px;
+  margin: auto;
+  margin-top: 80px
+}
+.banlijieguo h1 img{
+  margin-right: 10px;
+}
+.jy,.kj{
+  width: 88%;
+  margin-left: 10px;
+}
+.receipt .dd .allowDown{
+  background: #d4d4d4;
+}
+.kj{
+  background: #d4d4d4;
+}
+.receipt{
+  margin-left: 0;
+}

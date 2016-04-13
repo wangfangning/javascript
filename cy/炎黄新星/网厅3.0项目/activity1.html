@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>话费充值 抽奖赢好礼！</title>
+  <link type="text/css" rel="stylesheet" href="css/base.css">
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/base.js"></script>
+
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+
+    body {
+      font-family: '微软雅黑';
+      background: #fff3dc;
+      min-width: 980px;
+    }
+
+    .main {
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .clear {
+      clear: both;
+      padding-bottom: 80px;
+    }
+
+    div.maincontent .hdimg1 {
+      width: 800px;
+      display: block;
+      margin: auto;
+      position: absolute;
+    }
+
+    .jzxs_1 {
+      width: 800px;
+      margin: auto;
+      height:
+    }
+
+    .bg_ban {
+      /*background: url("images/beijing2.png");*/
+      /*background-size: cover;
+      background-position: center;*/
+      width: 100%;
+      max-width: 2500px;
+      height: 230px
+    }
+
+    .section1 {
+      width: 48%;
+      float: left;
+    }
+
+    .tishi {
+      text-align: center;
+      font-size: 25px;
+      color: #9a4d1f;
+    }
+
+    .jihuicishu {
+      font-size: 35px;
+      color: #ff821c;
+    }
+
+    .hdimg2 {
+      display: block;
+      margin: auto!important;
+      float: none!important;
+    }
+
+    .button1 {
+      border: none;
+      outline: none;
+      background: none;
+    }
+
+    .button1:hover {
+      cursor: pointer;
+    }
+
+    .jiangpin {
+      float: left;
+      width: 33.33%;
+    }
+
+    .shezhi {
+      font-size: 18px;
+      color: #9a4d1f;
+      margin: 20px 0;
+    }
+
+    .shezhi span {
+      height: 10px;
+      border-left: 6px solid #9a4d1f;
+      /*margin-left: -20px;*/
+    }
+
+    .zhongjiang_chaxun {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      color: #9a4d1f;
+      width: 150px;
+      font-size: 16px;
+    }
+
+    .zhongjiang_chaxun:active {
+      background: none;
+    }
+
+    .jiangpinshezhi {
+      height: 240px;
+    }
+
+    .jiangpindengji {
+      font-size: 18px;
+      color: #9a4d1f;
+      margin-top: 10px;
+    }
+
+    .jiangpinjiazhi {
+      font-size: 16px;
+      color: #9a4d1f;
+    }
+
+    .jiangpinshiti {
+      font-size: 14px;
+      color: #fb8b00;
+    }
+
+    .guizejieshao {
+      color: #9a4d1f;
+    }
+    /*弹层样式*/
+    /*小弹层*/
+
+    .transact_tc_box {
+      width: 350px;
+      height: 250px;
+      border-radius: 15px;
+      border: 6px solid #f6c044;
+      background: #fff4dc;
+      overflow: visible;
+      ;
+    }
+
+    .transact_tc_max_box {
+      width: 450px;
+      height: 395px;
+      border-radius: 15px;
+      border: 1px solid #f6c044;
+      background: #fff4dc;
+    }
+
+    .transact_sure_list {
+      margin: auto;
+      text-align: center;
+    }
+
+    .transact_sure dd {
+      width: auto;
+      float: none;
+    }
+
+    .submit_btn {
+      margin-left: auto;
+    }
+
+    .submit_btn input {
+      display: block;
+      margin: auto;
+    }
+
+    dd .tancengtishi {
+      color: #90572c!important;
+      font-size: 16px!important;
+      margin: auto 30px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-top: 25px;
+      margin-bottom: 40px;
+      text-align: left;
+       word-wrap: break-word;
+    }
+
+    .transact_success {
+      padding: inherit;
+    }
+
+    .transact_tc_t,
+    .transact_success dd,
+    .transact_success,
+    .transact_tc_c,
+    .transact_sure {
+      width: auto;
+      border: none;
+    }
+
+    .biao_ti {
+      color: #90572c;
+      font-size: 16px;
+    }
+
+    .tancen_xs {
+      display: block;
+      z-index: 9999999;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      margin-top: -151px;
+      margin-left: -181px;
+    }
+
+    .transact_tc_box,
+    .transact_tc_max_box {
+      display: none;
+    }
+    /*大弹层*/
+
+    .transact_tc_max_box {
+      border: none;
+      margin-top: -200px;
+    }
+
+    .close_t dd {
+      margin: 0;
+      margin-top: -10px;
+    }
+
+    .close_t dd a {
+      background: url("images/guanbi.png");
+      width: 40px;
+      height: 50px;
+    }
+
+    .transact_tc_min_box .close_t dd a {
+      background: url("images/xguanbi.png");
+      width: 45px;
+      height: 45px;
+    }
+
+    .shibai {
+      margin-top: 50px;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background: none;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    .csjp {
+      color: #90572c;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .csjp a {
+      color: #fdaa79;
+    }
+
+    dd {
+      margin-top: 10px;
+    }
+
+    .tancengtishi2 {
+      line-height: 2;
+      color: #90572c!important;
+      font-size: 16px!important;
+      margin: auto 50px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .sure_btn {
+      float: none;
+      background: none;
+      margin-right: auto;
+    }
+
+    img:active {
+      border: none;
+      outline: none;
+    }
+
+    .jpjs {
+      width: 225px;
+      text-align: left;
+      font-size: 16px;
+      margin-top: 10px;
+      color: #90572c;
+      margin-left: 80px;
+    }
+
+    .post span {
+      width: 100px;
+    }
+
+    ul input,
+    ul textarea {
+      width: 200px;
+      border: 1px solid #fff;
+      outline: none;
+      padding-left: 5px;
+    }
+    ul  p,
+    ul  p {
+      color: #fff3dc;
+    }
+    ul  .cuowu_tishi  input,ul  .cuowu_tishi  textarea{
+      border: 1px solid #ed6835;
+    }
+    ul  .cuowu_tishi p{
+      color: #ed6835;
+    }
+
+
+
+    li span {
+      width: 70px;
+      display: inline-block;
+      text-align: right;
+      vertical-align: middle;
+    }
+
+    button:active,button:focus {
+      outline: none!important;
+      border: none!important;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    form ul {
+      color: #90572c;
+    }
+
+    .anjz {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!--流量半年包弹层-->
+  <div class="transact_tc_box transact_tc_min_box" id="arry2">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd style="width: 50px;height: 50px;position: absolute;
+    top: -10px;
+    right: -25px;">
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <dl class="transact_success" style="margin-top: 10px;margin-bottom: 40px;">
+
+        <dd>
+          <p class="tancengtishi" style="margin:0 30px;">真的真的不想对您说：差点中奖……亲，要不去洗个手先再来抽？</p>
+
+        </dd>
+      </dl>
+
+      <div class="submit_btn" style="text-align:center;">
+        <img src="images/xixuchoujiang.png" alt="" class="sure_btns2" style='cursor: pointer;' />
+      </div>
+    </div>
+  </div>
+  <div class="transact_tc_box transact_tc_min_box" id="arry">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd style="width: 50px;height: 50px;position: absolute;
+    top: -10px;
+    right: -25px;">
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <div class="space-30"></div>
+      <div class="transact_sure_list">
+
+        <div class="space-10"></div>
+        <dl class="transact_sure">
+
+          <dd>
+            <p class="tancengtishi" style="text-align:center;">
+              差点中奖，好遗憾……
+              <br>不要气馁，再充一次接着抽！
+            </p>
+          </dd>
+        </dl>
+
+      </div>
+      <div class="space-30"></div>
+      <div class="anjz">
+
+       <img src="images/quchongzhi.png" class="sure_btn" alt="" width="245" style="width:auto;height:63px;width:234px;" />
+      </div>
+
+    </div>
+  </div>
+
+  <div class="transact_tc_box transact_tc_min_box" id="arry3">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd style="width: 50px;height: 50px;position: absolute;
+    top: -10px;
+    right: -25px;">
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <div class="space-30"></div>
+      <div class="transact_sure_list">
+
+        <div class="space-10"></div>
+        <dl class="transact_sure">
+          <p class="tancengtishi biao_ti">
+            恭喜您抽中XX！
+          </p>
+
+          <dd>
+
+            <p class="tancengtishi" style="margin-bottom:0;">
+              嘻嘻，最近是不是扶老奶奶过马路了？请填写联系地址和电话，工作人员将尽快邮寄给您哦！
+            </p>
+          </dd>
+        </dl>
+
+      </div>
+      <div class="space-30"></div>
+      <div class="anjz">
+
+        <img src="images/tianxiexinxi.png" alt="" width="234px" class="sure_btns3" style='cursor: pointer;' />
+      </div>
+
+    </div>
+  </div>
+  <div class="transact_tc_box transact_tc_max_box" id="arry4">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd>
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <div class="space-30"></div>
+      <div class="transact_sure_list">
+
+        <div class="space-10"></div>
+        <div class="jiangpin_yangshi" style="width:200px;height:95px;margin:auto;">
+          <img src="images/wupinxianshi.png" alt="" width="70px" style="position: absolute;left: 130px;" />
+          <div class="jpjs">
+            <span style="display:inline-block;margin-top:18px;font-size: 16px;">  奖品名称：XXX</span>
+            <br>
+            <span>领取方式：快递到家</span>
+          </div>
+
+
+        </div>
+        <form method="post">
+
+          <ul>
+            <li class="cuowu_tishi">
+              <span style="margin-bottom: 5px;font-size:16px;">姓名:</span>
+              <input type="text" placeholder="请输入您的姓名" style="font-family: '微软雅黑';border-radius:5px;font-size: 13px;padding-left:5px;padding-top:5px;padding-bottom:5px;" />
+              <p style="font-size:13px;margin-left: -18px;padding-top:3px;padding-bottom:3px;" class="zhengze">
+                请输入正确的姓名
+              </p>
+            </li>
+            <li class="cuowu_tishi">
+              <span style="margin-bottom: 5px;font-size:16px;">手机号码:</span>
+              <input type="text" style="font-family: '微软雅黑';border-radius:5px;font-size:13px;padding-left:5px;padding-top:5px;padding-bottom:5px;" class="tishi_hm" placeholder="请输入正确的联系电话" />
+              <p style="font-size:13px;padding-top:3px;padding-bottom:3px;" class="zhengze">
+                请输入正确的联系电话
+              </p>
+            </li>
+
+            <li class="cuowu_tishi">
+              <span style="position:relative;top:-52px;*top:-45px;font-size:16px;">联系地址:</span>
+              <textarea id="bio" name="bio" cols="40" rows="5" class="field-large" style="font-family: '微软雅黑';border-radius: 5px;height: 63px;padding-top:5px;font-size:13px;padding-left:5px;"></textarea>
+              <p style="font-size:13px;padding-top:3px;padding-bottom:3px;" class="zhengze">
+                请输入正确的联系地址
+              </p>
+            </li>
+          </ul>
+
+        </form>
+
+      </div>
+      <div class="space-30"></div>
+      <div class="anjz" style="margin-top: 5px;">
+        <img src="images/tijiao.png" alt="" class="sure_btns4" style='cursor:pointer;' />
+        <div class="space_10"></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="transact_tc_box transact_tc_max_box" id="arry5">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd>
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <div class="space-30"></div>
+      <div class="transact_sure_list">
+
+        <div class="space-10"></div>
+        <dl class="transact_sure">
+          <p style="color:#9a4d1f;font-size:18px">
+            地址确认
+          </p>
+          <dd>
+            <p class="tancengtishi">
+              尊敬的用户，送货地址一旦确认将不可修改，是否确定如下配送信息正确？
+            </p>
+            <p class="tancengtishi">
+              &nbsp;&nbsp;&nbsp;收件人：张飞
+              <br> 手机号码：186 1056 5019
+              <br> 收货地址：北京市xx区天通苑西一区xx号楼xx室
+            </p>
+          </dd>
+        </dl>
+
+      </div>
+      <div class="space-30"></div>
+      <div style="text-align:center;">
+
+        <!-- <button type="button" name="button" class="sure_btns5" style="display:inline-block;width:180px;"> -->
+          <img src="images/quxiao.png" alt="" width='160' style='display:inline-block;cursor:pointer;' class="sure_btns5"/><!-- </button> -->
+
+        <!-- <button type="button" name="button" class="sure_btns5" style="display:inline-block;width:180px;"> -->
+          <img src="images/tijiao.png" alt=""  width='160' class="sure_btns5" style='display:inline-block;cursor:pointer;' /><!-- </button> -->
+      </div>
+
+    </div>
+  </div>
+  <div class="transact_tc_box transact_tc_max_box" id="arry6">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd>
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <div class="space-30"></div>
+      <div class="transact_sure_list">
+
+        <div class="space-10"></div>
+        <div class="">
+          <img src="images/chenggong.png" alt="" />
+          <p style="color:#53b373;">
+            信息提交成功
+          </p>
+        </div>
+        <dl class="transact_sure">
+
+          <dd>
+            <p class="tancengtishi2">
+              尊敬的用户，工作人员将在xx个工作日内为您寄送，请耐心等待。
+            </p>
+            <p class="tancengtishi2">
+              既然运气那么好，再充一次接着抽吧！
+            </p>
+          </dd>
+        </dl>
+
+      </div>
+      <div class="space-30"></div>
+      <div class="anjz">
+
+        <!-- <button type="button" name="button" class="sure_btns6"> --><img src="images/quchongzhi.png" class="sure_btns6" alt="" style="width: 240px;cursor:pointer;" /><!-- </button> -->
+      </div>
+
+      <p class="csjp">
+        您可以点击<a href="/activity_chaxun.html">"中奖信息查询"</a>查看奖品详情
+      </p>
+
+    </div>
+  </div>
+  <div class="transact_tc_box transact_tc_max_box" id="arry7">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd>
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <div class="space-30"></div>
+      <div class="transact_sure_list">
+        <div class="">
+          <img src="images/chenggong.png" alt="" />
+          <p style="color:#53b373;">
+            信息提交成功
+          </p>
+        </div>
+        <div class="space-10"></div>
+        <dl class="transact_sure">
+
+          <dd>
+            <p class="tancengtishi">
+              尊敬的用户，工作人员将在xx个工作日内为您寄送，请耐心等待。
+            </p>
+          </dd>
+        </dl>
+
+      </div>
+      <div class="space-30"></div>
+      <div class="anjz">
+        <!-- <button type="button" name="button" class="sure_btns7"> --><img src="images/xixuchoujiang.png" class="sure_btns7" alt="" style='cursor:pointer;' /><!-- </button> -->
+
+      </div>
+      <p class="csjp">
+        您可以点击<a href="/activity_chaxun.html">"中奖信息查询"</a>查看奖品详情
+      </p>
+    </div>
+  </div>
+  <div class="transact_tc_box transact_tc_max_box" id="arry8">
+    <div class="transact_tc_t">
+      <dl class="close_t">
+
+        <dd>
+          <a href="javascript:;" title="关闭" class="closeTransact"></a>
+        </dd>
+      </dl>
+    </div>
+    <div class="transact_tc_c">
+      <div class="space-30"></div>
+      <div class="transact_sure_list">
+        <div class="shibai">
+          <img src="images/shibai.png" alt="" />
+          <p style="color:#e97c61;">
+            信息提交失败
+          </p>
+        </div>
+        <div class="space-10"></div>
+        <dl class="transact_sure">
+
+          <dd>
+
+          </dd>
+        </dl>
+
+      </div>
+      <div class="space-30"></div>
+      <div class="anjz">
+        <!-- <button type="button" name="button" class="closeTransact" style="border: none;
+        margin-top: 50px;outline: none;"> --><img src="images/chongxintianxie.png" class="closeTransact" style='cursor:pointer;margin-top: 50px;'  alt="" /><!-- </button> -->
+
+      </div>
+
+    </div>
+  </div>
+  <!-- 主体内容 -->
+  <div class="maincontent">
+    <div class="jzxs_1">
+
+      <img src="images/beijing1.png" class="hdimg1" alt="" />
+
+    </div>
+    <img src="images/beijing2.png" alt="" class="bg_ban" />
+
+    <div class="main">
+      <div class="section1" style='width:47%;'>
+        <p class="tishi">
+          亲，您还有<span class="jihuicishu">3</span>次机会
+        </p>
+        <img src="images/huodong7.jpg" class="hdimg2" alt="" />
+        <div class="transact_btn" style="margin-left:0;text-align:center;outline:none;">
+          <img src="images/huodong3.png" alt="" class="button1" id="isread-text" />
+        </div>
+        <a href="/activity_chaxun.html" class="zhongjiang_chaxun">点击查询中奖信息></a>
+      </div>
+      <div class="section1">
+        <div class="jiangpinshezhi">
+          <p class="shezhi">
+            <span>&nbsp;</span>&nbsp;&nbsp;奖品设置:
+          </p>
+          <div style='padding-left:20px;'>
+            <div class="jiangpin">
+              <img src="images/huawei7.png" alt="" />
+              <!-- <p class="jiangpindengji">
+                一等奖
+              </p>
+              <p class="jiangpinjiazhi">
+                价值4199元
+              </p>
+              <p class="jiangpinshiti">
+                Mate S 臻享版(64G)</br>(3台)
+              </p> -->
+            </div>
+
+            <!-- <div class="jiangpin">
+              <img src="images/huodong5.jpg" alt="" />
+              <p class="jiangpindengji">
+                二等奖
+              </p>
+              <p class="jiangpinjiazhi">
+                价值99元
+              </p>
+              <p class="jiangpinshiti">
+                华为Colorphon 5 </br>移动电源(200个)
+              </p>
+            </div> -->
+
+            <!-- <div class="jiangpin">
+              <img src="images/huodong6.jpg" alt="" />
+              <p class="jiangpindengji">
+                三等奖
+              </p>
+              <p class="jiangpinjiazhi">
+                价值50元
+              </p>
+              <p class="jiangpinshiti">
+                华为一体线控自拍杆</br>(300个)
+              </p>
+            </div> -->
+
+          </div>
+        </div>
+        <div class='clr'></div>
+        <div class='space_10'></div>
+          <div class="huodongguize">
+            <p class="shezhi guize">
+              <span>&nbsp;</span>&nbsp;&nbsp;活动规则:
+            </p>
+            <div style='padding-left:20px;'>
+              <p class="guizejieshao">
+                活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则
+              </p>
+              <p class="guizejieshao">
+                活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则
+              </p>
+              <p class="guizejieshao">
+                活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则活动规则
+              </p>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+  <div class="clear">
+
+  </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+  (function() {
+    jqPopup = function(popupBtn, popupCon) {
+      $(popupBtn).click(function() {
+        //cleanUp();
+        $(popupCon).fadeIn().siblings('.transact_tc_box').hide();
+      });
+    };
+    jqPopup('', '#arry');
+    jqPopup('.sure_btn', '#arry2');
+
+    $('.closeTransact,#layer').click(function() {
+      //cleanUp();
+      $(this).parents('.transact_tc_box').fadeOut();
+      $('div#layer').remove();
+    });
+  })();
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".sure_btns2").click(function() {
+      $("#arry3").addClass("tancen_xs").show();
+      $("#arry2").hide();
+    });
+    $(".sure_btns3").click(function() {
+      $("#arry4").addClass("tancen_xs").show();
+      $("#arry3").hide();
+    });
+    $(".sure_btns4").click(function() {
+      $("#arry5").addClass("tancen_xs").show();
+      $("#arry4").hide();
+    });
+    $(".sure_btns5").click(function() {
+      $("#arry6").addClass("tancen_xs").show();
+      $("#arry5").hide();
+    });
+    $(".sure_btns6").click(function() {
+      $("#arry7").addClass("tancen_xs").show();
+      $("#arry6").hide();
+    });
+    $(".sure_btns7").click(function() {
+      $("#arry8").addClass("tancen_xs").show();
+      $("#arry7").hide();
+    });
+    // $(".tishi_hm").click(function() {
+    //   $(this).css("margin-bottom", "0");
+    //   $(".zhengze").css("color", "#ed6835");
+    //
+    // });
+    // $(" :input:not(.tishi_hm)").click(function() {
+    //   $(".zhengze").css("color", "#fff3dc");
+    //
+    // });
+  });
+</script>
