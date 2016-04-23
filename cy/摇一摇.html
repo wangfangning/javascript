@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var SHAKE_THRESHOLD = 800;
+    var last_update = 0;
+    var x = y = z = last_x = last_y = last_z = 0;
+
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+    } else {
+        alert('本设备不支持devicemotion事件');
+    }
+
+    function deviceMotionHandler(eventData) {
+        var acceleration = eventData.accelerationIncludingGravity;
+        var curTime = new Date().getTime();
+
+        if ((curTime - last_update) > 100) {
+            var diffTime = curTime - last_update;
+            last_update = curTime;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+            var status = document.getElementById("status");
+            var dis =$("#meng").css("display");
+            if (speed > SHAKE_THRESHOLD && dis=='none' ) {
+                doResult();
+            }
+            last_x = x;
+            last_y = y;
+            last_z = z;
+        }
+    }
+
+    function doResult() {
+
+        setTimeout(function(){
+          document.getElementById("getprize3").style.display="block";
+          document.getElementById("meng").style.display="block";
+        },2000);
+        document.getElementById("audio").play();
+        setTimeout(function(){
+            document.getElementById("audio").pause();
+        },2000);}
+    </script>
+  </body>
+</html>
