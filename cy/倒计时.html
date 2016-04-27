@@ -7,31 +7,44 @@
   <body>
     <script type="text/javascript">
     var seconds = 3; //记数时间
-    var handle; //事件柄
-    var oSpan = document.getElementById("time_lll");
-    var abc = $("#getprize4").css("display");
-    var oSpan = document.getElementById("time_lll");
-    //开始记数器
-    function startTimer() {
-      handle = setInterval("timer()", 1000);
-    }
+var handle; //事件柄
+//var oSpan = document.getElementById("time_lll");
+var abc = $("#getprize4").css("display");
+var oSpan = document.getElementById("time_lll");
+//开始记数器
+function startTimer() {
+  handle = setInterval("timer()", 1000);
+}
 
-    //结束记数器
-    function stopTimer() {
-      clearInterval(handle);
-      var seconds = document.getElementById('time_lll');
-      oSpan.innerHTML = "";
-    }
-
-    //计数器
-    function timer() {
-      seconds -= 1;
-      oSpan.innerHTML = seconds;
-      if (seconds == 0) {
-        stopTimer();
-         $(".disa").removeAttr('disabled').removeClass('col').text('换个姿势再接再励吧');
-      }
-    }
+//结束记数器
+function stopTimer() {
+  clearInterval(handle);
+  var oSpan = document.getElementById('time_lll');
+  oSpan.innerHTML = "0";
+}
+$('#puple5').bind('click', function() {
+  $('#getprize4').show();
+  $('.poubg').show();
+  startTimer();
+})
+//计数器
+function timer() {
+  seconds -= 1;
+  oSpan.innerHTML = seconds;
+  if (seconds == 0) {
+    stopTimer();
+     $(".disa").removeAttr('disabled').removeClass('col').text('换个姿势再接再励吧');
+  }
+}
+$('.closewindow').bind('click',function(){
+  //数据还原
+  seconds = 3;
+  $(".disa").attr('disabled','disabled');
+  var text = '换个姿势再接再励吧'+'(<span class="time_lll" id="time_lll">'+seconds+'</span>)';
+     $(".disa").addClass('col').html(text);
+     //重新获取
+      oSpan = document.getElementById('time_lll');
+})
     </script>
   </body>
 </html>
