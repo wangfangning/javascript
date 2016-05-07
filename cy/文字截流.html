@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var _self = this;
+      _self.width = 640; // 璁剧疆榛樿鏈€澶у搴�
+      _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+      _self.widthProportion = function() {
+        var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+        return p > 1 ? 1 : p < 0.5 ? 0.5 : p;
+      };
+      _self.changePage = function() {
+        document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+      }
+      _self.changePage();
+      window.addEventListener('resize', function() {
+        _self.changePage();
+      }, false);
+    </script>
+    <style media="screen">
+      p{
+
+        font-size: 16px;
+        width: 200px;
+        /*text-overflow: ellipsis;;
+        overflow:  hidden;*/
+
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo">
+    数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据数据
+    </p>
+    <script>
+// js无法直接通过class获取对象，必须自己写一个方法,这样效率会非常低，原生js里最好用id获取，
+// 直接用id获取domo对象
+var oBox=document.getElementById('demo');
+// slice() 方法可从已有的数组中返回选定的元素。
+// 您可使用负值从数组的尾部选取元素。
+// 如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素。
+// 此处需要根据需求自行修改slice()的值，以达到要显示的内容
+var demoHtml = oBox.innerHTML.substr(0,40)+'...';
+//alert(oBox.innerHTML.slice(0,20))
+// 填充至指定位置
+oBox.innerHTML = demoHtml;
+alert(oBox.innerHTML.length)
+</script>
+  </body>
+</html>
