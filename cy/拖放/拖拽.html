@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1,#div2{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+    </style>
+    <script>
+       /* window.onload=function(){
+            var oDiv1=null;
+            var disX=0;
+            var disY=0;
+
+                init();
+        }
+        function init(){
+            oDiv1=document.getElementById('div1');
+            oDiv1.onmousedown=fnDown;
+        }
+        function fnDown(ev){
+            var ev=ev||window.event;
+            disX=ev.clientX-oDiv1.offsetLeft;
+            disY=ev.clientY-oDiv1.offsetTop;
+            document.onmousemove=fnMove;
+            document.onmouseup=fnUp;
+            return false;
+        }
+        function fnMove(ev){
+            var ev=ev||window.event;
+            oDiv1.style.left=ev.clientX-disX+'px';
+            oDiv1.style.top=ev.clientY-disY+'px';
+
+        }
+        function fnUp(){
+            document.onmousemove=null;
+            document.onmouseup=null;
+        }*/
+       window.onload = function(){
+
+           var d1 = new Drag('div1');
+           d1.init();
+           var d2 = new Drag('div2');
+           d2.init();
+
+       };
+
+       function Drag(id){
+           this.oDiv = document.getElementById(id);
+           this.disX = 0;
+           this.disY = 0;
+       }
+       Drag.prototype.init = function(){
+
+           var This = this;
+
+           this.oDiv.onmousedown = function(ev){
+               var ev = ev || window.event;
+               This.fnDown(ev);
+               return false;
+           };
+       };
+       Drag.prototype.fnDown = function(ev){
+
+           var This = this;
+           this.disX = ev.clientX - this.oDiv.offsetLeft;
+           this.disY = ev.clientY - this.oDiv.offsetTop;
+
+           document.onmousemove = function(ev){
+               var ev = ev || window.event;
+               This.fnMove(ev);
+           };
+           document.onmouseup = this.fnUp;
+
+       };
+       Drag.prototype.fnMove = function(ev){
+           this.oDiv.style.left = ev.clientX - this.disX + 'px';
+           this.oDiv.style.top = ev.clientY - this.disY + 'px';
+       };
+       Drag.prototype.fnUp = function(){
+           document.onmousemove = null;
+           document.onmouseup = null;
+       };
+
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>
