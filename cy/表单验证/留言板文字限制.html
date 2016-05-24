@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <textarea id="txtF_Content" class="textareaT" MaxLength="500" onkeydown="countChar('txtF_Content','counter',500);"
+    onkeyup="countChar('txtF_Content','counter',500);"></textarea>
+    <span>您还可以输入</span><span SPAN id="counter" style="COLOR:red;FONT-WEIGHT:bold">0</span>/500
+    <script type="text/javascript">
+    function countChar(textareaID,spanID,maxNum)
+    {
+    //得到输入的字符的长度
+    var NowNum = document.getElementById(textareaID).value.length;
+    //判断输入的长度是否超过规定的长度
+    if(NowNum>maxNum)
+    {
+    //如果超过就截取规定长度的内容
+    document.getElementById(textareaID).value = document.getElementById(textareaID).value.substring(0,maxNum);
+    }
+    else
+    {
+    //得到当前的输入长度并且显示在页面上
+    document.getElementById(spanID).innerHTML = NowNum;
+    }
+    }
+    //得到当前的输入长度并且显示在页面上
+    function SetLength(textareaID,spanID)
+    {
+    var NowNum = document.getElementById(textareaID).value.length;
+
+    document.getElementById(spanID).innerHTML = NowNum;
+    }
+
+    </script>
+  </body>
+</html>
