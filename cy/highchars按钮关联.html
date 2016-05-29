@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+   <!-- jQuery -->
+<script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+ <!-- Highcharts -->
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<style media="screen">
+.month_xf_r {
+  float: left;
+  width: 302px;
+  margin-left: 20px;
+  height: 192px;
+  display: inline;
+  margin-top: 30px;
+}
+.plans_list_l {
+  height: 12px;
+  position: relative;
+  z-index: 9;
+  width: 240px;
+  background: #fff;
+  cursor: pointer;
+}
+.plans_list_l span {
+  background: url(../images/plans_list_img.jpg) no-repeat;
+  width: 16px;
+  height: 10px;
+  display: block;
+  margin-left: 110px;
+  overflow: hidden;
+}
+.plans_list_c {
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+}
+.plans_list_box {
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.plans_list_r {
+  height: 10px;
+  position: relative;
+  z-index: 9;
+  background: #fff;
+  width: 240px;
+  cursor: pointer;
+}
+.plans_list_r span {
+  background: url(../images/plans_list_img.jpg) no-repeat 0 -10px;
+  width: 16px;
+  height: 10px;
+  display: block;
+  margin-left: 110px;
+}
+.month_xf_list {
+  width: 272px;
+  height: 28px;
+  line-height: 29px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  color: #999;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.month_xf_list p {
+  float: left;
+  padding-left: 42px;
+  width: 134px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.month_xf_list p.infor_img1 {
+  background: url(../images/infor_img1.jpg) no-repeat;
+  height: 29px;
+}
+.month_xf_list p.infor_img2 {
+  background: url(../images/infor_img2.jpg) no-repeat;
+  height: 29px;
+}
+.month_xf_list p.infor_img3 {
+  background: url(../images/infor_img3.jpg) no-repeat;
+  height: 29px;
+}
+.month_xf_list p.infor_img4 {
+  background: url(../images/infor_img4.jpg) no-repeat;
+  height: 29px;
+}
+.month_xf_list p.infor_img5 {
+  background: url(../images/infor_img5.jpg) no-repeat;
+  height: 29px;
+}
+.month_xf_list span {
+  float: right;
+  padding-right: 6px;
+  text-align: right;
+  width: 70px;
+  overflow: hidden;
+}
+.month_xf_list.active {
+  background: #ddd;
+  color: #666;
+  margin-left: 0;
+}
+
+</style>
+  </head>
+  <body>
+    <div class="bt_border">
+    	<p class="mian_pll" style="margin-bottom:20px;">
+    	<span></span>月流量分析
+     </p>
+    	<div class="charts_left FailFather " id="histroyb1" style="height:220px;width:300px"></div>
+
+    	<div class="month_xf_r">
+    			 <div class="plans_list_l" style=" display:none;">
+    						<span></span>
+    			 </div>
+    			 <div class="plans_list_c" id="plansList" Num="0">
+    						<div class="plans_list_box">
+    								 <div class="month_xf_list">
+    										 <p class="infor_img1">套餐内消费套餐内</p>
+    										 <span>152.00</span>
+    								 </div>
+    								 <div class="month_xf_list">
+    										 <p class="infor_img2">流量</p>
+    										 <span>152.00000</span>
+    								 </div>
+    								 <div class="month_xf_list">
+    										 <p class="infor_img3">短信</p>
+    										 <span>152.00</span>
+    								 </div>
+    								 <div class="month_xf_list">
+    										 <p class="infor_img4">彩信</p>
+    										 <span>152.00</span>
+    								 </div>
+    								 <div class="month_xf_list">
+    										 <p class="infor_img5">其它</p>
+    										 <span>152.00</span>
+    								 </div>
+
+    						</div>
+    			 </div>
+    			 <div class="plans_list_r" style=" display:none;">
+    						<span></span>
+    			 </div>
+    	</div>
+    </div>
+    <script type="text/javascript">
+
+    //  饼图
+    $(function () {
+
+     $('#histroyb1').highcharts({
+    	 chart: {
+    		 plotBackgroundColor: null,
+    		 plotBorderWidth: null
+    	 },
+    	 title: {
+    		 text: '¥230.00',
+    		 style: {
+    		 "fontSize":"18px",
+    		 "color":"#f00",
+    		 "fontfamily":"微软雅黑"
+    		 },
+    		 align: 'center',
+    		 verticalAlign: 'middle',
+    		 x: 0,
+    		 y: 10
+    	 },
+    	 tooltip: {
+    		 pointFormat: ': <b>{point.percentage:.1f}%</b>'
+    	 },
+    	 plotOptions: {
+    		 pie: {
+    			 center: ['50%', '50%'],
+    			 dataLabels: {
+    				 enabled: false
+    			 },
+    			 showInLegend: true,
+    				innerSize:'15'
+    		 }
+    	 },
+    	 legend: {
+    		 enabled: false
+    	 },
+    	 credits: {
+        enabled: false
+    },
+    	 series: [{
+    		 type: 'pie',
+    		 name: 'TITLE',
+    		 innerSize: '70%',
+    		 data: [
+    			 { name: '流量', y: 30,color:'#fedd74'},
+    			 { name: '短信', y: 25,color:'#82d8ef'},
+    			 { name: '彩信', y: 15,color:'#f76864'},
+    			 { name: '其它', y: 20,color:'#80bd91'},
+    			 { name: '套餐', y: 10,color:'#fd9fc1'}
+    		 ]
+    	 }]
+     });
+
+    });
+
+    </script>
+    <script type="text/javascript">
+
+    $(function(){
+
+    	$('.plans_list_box').find('.month_xf_list').hover(function() {
+    		$(this).addClass('active').siblings().removeClass('active');
+    		},function(){
+    		$(this).removeClass('active');
+    	});
+    	$('#histroyb1').find('path').bind({
+    		mouseenter:
+    		function(){
+    			var index = $(this).index();
+    			$('.plans_list_box').find('.month_xf_list').eq(index).addClass('active');
+    		},
+    		mouseleave:
+    		function(){
+    			$('.plans_list_box').find('.month_xf_list').removeClass('active');
+    		}
+    	});
+
+    });
+
+    </script>
+  </body>
+</html>
