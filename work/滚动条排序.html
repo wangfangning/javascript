@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta id="viewport" name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<meta name="format-detection" content="telephone=no" />
+<title>手机客户端</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/add.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+</head>
+<style>
+  .datecheck{
+    margin-top: 10px;
+    height: 28px;
+    font-size: 13px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .padTborder{
+    padding-top: 20px;
+  }
+  .bor-B{
+            border-bottom: 1px solid #d4d4d4;
+          }
+          .datestyle{
+              padding-top: 1px;
+              background-color: #fff;
+              position: relative;
+              top: -3px;
+              padding-left: 2px;
+              padding-right: 2px;
+          }
+  .borBedT4{
+    border-bottom: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+  }
+  .outflowtip{
+    font-size: 13px;
+    color: #555555;
+    float: right;
+    margin-top: 3px;
+  }
+  .outflowtip a{
+    color: #fe7f05;
+  }
+  .padB15{
+    padding-bottom: 15px;
+  }
+  .padT10{
+    padding-top: 10px;
+  }
+  .padT15{
+    padding-top: 15px;
+  }
+.pagename{
+  line-height: 150%;
+  font-size: 15px;
+  color: #333333;
+}
+.overflows{
+  font-size: 13px;
+  color: #555555;
+  overflow: hidden;
+}
+.overflows dd span{
+  font-size: 19px;
+}
+.overflows dt span{
+  font-size: 19px;
+}
+.load_4gNew{
+  background: #e2e3e3;
+  height: 4px;
+}
+.load_4gNew div{
+  background: #1ab394;
+  height: 4px;
+  width: 0;
+}
+.warningred{
+  background: #ee555c !important;
+}
+.load_outnew2{
+
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
+.opacitysty{
+  background: #fe7f05;
+  color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+.padB10{
+  padding-bottom: 10px;
+}
+.gapLR{
+  margin-left: 13px;
+  margin-right: 13px;
+}
+.schducebg{
+  background: #fbfbfb;
+}
+.warmtipbor{
+    margin: 0 auto;
+    color: #b0b0b0;
+    line-height: 19px;
+}
+.borT{
+  border-top: 1px solid #d4d4d4;
+}
+#shareNew11{
+    width: 100%;
+    height: 40px;
+    border: 0 none;
+    outline: 0 none;
+    color: #fff;
+    font-size: 18px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    background: url(/images/bg_btn.png) repeat-x 0 0;
+}
+.youneed{
+  font-size: 16px;
+  color: #707070;
+
+}
+.youneed span{
+  font-size: 13px;
+  color: #fe7f05;
+}
+.borderB{
+  border-bottom: 1px solid #d4d4d4;
+}
+.iconborder{
+  width: 48px;
+  height: 60px;
+
+  border:1px solid #d4d4d4;
+  text-align: center;
+  display: table-cell;
+
+ vertical-align:middle;
+}
+.iconborder img{
+    height: 44px;
+}
+.needlist ul li{
+  margin-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #d4d4d4;
+}
+.needtitle{
+  line-height: 150%;
+  font-size: 14px;
+  color: #333333;
+}
+.needtitle span{
+  background: #fc2928;
+  color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+  float: right;
+}
+.leftimgcontaner{
+  margin-right: 10px;
+  float: left;
+}
+.introdetail{
+  font-size: 13px;
+  color: #3d4245;
+  line-height: 150%;
+  margin-top: 5px;
+  margin-left: 58px;
+}
+.warmtipbor .more{
+  display: none;
+}
+/*弹窗*/
+.package_content{
+  overflow: visible;
+}
+.PopBtn{
+  color: blue;
+  text-decoration: underline;
+}
+.detailPop{
+  border: 1px solid #999;
+    padding: 10px 5px;
+    font-size: 12px;
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    width: 97%;
+    min-height: 100px;
+    z-index: 1000;
+    display: none;
+}
+.bg_popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+    display: none;
+}
+.flow4g_list{
+  position: relative;
+}
+</style>
+<body>
+<div id="packageLeft">
+  <div class="bg_popup" style="min-height: 1000px; height: 2811px;"></div>
+	<div id="clientInfo">
+        	<div class="clientInfo_top">186 2014 0121<section></section></div>
+        	<div class="space_05"></div>
+            <div class="clientInfo_table">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th>客户姓名：</th>
+                        <td>业务测试卡焦作信息化服务中心</td>
+                    </tr>
+                    <tr>
+                        <th>当前套餐：</th>
+                        <td>如意通畅聊卡A套餐2012版(OCS)</td>
+                    </tr>
+                    <tr>
+                        <th>查询日期：</th>
+                        <td>2014年07月23日</td>
+                    </tr>
+                </table>
+            </div>
+	</div>
+  <div class="datecheck">
+
+            <p class="bor-B">查询时间</p>
+            <p><span class="datestyle">XX年XX月XX日  XX:XX:XX</span></p>
+  </div>
+   <div class="package_content package_content_4g">
+    	<h3 class="f16 gapLR padTborder">当前套餐:396元4G全国套餐</h3>
+        <div class="f18 borBedT4 padB10 padT10" style='border-top:0px;'>
+            <h4 class="gapLR">
+              <img src="/images/package_content_02.png" width="22" class="vm" /><span class="vm pad_l_10">流量</span>
+              <span class='outflowtip'>超出XXXGB，<a href='#'>去充值&gt;</a></span>
+            </h4>
+        </div>
+       <div class="flow4g_list_wrp schducebg">
+        <div class="gapLR padT15 flow4g_list">
+          <p class='pagename'>套餐名称（免费资源名称）</p>
+           <dl class='overflows'>
+              <dd class='fl'>共&nbsp;<span>2</span>&nbsp;<em>GB</em></dd>
+              <dt class='fr'>剩余&nbsp;<span>500.00</span>&nbsp;<em>MB</em></dt>
+           </dl>
+           <div class='clr'></div>
+          <p class=" space_10"></p>
+            <div class="ap load_outnew2">
+                <div class="load_4gNew">
+                    <div data='30' class='datashow'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gapLR padT15 flow4g_list" style='position: relative;'>
+          <p class='pagename'>
+            <span>10月结转流量</span>
+            <em class='PopBtn'>结转流量</em>
+            <span class='opacitysty'>次月生效</span>
+          </p>
+           <dl class='overflows'>
+              <dd class='fl'>共&nbsp;<span>2</span>&nbsp;<em>GB</em></dd>
+              <dt class='fr'>剩余&nbsp;<span>1</span>&nbsp;<em>GB</em></dt>
+           </dl>
+           <div class='clr'></div>
+          <p class="space_10"></p>
+            <div class="ap load_outnew2">
+                <div class="load_4gNew">
+                    <div data='10' class='datashow'></div>
+                </div>
+            </div>
+            <div class='detailPop'>
+                <strong style="font-size:14px;">结转流量说明</strong><br>
+                          <p>1、结转流量即是流量不清零：是指本月月底最后一日24时，主套餐内未用尽的剩余流量（以下统称“剩余流量”）执行当月不清零，“剩余流量”自动结转至次月使用。如“剩余流量”在次月仍未用尽，则在次月月底最后一日24时自动清零，并依此类推。</p>
+                          <p>2、用户办理2G、3G、4G互转、预后互转、套餐变更、改号、过户、销户等情况下，不结转相关“剩余流量”。</p>
+                          <p>3、“剩余流量”保持原套餐的全国/本地/小区等流量属性不变。</p>
+                          <p>4、用户仅在正常在用状态下方能使用“剩余流量”。</p>
+            </div>
+        </div>
+
+        <div class="gapLR padT15 flow4g_list">
+          <p class='pagename'>新春赠送国内流量</p>
+           <dl class='overflows'>
+              <dd class='fl'>共&nbsp;<span>2</span>&nbsp;<em>GB</em></dd>
+              <dt class='fr'>剩余&nbsp;<span>800.00</span>&nbsp;<em>MB</em></dt>
+           </dl>
+           <div class='clr'></div>
+          <p class=" space_10"></p>
+            <div class="ap load_outnew2">
+                <div class="load_4gNew">
+                    <div data='10' class='datashow'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gapLR padT15 flow4g_list">
+          <p class='pagename'>
+            <span>全国流量半年包</span>
+            <em class='PopBtn'>结转流量</em>
+            <span class='opacitysty'>2016年6月1日到期</span>
+          </p>
+           <dl class='overflows'>
+              <dd class='fl'>共&nbsp;<span>2</span>&nbsp;<em>GB</em></dd>
+              <dt class='fr'>剩余&nbsp;<span>500.00</span>&nbsp;<em>MB</em></dt>
+           </dl>
+           <div class='clr'></div>
+          <p class=" space_10"></p>
+            <div class="ap load_outnew2">
+                <div class="load_4gNew">
+                    <div data='25' class='datashow'></div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+<!--语音-->
+   <div class="package_content package_content_4g">
+        <div class="f18 borBedT4 padB10 padT10">
+            <h4 class="gapLR">
+              <img src="/images/package_content_01.png" width="22" class="vm" /><span class="vm pad_l_10">语音</span>
+              <span class='outflowtip'>超出XXX分钟，<a href='#'>换套餐&nbsp;&gt;</a></span>
+            </h4>
+        </div>
+       <div class="flow4g_list_wrp schducebg">
+
+       <div class="gapLR padT15 flow4g_list">
+          <p class='pagename'>套餐名称（免费资源名称）</p>
+           <dl class='overflows'>
+              <dd class='fl'>共&nbsp;<span>200</span>&nbsp;<em>分钟</em></dd>
+              <dt class='fr'>剩余&nbsp;<span>50</span>&nbsp;<em>分钟</em></dt>
+           </dl>
+           <div class='clr'></div>
+          <p class=" space_10"></p>
+            <div class="ap load_outnew2">
+                <div class="load_4gNew">
+                    <div data='93' class='datashow'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gapLR padT15 flow4g_list">
+          <p class='pagename'>随意拨打语音包<span class='opacitysty'>限拨打联通号码</span></p>
+           <dl class='overflows'>
+              <dd class='fl'>共&nbsp;<span>999</span>&nbsp;<em>分钟</em></dd>
+              <dt class='fr'>剩余&nbsp;<span>999</span>&nbsp;<em>分钟</em></dt>
+           </dl>
+           <div class='clr'></div>
+          <p class=" space_10"></p>
+            <div class="ap load_outnew2">
+                <div class="load_4gNew">
+                    <div data='0' class='datashow'></div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+   </div>
+   <!--短信-->
+   <div class="package_content package_content_4g">
+        <div class="f18 borBedT4 padB10 padT10">
+            <h4 class="gapLR">
+              <img src="/images/package_content_03.png" width="22" class="vm" /><span class="vm pad_l_10">短信/彩信</span>
+              <!--<span class='outflowtip'>超出XXX分钟，<a href='#'>换套餐&nbsp;&gt;</a></span>-->
+            </h4>
+        </div>
+        <div class="flow4g_list_wrp schducebg">
+           <div class="gapLR padT15 flow4g_list">
+              <p class='pagename'>套餐名称（免费资源名称）</p>
+               <dl class='overflows'>
+                  <dd class='fl'>共&nbsp;<span>100</span>&nbsp;<em>条</em></dd>
+                  <dt class='fr'>剩余&nbsp;<span>80</span>&nbsp;<em>条</em></dt>
+               </dl>
+               <div class='clr'></div>
+              <p class=" space_10"></p>
+                <div class="ap load_outnew2">
+                    <div class="load_4gNew">
+                        <div data='20' class='datashow'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  <div class="package_content package_content_4g">
+        <div class="f18 borBedT4 padB10 padT10">
+            <h4 class="gapLR">
+              <img src="/images/othersicon.png" width="22" class="vm" /><span class="vm pad_l_10">其他</span>
+              <!--<span class='outflowtip'>超出XXX分钟，<a href='#'>换套餐&nbsp;&gt;</a></span>-->
+            </h4>
+        </div>
+        <div class="flow4g_list_wrp schducebg">
+           <div class="gapLR padT15 flow4g_list">
+              <p class='pagename'>T值</p>
+               <dl class='overflows'>
+                  <dd class='fl'>共&nbsp;<span>5</span>&nbsp;<em>个</em></dd>
+                  <dt class='fr'>剩余&nbsp;<span>1</span>&nbsp;<em>个</em></dt>
+               </dl>
+               <div class='clr'></div>
+              <p class=" space_10"></p>
+                <div class="ap load_outnew2">
+                    <div class="load_4gNew">
+                        <div data='96' class='datashow'></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gapLR padT15 flow4g_list">
+              <p class='pagename'>M值</p>
+               <dl class='overflows'>
+                  <dd class='fl'>共&nbsp;<span>10</span>&nbsp;<em>个</em></dd>
+                  <dt class='fr'>剩余&nbsp;<span>3</span>&nbsp;<em>个</em></dt>
+               </dl>
+               <div class='clr'></div>
+              <p class=" space_10"></p>
+                <div class="ap load_outnew2">
+                    <div class="load_4gNew">
+                        <div data='70' class='datashow'></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+	</div>
+	   <div class="warmtipbor gapLR borT">
+        <div class="warm padT20">注：</div>
+        <div class="warm_hide">
+            <div class="warm_msg">1. 本页数据包含套餐内产品、赠送产品、流量包产品等当前生效产品的使用情况，供您参考，详细内容以当地
+  营业厅查询为准。</div>
+          <div class="warm_msg">2. 如您在产品规定的使用范围外使用，将按照标准资费
+  计费，请注意。</div>
+      </div>
+        <p class="space_20"></p>
+    </div>
+
+    <div class="tc gapLR">
+    <input type="button" class="" id="shareNew11" value="分享给朋友">
+  </div>
+
+    <div class="youneed">
+        <div class='padB5 padT20 gapLR borderB' style='margin-bottom:5px;'>
+          <P>您可能需要<span class='fr'>更多&nbsp;&gt;</span></P>
+        </div>
+        <div class='needlist gapLR'>
+            <ul>
+                <li>
+                    <div class='leftimgcontaner'>
+                      <div class='iconborder'>
+                          <img src="/images/taocanbian.png" />
+                      </div>
+                    </div>
+                    <div class='needtext'>
+                      <p class='needtitle'>套餐变更<span>服务</span></p>
+                      <p class='introdetail'>推荐理由：您当前套餐高于106元，连续三个月流量仅用80%以下，推荐办理。</p>
+                    </div>
+                    <div class='clr'></div>
+                </li>
+                <li>
+                    <div class='leftimgcontaner'>
+                      <div class='iconborder'>
+                          <img src="/images/flowban.png" />
+                      </div>
+                    </div>
+                    <div class='needtext'>
+                      <p class='needtitle'>流量包办理<span>服务</span></p>
+                      <p class='introdetail'>推荐理由：您当前是2/3G号码，正使用4G终端，推荐您办理速度更快，均价更低的套餐。</p>
+                    </div>
+                    <div class='clr'></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+	<div class="warmtipbor gapLR">
+        <div class="warm padT20">温馨提示：</div>
+        <div class="warm_hide"><div class="warm_msg">1. 此界面仅为您提供当月余量信息查询。</div>
+        <div class="warm_msg">2. 对于超出套餐及订购产品包外的情况，将按照标准资费计费，请您注意。<span class="colfe7f05">点击了解更多>></span></div></div>
+        <div class="more"><div class="warm_msg">3. 本页数据不包含免费流量、免费语音。</div>
+        <div class="warm_msg">4. 详细内容以当地营业厅查询为准。</div></div>
+        <p class="space_20"></p>
+    </div>
+</div>
+        <p class="space_20"></p>
+<script type="text/javascript" src="js/base.js"></script>
+<script>
+
+
+$(function(){
+
+  $('.PopBtn').live('click',function(){
+      $(this).parent('p').siblings('.detailPop').show();
+      $('.bg_popup').show();
+  });
+  $('.bg_popup').live('click',function(){
+      $(this).hide();
+      $('.detailPop').hide();
+  });
+
+  function sortFlowList(obj){//对每个模块里的进度条块排序
+      var listchildren = $(obj).children('.flow4g_list');
+      var arr = [];
+      for(var i = 0;i < listchildren.length;i++){
+          arr.push(listchildren.eq(i));
+      }
+      var tt = arr.sort(function(a,b){//排序
+        return $(b).find('.datashow').attr('data') - $(a).find('.datashow').attr('data');//根据进度条的data数据排序
+      });
+      return tt;//返回排好序的数组
+  }
+  function getobj(){//选取不同模块
+      //var allobj = $('.flow4g_list_wrp');
+      var allobj = $('.package_content');
+      for(var i=0;i < allobj.length;i++){
+          var getlistContainer = allobj.eq(i).find('.flow4g_list_wrp');
+         var sortarr = sortFlowList(getlistContainer);
+         //var sortarr =
+         //allobj.eq(i).empty();//清空模块
+         getlistContainer.empty();
+          for(var j in sortarr){
+              var newobj = '<div class="gapLR padT15 flow4g_list">'+sortarr[j].html()+'</div>';
+              //allobj.eq(i).append(newobj);//重新装填进排好序的模块
+              getlistContainer.append(newobj);
+          }
+      }
+  }
+  getobj();//排序
+  $('.load_4gNew').each(function(){//进度条动画
+      var dataschedule = $(this).children('div').attr('data');
+      if(dataschedule <2){
+          dataschedule = 2;
+      }
+      var total = dataschedule + '%';
+      if(dataschedule > 90){
+          $(this).children('div').addClass('warningred');
+      }
+      $(this).children('div').animate({ width:total }, 1000);
+  });
+  //温馨提示了解更多
+  $('.warmtipbor').find('.colfe7f05').bind('click',function(){
+      $(this).parents('.warmtipbor').children('.more').show();
+      $(this).hide();
+  })
+
+});
+function stopBubble(e){
+                var evt = e||window.event;
+                evt.stopPropagation?evt.stopPropagation():(evt.cancelBubble=true);//阻止冒泡
+                //evt.preventDefault();//阻止浏览器默认行为，这样链接就不会跳转
+            }
+
+</script>
+
+</body>
+</html>
