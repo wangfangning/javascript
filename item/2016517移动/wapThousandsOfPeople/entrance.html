@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>入口页</title>
+	<script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/choujiangstyle.css">
+    <script type="text/javascript">
+        var _self =  this ;
+        _self.width = 640; // 璁剧疆榛樿鏈€澶у搴�
+        _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+        _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        _self.changePage =  function (){
+        document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function (){_self.changePage();}, false );
+    </script>
+    <style type="text/css">
+        .entrance{
+            overflow: hidden;
+        }
+        .entrance li{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 0.3rem;
+            border-top:1px solid #eee;
+            border-bottom:1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id='container_l' style='background: #fff4db;'>
+        <ul class='entrance'>
+            <li onclick='window.location.href="index.html"'>全量</li>
+            <li onclick='window.location.href="modul578.html"'>578</li>
+            <li onclick='window.location.href="modul2578.html"'>2578</li>
+            <li onclick='window.location.href="modul135678.html"'>135678</li>
+            <li onclick='window.location.href="modul145678.html"'>145678</li>
+            <li onclick='window.location.href="modul567138.html"'>567138</li>
+            <li onclick='window.location.href="modul567148.html"'>567148</li>
+            <li onclick='window.location.href="modul1235678.html"'>1235678</li>
+            <li onclick='window.location.href="modul1245678.html"'>1245678</li>
+            <li onclick='window.location.href="modul2567138.html"'>2567138</li>
+            <li onclick='window.location.href="modul2567148.html"'>2567148</li>
+						<li onclick='window.location.href="mistake.html"'>报错页</li>
+        </ul>
+    </div>
+</body>
+</html>

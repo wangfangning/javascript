@@ -1,0 +1,569 @@
+.container {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffdec4;
+}
+.zhuti p {
+  line-height: .35rem;
+}
+.tb {
+  width: 100%;
+}
+.section {
+  margin: auto;
+}
+.zhuti {
+  width: 98%;
+  margin: auto;
+}
+.main {
+  font-size: .35rem;
+  margin: 20px 0 10px 0;
+}
+.banner p {
+  color: #fff;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: url("../images/标题背景.png") no-repeat;
+  background-size: contain;
+  background-position: top;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: .41rem;
+}
+.banner p i {
+  font-style: italic;
+  color: #ffff00;
+  font-size: .5rem;
+  vertical-align: sub;
+}
+.hui, .zhaolian {
+  background: #f9f9f9;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.hui img {
+  width: 1rem;
+  margin-top:20px;
+  margin-right: 0;
+}
+/*ul li {
+  box-shadow: 2px 2px 2px #a79080;
+}*/
+.hui .wenan {
+  color: #000;
+  font-size: .21rem;
+  border: 1px solid #f0d9b5;
+  display: inline-block;
+  width: 75%;
+  margin: 20px 0;
+  padding: 10px 0 10px 5px;
+}
+.zhaolian img {
+  margin: .2rem 0 .2rem .4rem ;
+  width: 3.3rem;
+}
+.zhaolian .wenan {
+  margin: auto;
+  border: 1px solid #c80000;
+  color: #c80000;
+  width: 85%;
+  border-radius: 12px 60px 60px 12px;
+  font-size: .21rem;
+  padding: 5px 10px;
+}
+.zhaolian a {
+  overflow: hidden;
+  float: right;
+  text-decoration: underline;
+  color: #c80000;
+  font-size: .24rem;
+  margin: .2rem .25rem .2rem 0;
+  font-weight: bolder;
+}
+.section2 .banner {
+  background: #ff464b;
+  padding-top: 15px;
+    padding-bottom: 10px;
+}
+.section3 .banner {
+  padding-top: 15px;
+  background:#fe894a;
+    padding-bottom: 10px;
+}
+.section4 .banner {
+  background:  #ffb142;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.section5 .banner {
+  background: #ff464b;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.section6 .banner {
+  background: #ff8a4c;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.section7 .banner {
+background: #ff427c;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.section2 .banner p,.section3 .banner p,.section4 .banner p, .section5 .banner p, .section6 .banner p, .section7 .banner p {
+  padding-top: 3px;
+}
+.section2 .youshi, .section3 .youshi, .section5 .youshi {
+  background: #f9f9f9;
+}
+.section4 .zhuti, .section6 .zhuti, .section7 .zhuti,.section8 .zhuti {
+
+  background: #fff;
+}
+.section2 .wenan, .section3 .wenan {
+  padding: 20px 0 20px 5px;
+  color: #df955e;
+  font-size: .25rem;
+
+}
+.section3 .wenan {
+  font-size: .32rem;
+  color: #da0b05;
+  line-height: .5rem;
+  font-weight: bold;
+}
+.section2 .wenan span {
+  border-bottom: 1px dashed #d2d2d2;
+}
+.youshi img {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+.youshi a img {
+  padding: 20px 0;
+}
+.section5 .bai{
+  font-size: .3rem;
+  width: 70%;
+  display: inline-block;
+}
+.section5 .xiao{
+  font-size: .2rem;
+  width: 70%;
+  display: inline-block;
+}
+}
+.section5 a{
+  width: 20px;
+}
+
+.shouji div a{
+  background: #c80000;
+  padding: 3px 25px;
+  display: inline-block;
+  border-radius: 8px;
+  color: #fff;
+  margin: auto;
+
+}
+.jiage{
+  display:inline-block;
+  margin-top:-0.05rem;
+}
+.shouji div span{
+  display: inline-block;
+}
+.shouji div span i{
+  font-weight: bold;
+  font-size: .5rem;
+}
+.shouji div span{
+
+}
+.shouji div span.xiao{
+
+}
+.shouji div span.huo{
+  color: #c80000;
+  font-size: .26rem;
+  font-weight: bold;
+}
+body{
+  max-width: 640px;
+  min-width: 320px;
+  margin:0 auto;
+}
+.section1 .right{
+  text-align: right;
+}
+.section1 a img{
+
+  margin: 10px 0 20px 0;
+}
+.section2 .banner p i,.section3 .banner p i{
+  font-style: normal;
+  vertical-align: inherit;
+  font-size: .35rem;
+}
+
+
+.shouji ul li{
+    width: 3.11rem;
+    height: 4.79rem;
+    background: #f9f9f9;
+    float: left;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0.05rem;
+}
+.zhekouContain span{
+    font-size: 0.4rem;
+    color: #fff;
+
+}
+.zhekouContain{
+  font-size: 0.28rem;
+  color: #fff;
+  display: table-cell;
+    vertical-align: middle;
+}
+
+.shouji ul li .ad{
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+}
+.phoneinfo{
+  position: absolute;
+  top: 2.5rem;
+}
+.showphone{
+
+}
+.showphone .po{
+    position: absolute;
+    top: 0px;
+}
+.phoneNub i{
+    font-weight: bold;
+    font-size: .3rem;
+}
+.phoneNub{
+    font-size: .22rem;
+}
+.zhekouContain{
+width: 0.8rem;
+height: 0.8rem;
+border-radius: 50%;
+background: #c80000;
+position: relative;
+}
+.sanjiao{
+position: absolute;
+bottom: -0.12rem;
+height: 0.16rem;
+left: 45%;
+}
+.spanfirst{
+font-size: .24rem;
+color: #888786;
+}
+.section8{
+  padding-top: 10px;
+}
+.zhutic{
+  width: 95%;
+margin: auto;
+}
+.zhutic img{
+  width: 100%;
+
+}
+.zhutic p{
+padding-top: .5rem;
+}
+.zhutic p a{
+  color: #e60101;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.huodong{
+  text-align: right;
+}
+.huodong a{
+  display: inline-block;
+  width: 54%;
+  text-align: left;
+  text-decoration: underline;
+  font-size: .3rem;
+}
+.banner img{
+  width: 100%;
+}
+.section .banner{
+  padding: 28px 0
+}
+.meng{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999998;
+  opacity: 0.9;
+  background-color: rgb(136, 136, 136);
+    display: none;
+}
+.tanchuang{
+  z-index: 9999999;
+    display: none;
+    position: absolute;;
+    width: 5.26rem;
+
+top: 10%;
+
+left: 50%;
+margin-left: -2.7rem;
+    width: 5.5rem;
+height: 7rem;
+
+
+background: #f1f1f1;
+overflow: scroll;;
+}
+.shang,.xia{
+  position:relative;
+  font-size: 0;
+}
+.tclose{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.tanchuang h1{
+  font-size: .26rem;
+  font-weight: bold;
+  color: #e50000;
+  text-align: center;
+}
+.zhong{
+
+  width: 95%;
+  margin: auto;
+  margin-top: .71rem;
+}
+.tanchuang h2{
+  color: #e50000;
+  font-size: .22rem;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 0.35rem;
+}
+.zhong p{
+  font-size: .21rem;
+margin-left: .1rem;
+line-height: .35rem;
+margin-top: .1rem;
+margin-bottom: .1rem;
+}
+.zhong img {
+  width: 60%;
+  display: block;
+  margin: auto;
+  margin-top: .15rem;
+  margin-bottom: .15rem;
+}
+.zhong p span{
+  color: #e50000;
+
+}
+.date{
+  margin-top: .1rem ;
+  margin-bottom: .2rem;
+}
+.xia img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.xia{
+  padding: .4rem 0 .8rem 0;
+}
+.xia p{
+  color: #e50000;
+  font-size: .2rem;
+  font-weight: bold;
+  margin-left: .5rem;
+}
+.section1 .banner img{
+  width: 100%;/*改,原来102%*/
+  display: block;
+  margin: auto;
+}
+.youshi .wenan{
+  text-align: center;
+}
+.section2 .zhuti .wenan{
+  color: #000000;
+  font-size: 0.2rem;
+  text-align: center;
+  padding: 20px 5px 20px 5px;
+  border:1px solid #a7a7a7;
+}
+.section7 .topicTextshi{
+  background: #f9f9f9;
+}
+.section6 .zhuti{
+    background-color: #f9f9f9;
+}
+.section5 .zhuti{
+    background-color: #f9f9f9;
+}
+.section4 .zhuti{
+    background-color: #f9f9f9;
+}
+.section3 .zhuti{
+    background-color: #f9f9f9;
+}
+
+.section8 .zhuti{
+    background-color: #f9f9f9;
+}
+.btniocn{
+  width: 2.66rem !important;
+}
+.zhuti>img{
+  width: 100%;
+}
+
+
+
+
+
+    .shouji div span.xiao{
+      color: #9d9c9c;
+      display: inline;
+      top: 0.2rem;
+      position: absolute;
+      left: 0;
+      right:auto;
+text-decoration: line-through;
+font-size: 0.19rem;
+    }
+    .shouji div a{
+      width: 80%;
+      padding:0;
+      height: 0.51rem;
+      line-height: 0.51rem;
+      font-weight: bold;
+    }
+    @media screen and (max-width:320px){
+        .shouji div span.xiao{
+            top: 0.1rem !important;
+        }
+    }
+    .wangluo span{
+        margin-top: 0.1rem;
+        display: inline-block;
+    }
+    .wangluoarea{
+        width: 100%;
+        padding-top: 0.4rem;
+        margin:0 auto;
+    }
+    .wangluoarea img{
+        width: 100%;
+    }
+  
+
+        .youkuContainer img{
+            width: 100%;
+        }
+        .youkuContainer{
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .banlibtn img{
+          padding: 20px 0;
+          display: block;
+  margin: auto;
+        }
+        .youhui1 .outcircle{
+            background: #e58a8a;
+            height: 0.4rem;
+            width: 0.4rem;
+            border-radius: 50%;
+            position: relative;
+        }
+        .youhui1 .intercirclr{
+            background: #da0b05;
+            font-size: 0.24rem;
+            color: #fff;
+            font-weight: bold;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            width: 0.3rem;
+            border-radius: 50%;
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            margin-top: -0.15rem;
+            left: 50%;
+            margin-left: -0.15rem;
+            text-align: center;
+        }
+        .youhui1{
+          float: left;
+        }
+        .youkuYou{
+
+          overflow: hidden;
+          margin-left: 0.24rem;
+        }
+        .textbao{
+          margin-left: 0.13rem;
+          float: left;
+          font-size: 0.24rem;
+          color: #363636;
+        }
+        .textbao span{
+            font-size: 0.15rem;
+            color: #363636;
+        }
+        .marR27{
+          margin-right: 0.27rem;
+        }
+        .item{
+          float: left;
+          overflow: hidden;
+        }
+        .space_30{
+          width: 100%;
+          height: 0.6rem;
+          overflow: hidden;
+        }
+        .space_20{
+          width: 100%;
+          height: 0.2rem;
+          overflow: hidden;
+        }
+        .youkutop1{
+            width: 90%;
+            margin:0 auto;
+        }
+        .youkutop1 img{
+          width: 100%;
+        }
+        .banner img{
+  width: 100%;
+  }
+  .section .banner{
+  padding: 0.34rem 0
+  }

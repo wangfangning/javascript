@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选稿栏</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/manuscript.css">
+</head>
+<body>
+	<!--#include virtual="/news_xinhua/include/header.html"-->
+	<div class='nav_container'>
+		<div class="nav_con manuPosition">
+	        <div class="fl logoArea">
+	            <img src="images/logoManu.png" class="logo_img" onclick='window.location.href="http://124.192.56.213:178/news_xinhua/index.html"'>
+	            <span class='text1'>新华社供稿平台</span>
+	            <span class='text2'>|选稿栏</span>
+	        </div>
+	        <div class="fr right_con">
+	            <div class="inputs_con">
+	                <input type="text" class="inputs">
+	                <img src="images/search.png" class="search" onclick='window.location.href="http://124.192.56.213:178/news_xinhua/Wsearch.html"'>
+	            </div>
+	        </div>
+	        <div class="clr"></div>
+	        <div class='shoppingSelect'>
+	        	<p class='fl'>全部产品<span data-goods = '0' class='allGoods'>0</span>件</p>
+	        	<p class='fl'>已选产品<span data-goodsOn = '0' class='Ongoods'>0</span>件</p>
+	        	<input type='button' value='下&nbsp;载' class='' />
+	        </div>
+	    </div>
+    </div>
+    <div class='business_body'>
+    	<div class='body_part_Container option1'>
+    		<div class='checkbox chooseAll'>
+			    <img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+    		</div>
+    		<div class='pro_show'>
+    			<span class='optionText'>全选</span>
+    		</div>
+    		<div class='pro_intro'>
+    			<span class='optionText'>产品</span>
+    		</div>
+    		<div class='pro_style'>
+    			<span class='optionText'>类型</span>
+    		</div>
+    		<div class='pro_cost'>
+    			<span class='optionText'>金额（元）</span>
+    		</div>
+    		<div class='pro_operation'>
+    			<span class='optionText'>操作</span>
+    		</div>
+    	</div>
+    	<div class='busi_head'>
+	    	<i></i>
+	    	<span>可下载产品</span>
+	    </div>
+	    <div class='pro_list_manu'>
+	    	<ul>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '168.22'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg1.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>华为、三星、诺基亚专利混战正酣&nbsp;华为腹背受敌？</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>稿件新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>168.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下载</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '136.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg2.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>7月北京商品新房成交均价37566元/平 存量套数跌破6万套</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>稿件新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>136.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下载</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '190.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg3.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>延迟退休方案已提交审核预计年底出台</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>政治法律专题</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>190.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下载</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '68.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg4.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>7月份制造业PMI为49.9%:淡季特征显现</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>稿件新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>68.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下载</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '55.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg5.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>滴滴出行宣布收购优步中国</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>视频新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>55.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下载</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '100.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg6.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>刘延东会见柬埔寨副首相索安</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>稿件新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>100.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下载</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <div class='busi_head'>
+	    	<i></i>
+	    	<span>不可下载产品</span>
+	    </div>
+	    <div class='pro_list_manu'>
+	    	<ul>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '168.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg7.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>国防部举行招待会庆祝解放军建军89周年</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>稿件新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>168.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下单</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '136.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg8.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>习近平会见全国双拥模范代表</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>稿件新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>136.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下单</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    		<li>
+	    			<div class='body_part_Container detaile_Pro_manu'>
+			    		<div class='checkbox single' data-cost = '190.00'>
+			    			<img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			    		</div>
+			    		<div class='pro_show tc'>
+			    			<img src="images/manuProImg9.jpg" class='showproImg' />
+			    		</div>
+			    		<div class='pro_intro'>
+			    			<p>中央军委晋升上将军衔仪式在京举行</p>
+			    			<p class='Pro_timeShow'>2016-07-28 11:28:26</p>
+			    			<div class='labelArear'>
+			    				<div class='labelContainer fl'>
+			    					<span>IT行业</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>经济新闻</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    				<div class='labelContainer fl'>
+			    					<span>国民品牌</span>
+			    					<img src="images/iconPartR.jpg" />
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class='pro_style'>
+			    			<span class='optionText2'>稿件新闻</span>
+			    		</div>
+			    		<div class='pro_cost'>
+			    			<span class='optionText2 colcc3d3d'>190.00</span>
+			    		</div>
+			    		<div class='pro_operation'>
+			    			<span class='optionText3'>下单</span>
+			    			<span class='optionText3 mar16 deleteSingle'>删除</span>
+			    		</div>
+			    	</div>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <!--总价-->
+	    <div class='body_part_Container totalCost'>
+    		<div class='checkbox chooseAll'>
+			    <img src="images/onchooseIcon.png" class='onIcon_manu dn' />
+			</div>
+    		<div class='pro_show'>
+    			<span class='optionText'>全选</span>
+    			<span class='optionText deleteAll'>删除选中产品</span>
+    		</div>
+    		<div class='pro_intro'></div>
+    		<div class='pro_style'>
+    			<span class='optionText'>已选产品&nbsp;<em class='colcc3d3d Ongoods' data-goodson = '0'>0</em>&nbsp;件</span>
+    		</div>
+    		<div class='pro_cost'>
+    			&yen;<span class='costStyle' data-costTotal = '0'>0.00</span>
+    		</div>
+    		<div class='pro_operation'>
+    			<input type='button' value='下&nbsp;载' class='uploadBtn' />
+    		</div>
+    	</div>
+    	<!--轮滑-->
+    	<div class='sliderContaier'>
+	    	<div class='sliderHeader'>
+	    		<ul>
+	    			<li data = 'tab1'><span>热销下载</span></li>
+	    			<li class='ontabmanu'><span class='borderLR'>我的足迹</span></li>
+	    			<li><span>猜你喜欢</span></li>
+	    		</ul>
+	    	</div>
+	    	<!--滑动模块start-->
+	    	<div class="information_main">
+                 <div class="my_business_c">
+                      <div class="business_l">
+                           <span></span>
+                      </div>
+                      <div class="business_c" id="BusinessList" num="0">
+                          <ul class="business_list" style="width: 1848px; left: 0px;">
+                              <li>
+                                  <div class="business_yy" style="display: block;">
+                                       <div class="business_yy_t">
+                                            <div class="yy_img">
+                                                 <img src="images/new_pics1.jpg" class='showmainImg' data1-src='images/new_pics11.jpg' data2-src='images/new_pics1.jpg' data3-src='images/new_pics13.jpg' data1-status = 'video' data2-status = 'img' data3-status = 'img'>
+                                            </div>
+                                       </div>
+                                       <div class="business_yy_b" data1 = '又到一年赏樱季' data2 = '走进里约奥运村' data3 = '神奇抓拍鲸鲨捕食瞬间：巨口让鱼群无路可逃'>
+                                            <p>走进里约奥运村</p>
+                                       </div>
+                                  </div>
+                                  <img src="images/mp4_icon.png" class='playIcon dn' />
+                              </li>
+                              <li>
+                                  <div class="business_yy2" style="display: block;">
+                                       <div class="business_yy_t">
+                                            <div class="yy_img">
+                                                 <img src="images/new_pics2.jpg" class='showmainImg' data1-src='images/new_pics7.jpg' data2-src='images/new_pics2.jpg' data3-src='images/new_pics9.jpg' data1-status = 'img' data2-status = 'img' data3-status = 'img'>
+                                            </div>
+                                       </div>
+                                       <div class="business_yy_b" data1 = '米奇遇见夜上海 迪士尼最美夜景图' data2 = '聚焦自然之力！“追逐闪电的人” 拍摄震撼雷暴大片' data3 = '劳动最美丽'>
+                                            <p>聚焦自然之力！“追逐闪电的人” 拍摄震撼雷暴大片</p>
+                                       </div>
+                                  </div>
+                                  <img src="images/mp4_icon.png" class='playIcon dn' />
+                              </li>
+                              <li>
+                                  <div class="business_yy3" style="">
+                                       <div class="business_yy_t">
+                                            <div class="yy_img">
+                                                 <img src="images/new_pics3.jpg" class='showmainImg' data1-src='images/new_pics12.jpg' data2-src='images/new_pics3.jpg' data3-src='images/new_pics8.jpg' data1-status = 'img' data2-status = 'img' data3-status = 'img'>
+                                            </div>
+                                       </div>
+                                       <div class="business_yy_b" data1 = '一次别离 外出务工潮下的中国,留守儿童' data2 = '天眼”现美景 盘点 “世界之最”中国制造' data3 = '盘点“最恐怖”酒店 悬崖房、透明屋你敢住吗？'>
+                                            <p>天眼”现美景 盘点 “世界之最”中国制造</p>
+                                       </div>
+                                  </div>
+                                  <img src="images/mp4_icon.png" class='playIcon dn' />
+                              </li>
+                              <li>
+                                  <div class="business_yy4" style="display: block;">
+                                       <div class="business_yy_t">
+                                            <div class="yy_img">
+                                                 <img src="images/new_pics4.jpg" class='showmainImg' data1-src='images/new_pics10.jpg' data2-src='images/new_pics4.jpg' data3-src='images/new_pics8.jpg' data1-status = 'img' data2-status = 'img' data3-status = 'img'>
+                                            </div>
+                                       </div>
+                                       <div class="business_yy_b" data1 = '欧锦赛精彩瞬间连连看（6月13日）' data2 = '欧锦赛精彩瞬间连连看' data3 = '盘点“最恐怖”酒店 悬崖房、透明屋你敢住吗？'>
+                                            <p>欧锦赛精彩瞬间连连看</p>
+                                       </div>
+                                  </div>
+                                  <img src="images/mp4_icon.png" class='playIcon dn' />
+                              </li>
+                              <li>
+                                  <div class="business_yy4" style="display: block;">
+                                       <div class="business_yy_t">
+                                            <div class="yy_img">
+                                                 <img src="images/new_pics5.jpg" class='showmainImg' data1-src='images/new_pics10.jpg' data2-src='images/new_pics5.jpg' data3-src='images/new_pics8.jpg' data1-status = 'img' data2-status = 'img' data3-status = 'img'>
+                                            </div>
+                                       </div>
+                                       <div class="business_yy_b" data1 = '欧锦赛精彩瞬间连连看（6月13日）' data2 = '那些被“玩坏”的毕业照' data3 = '盘点“最恐怖”酒店 悬崖房、透明屋你敢住吗？'>
+                                            <p>那些被“玩坏”的毕业照</p>
+                                       </div>
+                                  </div>
+                                  <img src="images/mp4_icon.png" class='playIcon dn' />
+                              </li>
+                              <li>
+                                  <div class="business_yy3" style="display: block;">
+                                       <div class="business_yy_t">
+                                            <div class="yy_img">
+                                                 <img src="images/new_pics6.jpg" class='showmainImg' data1-src='images/new_pics10.jpg' data2-src='images/new_pics6.jpg' data3-src='images/new_pics8.jpg' data1-status = 'img' data2-status = 'img' data3-status = 'img'>
+                                            </div>
+                                       </div>
+                                       <div class="business_yy_b" data1 = '欧锦赛精彩瞬间连连看（6月13日）' data2 = '广东佛山“千佛山”隐埋深山20年 一夜走红网络' data3 = '盘点“最恐怖”酒店 悬崖房、透明屋你敢住吗？'>
+                                            <p>广东佛山“千佛山”隐埋深山20年 一夜走红网络</p>
+                                       </div>
+                                  </div>
+                                  <img src="images/mp4_icon.png" class='playIcon dn' />
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="business_r">
+                           <span></span>
+                      </div>
+                 </div>
+            </div>
+	    	<!--滑动模块end-->
+    	</div>
+    </div>
+    <!--#include virtual="/news_xinhua/include/footer.html"-->
+<script type="text/javascript">
+	function calculateShoping(){
+			var totalShoping = 0;
+			$('.pro_list_manu').each(function(idx, item){
+				totalShoping += $(item).find('li').length;
+			});
+			$('.allGoods').attr('data-goods',totalShoping).text(totalShoping);
+			$('.business_body').attr('data-goodsState', totalShoping);
+		}
+
+	function OnShoppingTotal(){
+		var totalShoping = $('.onBg').length;
+		$('.Ongoods').attr('data-goodson',totalShoping).text(totalShoping);
+	}
+	function clearMarginR(){
+		var item = $('#BusinessList').find('li');
+		for(var i = 0; i < item.length; i++){
+			var islastLine = ((i+1)%5 == 0);
+			if(islastLine){
+				item.eq(i).css('margin-right','auto');
+			}
+		}
+	}
+	
+	var NumAll = $('#BusinessList').find('li').length;
+	var liWidth = $('#BusinessList').find('li').eq(0).width();
+	$(window).resize(function(){
+		liWidth = $('#BusinessList').find('li').eq(0).width();
+	});
+	$('.business_list').width(NumAll*(liWidth+30));
+	if(NumAll<5){
+		$('.business_l span,.business_r span').hide();
+	}else{
+		$('.business_l').click(function(){Prev()});
+		$('.business_r').click(function(){Next()});
+	};
+	function Prev(){
+		var NumAll = $('#BusinessList').find('li').length;
+		var PageAll = Math.ceil(NumAll/5);
+		var NowNum = $("#BusinessList").attr('Num');
+		var NewNum = parseInt(NowNum)-1;
+		if(NowNum != 0){
+			$(".business_list").animate({'left':-(liWidth*NewNum)});
+			$("#BusinessList").attr('Num',NewNum);
+		};
+	};
+	function Next(){
+		var NumAll = $('#BusinessList').find('li').length;
+		var PageAll = Math.ceil(NumAll/5);
+		var yueshu = NumAll%5;
+		var NowNum = $("#BusinessList").attr('Num');
+		var NewNum = parseInt(NowNum)+1;
+		if(NowNum != yueshu){
+			$(".business_list").animate({'left':-(liWidth*NewNum)});
+			$("#BusinessList").attr('Num',NewNum);
+		};
+	};
+	$(function(){
+		clearMarginR();
+		calculateShoping();
+		$('.single').bind('click', function(){
+			var isHide = $(this).children('img').hasClass('dn');
+			var costThis = parseFloat($(this).attr('data-cost'));
+			var totalCost = parseFloat($('.costStyle').attr('data-costTotal'));
+			//var Ongoods = parseInt($('.Ongoods').attr('data-goodson'));
+			if(isHide){
+				$(this).children('img').removeClass('dn');
+				$(this).parents('li').addClass('onBg');
+				//Ongoods++;
+				totalCost = (costThis +totalCost).toFixed(2);
+				$('.costStyle').attr('data-costTotal',totalCost).text(totalCost);
+				//$('.Ongoods').attr('data-goodson', Ongoods).text(Ongoods);
+			}else{
+				$(this).children('img').addClass('dn');
+				//Ongoods--;
+				$(this).parents('li').removeClass('onBg');
+				totalCost = (totalCost - costThis).toFixed(2);
+				$('.costStyle').attr('data-costTotal',totalCost).text(totalCost);
+				//$('.Ongoods').attr('data-goodson', Ongoods).text(Ongoods);
+			}
+			OnShoppingTotal();
+		});
+		$('.chooseAll').bind('click', function(){
+			var isHide = $(this).children('img').hasClass('dn');
+			var goods = $('.business_body').attr('data-goodsState');
+			if(isHide){//选中
+				var totalCost = calculateTotalCost();//计算总价格
+				$('.costStyle').attr('data-costTotal',totalCost).text(totalCost);//写入总价格
+				//$('.Ongoods').attr('data-goodson', goods).text(goods);//写入选取的商品数
+				$(this).children('img').removeClass('dn');//显示沟
+				$('.pro_list_manu').find('.checkbox').children('img').removeClass('dn');
+				$('.pro_list_manu').find('li').addClass('onBg');//所有的选项增加背景色
+			}else{//取消
+				$(this).children('img').addClass('dn');
+				var zero = '0.00';
+				$('.pro_list_manu').find('.checkbox').children('img').addClass('dn');
+				$('.costStyle').attr('data-costTotal',zero).text(zero);
+				//$('.Ongoods').attr('data-goodson', 0).text(0);
+				$('.pro_list_manu').find('li').removeClass('onBg');
+			}
+			OnShoppingTotal();
+		});
+		$('.deleteSingle').bind('click', function(){
+			$(this).parents('li').remove();
+			calculateShoping();
+			OnShoppingTotal();
+			//var Ongoods = parseInt($('.Ongoods').attr('data-goodson'));
+			// Ongoods--;
+			// $('.Ongoods').attr('data-goodson', Ongoods).text(Ongoods);
+
+		});
+		
+		$('.sliderHeader').bind('click', function(element){
+			var thisTarget = element.target;
+			var tabToLi = ($(thisTarget).eq(0).hasClass('tabLi')) ? $(thisTarget).eq(0) : $(thisTarget).eq(0).parents('li');
+			tabToLi.addClass('ontabmanu');
+			tabToLi.siblings('li').removeClass('ontabmanu');
+			var texttab = tabToLi.find('span').text();
+			switch(texttab){
+				case '热销下载':
+					// var text1 = $('.business_yy_b').attr('data1');
+					// var imgurl1 = $('.business_yy').find('img').attr('data1-src');
+					// var linkstatus = $('.business_yy').find('img').attr('data1-status');
+					// $('.business_yy_b').children('p').text(text1);
+					// $('.business_yy_b').children('img').attr('src',imgurl1);
+					// if(linkstatus == 'video'){
+					// 	$('.business_list').find('.playIcon').removeClass('dn');
+					// }else{
+					// 	$('.business_list').find('.playIcon').addClass('dn');
+					// }
+
+					$('.business_list').children('li').each(function(idx,item){
+						var text1 = $(item).find('.business_yy_b').attr('data1');
+						var imgurl1 = $(item).find('.showmainImg').attr('data1-src');
+						var linkstatus = $(item).find('.showmainImg').attr('data1-status');
+						$(item).find('.business_yy_b').text(text1);
+						$(item).find('.showmainImg').attr('src',imgurl1);
+						if(linkstatus == 'video'){
+							$(item).find('.playIcon').removeClass('dn');
+						}else{
+							$(item).find('.playIcon').addClass('dn');
+						}
+					})
+
+					break;
+				case '我的足迹':
+					$('.business_list').children('li').each(function(idx,item){
+						var text2 = $(item).find('.business_yy_b').attr('data2');
+						var imgurl2 = $(item).find('.showmainImg').attr('data2-src');
+						var linkstatus = $(item).find('.showmainImg').attr('data2-status');
+						$(item).find('.business_yy_b').text(text2);
+						$(item).find('.showmainImg').attr('src',imgurl2);
+						if(linkstatus == 'video'){
+							$(item).find('.playIcon').removeClass('dn');
+						}else{
+							$(item).find('.playIcon').addClass('dn');
+						}
+					})
+					break;
+				case '猜你喜欢':
+					$('.business_list').children('li').each(function(idx,item){
+						var text3 = $(item).find('.business_yy_b').attr('data3');
+						var imgurl3 = $(item).find('.showmainImg').attr('data3-src');
+						var linkstatus = $(item).find('.showmainImg').attr('data3-status');
+						console.log('text--->'+imgurl3);
+						$(item).find('.business_yy_b').text(text3);
+						$(item).find('.showmainImg').attr('src',imgurl3);
+						if(linkstatus == 'video'){
+							$(item).find('.playIcon').removeClass('dn');
+						}else{
+							$(item).find('.playIcon').addClass('dn');
+						}
+					})
+					break;
+			}
+		})
+		$('.deleteAll').bind('click',function(){
+			$('.pro_list_manu').each(function(idx, item){
+				var ischooses = $(item).find('li');
+				for(var i = 0; i < ischooses.length; i++){
+					if(ischooses.eq(i).hasClass('onBg')){
+						ischooses.eq(i).remove();
+					}
+				}
+			});
+			var zero = '0.00';
+			$('.costStyle').attr('data-costTotal',zero).text(zero);
+			$('.Ongoods').attr('data-goodson', 0).text(0);
+		})
+	})
+	function calculateTotalCost(){
+		var totalCost = 0;
+		$('.single').each(function(idx, item){
+			var itemCost = parseFloat($(item).attr('data-cost'));
+			totalCost = (totalCost + itemCost);
+		});
+		return (totalCost.toFixed(2));
+	}
+</script>
+</body>
+</html>

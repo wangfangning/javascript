@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Expires" content="0">
+	<title>填写信息</title>
+	<script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/choujiangstyle.css">
+    <script type="text/javascript">
+        var _self =  this ;
+        _self.width = 640; // 璁剧疆榛樿鏈€澶у搴�
+        _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+        _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        _self.changePage =  function (){
+        document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function (){_self.changePage();}, false );
+    </script>
+    <style type="text/css">
+        input {outline:none;}
+        textarea {outline:none;}
+    </style>
+</head>
+<body>
+    <div id='container_l' style='background: #fff4db;'>
+        <div class='showimg_top'>
+            <img src="images/awardipho.png" />
+        </div>
+        <div class='infobodyinput_body'>
+            <div class='infoaward_toM'>
+                <dl>
+                    <dt class='fl'>奖品名称：</dt>
+                    <dd>华为Colorphon 5移动电源</dd>
+                </dl>
+                <dl>
+                    <dt class='fl'>领取方式：</dt>
+                    <dd>快递到家</dd>
+                </dl>
+            </div>
+            <div class='inputinfoaddress'>
+                <ul>
+                    <li>
+                        <p id='ee'>姓名：</p>
+                        <div class='inputstylebody'>
+                            <input type='text' class='inputstyle' placeholder='请填写您的姓名' />
+                        </div>
+                    </li>
+                    <li>
+                        <p>手机号码：</p>
+                        <div class='inputstylebody'>
+                            <input type='text' class='inputstyle' placeholder='请填写您的手机号码' />
+                        </div>
+                        <span>请输入正确的手机号码</span>
+                    </li>
+                    <li>
+                        <p>联系地址：</p>
+                        <div class='inputstylebody padT30'>
+                            <textarea placeholder='请填写您的联系地址' class='inputareastyle'></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="gorechargebtn2" id='submitbtn'><!--提交按钮-->
+                    <img src="images/choujiangbtn6.png">
+            </div>
+            <div class='space_10'></div>
+            <div id='keyboargap'></div>
+        </div>
+        <div class='poubg'></div>
+            <div class='ensureinfo'>
+                <div class='ensureinfo_body'>
+                    <p class='topicPouptip'>地址确认</p>
+                    <p class='tipensu'>尊敬的用户，送货地址一旦确认将不可修改，是否确认如下配送信息正确?</p>
+                    <div class='intoarreass'>
+                        <dl>
+                            <dt class='fl'>姓名 :</dt>
+                            <dd>张飞</dd>
+                        </dl>
+                        <dl>
+                            <dt class='fl'>手机号码 :</dt>
+                            <dd>18600549999</dd>
+                        </dl>
+                        <dl>
+                            <dt class='fl'>联系地址 :</dt>
+                            <dd>北京市西城区玉渊潭南路1号水科院大厦一层101</dd>
+                        </dl>
+                    </div>
+
+                </div>
+                <div class='btnbody'>
+                        <ul>
+                            <li class='bordR' id='cancelbtn'>取消</li>
+                            <li id='ensureinfobtn' onclick='window.location.href="infosubmt.html"'>确定</li>
+                        </ul>
+                    </div>
+            </div>
+    </div>
+     <script type="text/javascript">
+        $(function(){
+            var windH = $(window).height();
+            $('#container_l').css('min-height',windH);
+            $('#submitbtn').bind('click',function(){//提交弹层
+                $('.poubg').show();
+                $('.ensureinfo').show();
+            });
+            $('#cancelbtn').bind('click',function(){
+                $(this).parents('.ensureinfo').hide();
+                $('.poubg').hide();
+            });
+
+            $('.inputareastyle').on('focus',function(){//点击textarea增加页面长度，兼容安卓
+                $('#keyboargap').show();
+                
+                $("body,html").scrollTop(350);
+            })
+
+            $('.inputareastyle').on('blur',function(){
+                $('#keyboargap').hide();
+            });
+
+            
+
+        })
+    </script>
+</body>
+</html>

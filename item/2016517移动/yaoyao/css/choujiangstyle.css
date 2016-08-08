@@ -1,0 +1,508 @@
+body{
+	background-color:#2f2942;
+}
+#container_l{
+	min-width:320px;
+	max-width:640px;
+	margin:0 auto;
+	font-family:"微软雅黑";
+	position:relative;
+	background-repeat: no-repeat;
+
+}
+.detailrules p img{
+	width: 100%;
+}
+.bodycontent{
+	width: 5.2rem;
+	margin:0 auto;
+	text-align: center;
+}
+.boxcontaner img{
+	margin-top: 30px;
+}
+.sucinfoicon{
+	width: 1.16rem;
+	margin-top: 0.64rem;
+}
+.tipsuc_T{
+	font-size: 0.36rem;
+	color: #53b373;
+	margin-top: 0.24rem;
+}
+.tipfail_T{
+	font-size: 0.36rem;
+	color: #e77155;
+	margin-top: 0.24rem;
+}
+.sucwarm_T{
+	font-size: 0.28rem;
+	color: #9a4e22;
+	margin-top: 0.7rem;
+	text-align: left;
+}
+.MarT40{
+	margin-top: 0.4rem;
+}
+.gorechargebtn{
+	margin-top: 0.6rem;
+}
+.gorechargebtn img{
+	width: 3.98rem;
+}
+.checkdetilmenu{
+	color: #9a4e22;
+	font-size: 0.26rem;
+	margin-top: 2.15rem;
+}
+.checkdetilmenu a{
+	color: #fc6c03;
+	text-decoration: underline;
+}
+.lishowinfo{
+	color: #9a4e22;
+	font-size: 0.28rem;
+	margin-top: 0.3rem;
+}
+.listbody_detail{
+	padding-top: 0.17rem;
+	padding-bottom: 0.17rem;
+	padding-left: 0.3rem;
+	background: #fff;
+	position: relative;
+	margin-bottom: 0.3rem;
+
+}
+.rem15{
+	width: 100%;
+	height: 0.3rem;
+	overflow: hidden;
+}
+.introaward dd{
+	font-size: 0.24rem;
+}
+.awardtime{
+	font-size: 0.18rem;
+}
+.dowmupicon{
+	height: 0.19rem;
+	position: absolute;
+	top: 50%;
+	margin-top: -0.08rem;
+	right: 0.45rem;
+}
+.outbody{
+	margin-right: 0.2rem;
+	font-size: 0.12rem;
+}
+.space_20{
+	width: 100%;
+	height: 20px;
+	overflow: hidden;
+}
+.failicon{
+	margin-top: 0.77rem;
+	width: 30%;
+}
+.errorbody{
+	text-align: center;
+}
+.errorbody p{
+	font-size: 0.28rem;
+	color: #9a4e22;
+	text-align: left;
+	margin:0 auto;
+	padding-left: 0.72rem;
+	padding-right: 0.72rem;
+	margin-top: 0.3rem;
+}
+.awardname{
+	font-size: 0.28rem;
+	color: #9a4e22;
+	margin-top: 0.54rem;
+
+}
+.bodysize{
+	margin:0 auto;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+.chancesego{
+	font-family: "黑体";
+	font-size: 12px;
+	padding-top: 0.3rem;
+	text-align: center;
+	position: relative;
+	margin-bottom: -7px;
+	color: #fce9d0;
+}
+.chancesego span{
+	font-size: 0.62rem;
+color: #fce9d0;
+}
+.boxcontaner{
+	text-align: center;
+}
+.boxcontaner img{
+	width: 5.03rem;
+}
+.gorechargebtn2{
+	text-align: center;
+	margin-top: 0.45rem;
+}
+.gorechargebtn2 img {
+    width: 4.5rem;
+}
+.rulesactivity{
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+	margin:0 auto;
+}
+.record{
+	text-align: center;
+}
+.record a{
+	color: #fff;
+	padding: .08rem .3rem;
+	font-size: 16px;
+	text-align: center;
+	 /*background: -webkit-linear-gradient(top,#ff845a,#f36651);*/
+	 border: 1px solid #f36651;
+	border-radius: 1rem;
+}
+.record1 a{
+		padding: .2rem 1.2rem;
+			font-size: 24px;
+}
+
+.rulestopic{
+	width: 100%;
+	position: relative;
+	text-align: center;
+	height: 0.32rem;
+}
+.bordergap{
+	border-top: 0;
+	border-bottom: 1px solid #bdb4c8;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	top: -0.32rem;
+}
+.rulestopic span{
+	position: absolute;
+	padding-left: 0.23rem;
+	padding-right: 0.23rem;
+	font-size: 0.24rem;
+	color: #bdb4c8;
+	top: 1px;
+    left: 38%;
+    z-index: 100;
+    background: #2f2942;
+}
+.space_10{
+	width: 100%;
+	height: 10px;
+	overflow: hidden;
+}
+.detailrules{
+	color: #bdb4c8;
+	font-size: 0.24rem;
+	padding-top: 0.2rem;
+}
+.detailrules p{
+	margin-bottom: 0.15rem;
+}
+.cs{
+	font-size: 14px;
+	padding-top: 0.5rem;
+}
+.checkmychark{
+	text-align: center;
+
+	font-size: 0.24rem;
+}
+.checkmychark a{
+	text-decoration: underline;
+	color: #ff6c00;
+}
+.poubg{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.6;
+	position: absolute;
+	z-index: 999;
+	top: 0px;
+	display: none;
+}
+.prizepoup{
+	position: absolute;
+	width: 5.26rem;
+	background: #f8bf43;
+	border-radius: 20px;
+	top: 19%;
+	z-index: 1000;
+	left: 50%;
+	margin-left: -2.63rem;
+	display: none;
+}
+.prizepoup_showwindow{
+	background: #2f2942;
+	margin:0.12rem;
+	border-radius: 15px;
+	position: relative;
+}
+.topicaward{
+	font-size: 0.36rem;
+	color: #9a4e22;
+	text-align: center;
+	padding-top: 0.6rem;
+}
+.congraT{
+	color: #9a4e22;
+	font-size: 0.28rem;
+	margin-top: 0.4rem;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+.congraT_no{
+	color: #9a4e22;
+	font-size: 0.28rem;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+	text-align: center;
+}
+
+.congraT_no a{
+	color: #ff6000;
+	font-size: 0.36rem;
+	text-decoration: underline;
+}
+
+.closewindow{
+	width: 0.68rem;
+	position: absolute;
+	z-index: 1001;
+	top: -0.34rem;
+	right: -0.34rem;
+}
+.nochoice{
+	color: blue;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 15px;
+}
+.space_100{
+	height: 1rem;
+	width: 100%;
+	overflow: hidden;
+}
+.space_90{
+	height: 0.52rem;
+	width: 100%;
+	overflow: hidden;
+
+}
+.showimg_top img{
+	height: 2.5rem;
+}
+.showimg_top{
+	text-align: center;
+	padding-top: 0.25rem;
+	padding-bottom: 0.3rem;
+}
+.infoaward_toM{
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	color: #9a4e22;
+	font-size: 0.28rem;
+	border-top: 1px solid #9a4e22;
+	border-bottom: 1px solid #9a4e22;
+}
+.infobodyinput_body{
+	margin:0 auto;
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+}
+.inputinfoaddress{
+	font-size: 0.26rem;
+	color: #9a4e22;
+}
+.inputstyle{
+	height: 0.8rem;
+	background: #fff;
+	border-radius: 5px;
+	width: 95%;
+	padding-left: 0.2rem;
+	font-size: 0.30rem;
+}
+.inputareastyle{
+	height: 1.7rem;
+	background: #fff;
+	border-radius: 5px;
+	width: 95%;
+	padding-left: 0.2rem;
+	border:0;
+	font-size: 0.30rem;
+}
+.padT30{
+	padding-top: 0.28rem;
+}
+.inputinfoaddress ul li p{
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+}
+.inputinfoaddress ul li span{
+	padding-top: 5px;
+	display: inline-block;
+	color: #ec5622;
+	font-size: 0.2rem;
+}
+.inputstylebody{
+	background: #fff;
+	border-radius: 5px;
+}
+
+.ensureinfo{
+	width: 5.3rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -2.65rem;
+	border-radius: 10px;
+	top: 10%;
+	display: none;
+	background: #fff4db;
+	z-index: 1000;
+}
+.topicPouptip{
+	font-size: 0.32rem;
+	color: #9a4e22;
+	text-align: center;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.tipensu{
+	color: #9a4e22;
+	font-size: 0.26rem;
+	margin-bottom: 0.38rem;
+}
+.ensureinfo_body{
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.intoarreass{
+	margin-bottom: 0.6rem;
+}
+.intoarreass dl{
+	margin-bottom: 0.1rem;
+}
+.intoarreass dl dt{
+	font-size: 0.26rem;
+	color: #9a4e22;
+	padding-right: 5px;
+}
+.intoarreass dl dd{
+	font-size: 0.26rem;
+	color: #ff6c00;
+
+}
+.btnbody{
+	overflow: hidden;
+	border-top: 1px solid #e1c2a3;
+}
+.bordR{
+	border-right: 1px solid #e1c2a3;
+}
+.btnbody ul li{
+	float: left;
+	width: 49.6%;
+	height: 0.88rem;
+	font-size: 0.32rem;
+	line-height: 0.88rem;
+	text-align: center;
+	color: #9a4e22;
+
+}
+.cancelbtn{
+	border-right: 1px solid #e1c2a3;
+	width: 100%;
+	height: 100%;
+}
+.awardimgshow{
+	border:1px solid #eeeeee;
+	width: 1.2rem;
+	height: 1.2rem;
+	display: table-cell;
+ 	vertical-align:middle;
+	text-align: center;
+}
+.denglu{
+	font-size: .5rem;
+	text-align: center;
+	color: #fce9d0;
+}
+.awardimgshow img{
+	height: 1rem;
+	vertical-align:middle;
+}
+.borspace15{
+	margin-bottom: 0.15rem;
+}
+.introawardinfo_det p{
+	font-size: 0.28rem;
+	color: #9a4e22;
+	padding-bottom: 0.1rem;
+	border-bottom: 1px solid #9a4e22;
+}
+.nochoice a{
+	color: #fff;
+}
+.introawardinfo_det{
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
+	margin:0 auto;
+}
+.introawardinfo_body{
+	font-size: 0.24rem;
+	margin-top: 0.23rem;
+	overflow: hidden;
+}
+.introawardinfo_body dl dd{
+	color: #ff6c00;
+	float: right;
+}
+.introawardinfo_body dl{
+	margin-bottom: 0.17rem;
+	overflow: hidden;
+}
+.introawardinfo_body dl dd span{
+	display: inline-block;
+	width: 3rem;
+	text-align: right;
+}
+.introawardinfo_body dl dt{
+	color: #9a4e22;
+	float: left;
+}
+.remgap40{
+	width: 100%;
+	height: 0.4rem;
+	overflow: hidden;
+}
+#keyboargap{
+	width: 100%;
+	height: 220px;
+	overflow: hidden;
+	display: none;
+}
+::-webkit-input-placeholder { color:#f5ebb1; }
+::-moz-placeholder { color:#f5ebb1; } /* firefox 19+ */
+:-ms-input-placeholder { color:#f5ebb1; } /* ie */
+input:-moz-placeholder { color:#f5ebb1; }
+/*new*/
+.btnarea{
+	margin: 0 auto;
+    width: 5rem;
+    text-align: center;
+}

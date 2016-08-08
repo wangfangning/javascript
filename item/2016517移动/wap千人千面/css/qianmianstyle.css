@@ -1,0 +1,217 @@
+.container {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #f9d9c0;
+}
+.zhuti p {
+  line-height: .35rem;
+}
+.tb {
+  width: 100%;
+}
+.section {
+  margin: auto;
+}
+.zhuti {
+  width: 98%;
+  margin: auto;
+}
+.main {
+  font-size: .35rem;
+  margin: 20px 0 10px 0;
+}
+.banner p {
+  color: #fff;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background: url("../images/标题背景.png") no-repeat;
+  background-size: contain;
+  background-position: top;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.banner p i {
+  font-style: italic;
+  color: #ffff00;
+  font-size: .5rem;
+  vertical-align: sub;
+}
+.hui, .zhaolian {
+  background: #fcfcfc;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.hui img {
+  width: 60px;
+  margin: 32px 5px;
+  margin-right: 0;
+}
+.yinying {
+  box-shadow: 2px 2px 2px #a79080;
+}
+.hui .wenan {
+  color: #000;
+  font-size: .21rem;
+  border: 1px solid #f0d9b5;
+  display: inline-block;
+  width: 75%;
+  margin: 20px 0;
+  padding: 10px 0 10px 5px;
+}
+.zhaolian img {
+  margin: 15px 0 15px 10px;
+}
+.zhaolian .wenan {
+  margin: auto;
+  border: 1px solid #c80000;
+  color: #c80000;
+  width: 85%;
+  border-radius: 12px 60px 60px 12px;
+  font-size: .21rem;
+  padding: 5px 10px;
+}
+.zhaolian a {
+  overflow: hidden;
+  float: right;
+  text-decoration: underline;
+  color: #c80000;
+  font-size: .3rem;
+  margin: .2rem .25rem .2rem 0;
+  font-weight: bold;
+}
+.section2 .banner {
+  background: #ff8645;
+  padding-top: 11px;
+}
+.section3 .banner {
+  padding-top: 11px;
+  background: #ffb142;
+}
+.section4 .banner {
+  background: #fe894a;
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+.section5 .banner {
+  background: #ff427c;
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+.section6 .banner {
+  background: #ff464b;
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+.section7 .banner {
+  background: #ff8a4b;
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+.section2 .banner p,.section3 .banner p,.section4 .banner p, .section5 .banner p, .section6 .banner p, .section7 .banner p {
+  padding-top: 3px;
+}
+.section2 .youshi, .section3 .youshi, .section5 .youshi {
+  background: #fcfcfc;
+}
+.section4 .zhuti, .section6 .zhuti, .section7 .zhuti {
+  height: 200px;
+  background: #fcfcfc;
+}
+.section2 .wenan, .section3 .wenan {
+  text-align: center;
+  color: #eabda6;
+  font-size: .25rem;
+  padding: 20px 0;
+}
+.section3 .wenan {
+  font-size: .32rem;
+  color: #da0b05;
+  line-height: .5rem;
+  font-weight: bold;
+}
+.section2 .wenan span {
+  border-bottom: 1px dashed #d2d2d2;
+}
+.youshi img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+.youshi a img {
+  padding: 20px 0;
+}
+.section5 .bai{
+  font-size: .3rem;
+  width: 70%;
+  display: inline-block;
+}
+.section5 .xiao{
+  font-size: .2rem;
+  width: 70%;
+  display: inline-block;
+}
+}
+.section5 a{
+  width: 20px;
+}
+.shouji div {
+  width: 48%;
+  display: inline-block;
+  margin: 1px;
+  background: #fcfcfc;
+  box-shadow: 2px 2px 2px #a79080;
+  vertical-align: text-top;
+  height: 333px;
+  text-align: center;
+
+}
+.shouji div img{
+  width: 80%;
+  display: block;
+  margin: auto;
+margin-left: 5px;
+
+}
+.shouji div a{
+  background: #c80000;
+  padding: 3px 25px;
+  display: inline-block;
+  border-radius: 8px;
+  color: #fff;
+  margin: auto;
+  margin-top: 10px;
+
+}
+.shouji div span{
+  display: inline-block;
+}
+.shouji div span i{
+  font-weight: bold;
+  font-size: .32rem;
+}
+.shouji div span{
+  font-size: .26rem;
+}
+.shouji div span.xiao{
+  color: #9d9c9c;
+  text-decoration: line-through;
+}
+.shouji div span.huo{
+  color: #c80000;
+  font-size: .32rem;
+  font-weight: bold;
+}
+.section1 .right{
+  text-align: right;
+}
+.section1 a img{
+
+  margin: 10px 0 20px 0;
+}
+.section2 .banner p i,.section3 .banner p i{
+  font-style: normal;
+  vertical-align: inherit;
+  font-size: .35rem;
+}

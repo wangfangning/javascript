@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Expires" content="0">
+  <title>517千人千面页面</title>
+  <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/qianmianstyle.css">
+  <script type="text/javascript">
+    var _self = this;
+    _self.width = 640; // 璁剧疆榛樿鏈€澶у搴�
+    _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+    _self.widthProportion = function() {
+      var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+      return p > 1 ? 1 : p < 0.5 ? 0.5 : p;
+    };
+    _self.changePage = function() {
+      document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+    }
+    _self.changePage();
+    window.addEventListener('resize', function() {
+      _self.changePage();
+    }, false);
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <img src="images/header.gif" alt="" class="tb" />
+    </div>
+    <div class="main">
+
+      <div class="section section2 no2">
+        <div class="banner">
+          <img src="images/bgph2.png" />
+        </div>
+        <div class="zhuti">
+          <div class="hui yinying">
+            <img src="images/hui.jpg" alt="" />
+            <p class="wenan">
+              换USIM卡用户专享优惠：<br />
+              （分公司自定义编辑内容，微软雅黑20点黑色）
+            </p>
+          </div>
+          <div class="youshi yinying">
+            <div class='wangluoarea'>
+              <img src="images/wangluo.jpg">
+            </div>
+            <img src="images/huojian.jpg" alt="" />
+
+            <a href="#"><img src="images/btniocn1.png" alt="" class='btniocn' /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section7 no5">
+        <div class="banner">
+          <img src="images/bgph5.png" />
+        </div>
+
+        <div class="zhuti">
+          <div class='topicTextshi'>
+            <div class='youkutop1'>
+              <img src="images/youku1.jpg" />
+            </div>
+          <div class='youkuContainer'>
+              <img src="images/youku.jpg" />
+            </div>
+            <a href="#" class='banlibtn'><img src="images/btniocn3.png" alt="" class='btniocn'></a>
+            <div class="huodong">
+              <p style="padding:0;text-align:center;">
+                  <a href="#" style='font-size:0.21rem;color: #474747;font-weight: bold;'>活动详情&gt;&gt;</a>
+                <a href="#" style='font-size:0.21rem;color:#e60101;font-weight: bold;margin-left:0.5rem;'>我的抽奖&gt;&gt;</a>
+              </p>
+            </div>
+            <div style='height:0.2rem;width:100%;'></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="section section6 no7">
+        <div class="banner">
+          <img src="images/bgph7.png" />
+        </div>
+        <div class="zhuti ">
+          <div class="zhutic">
+            <a href="#"><img src="images/czcj.jpg" alt="" style="margin-top:.1rem;"/></a>
+            <div class="huodong">
+              <p style="padding:0;">
+                  <a href="#" style='font-size:0.21rem;color: #474747;vertical-align: top;margin-right: 0.5rem;'>活动详情&gt;&gt;</a>
+                <a href="#" style='font-size:0.21rem;padding-right: .7rem;vertical-align: top;'>我的抽奖&gt;&gt;</a>
+              </p>
+            </div>
+            <div style='height:0.2rem;width:100%;'></div>
+          </div>
+        </div>
+      </div>
+      <div class="section section8 no8" style="padding:10px 0;">
+        <div class="zhuti">
+          <img src="images/tp.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <img src="images/footer.gif" alt="" class="tb" />
+    </div>
+  </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".zhaolian a").click(function(event) {
+      $(".meng").css("display","block");
+        $(".tanchuang").css("display","block");
+        event.stopPropagation();
+    });
+    $(".tclose").click(function() {
+      $(".meng").css("display","none");
+        $(".tanchuang").css("display","none");
+    });
+  })
+</script>
+</body>
+
+</html>

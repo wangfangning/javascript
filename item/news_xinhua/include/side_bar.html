@@ -1,0 +1,72 @@
+
+    <style>
+        ul,li,span{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #side_bar{
+            z-index: 1000000000;
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            margin-top: -90px;
+        }
+        #side_bar li{
+            height: 44px;
+            margin: 2px 0;
+        }
+        #side_bar li span{
+            margin-right: -8px;
+            display: inline-block;
+            height: 44px;
+            vertical-align: middle;
+        }
+        #side_bar li .txt{
+            width: 76px;
+            background: #cc3d3d;
+            text-align: center;
+            line-height: 44px;
+            font-family: "微软雅黑";
+            letter-spacing: 4px;
+            color: #ffffff;
+            display: none;
+            float: left;
+        }
+        #side_bar li .imgs{
+            width: 44px;
+            background: #a3a3a3;
+            float: right;
+        }
+    </style>
+    <ul id="side_bar">
+        <li>
+            <span class="txt">客服</span>
+            <span class="imgs"><img src="images/logo_icon_1.png"/></span>
+        </li>
+        <li>
+            <span class="txt">点题</span>
+            <span class="imgs"><img src="images/logo_icon_2.png"/></span>
+        </li>
+        <li style="position: relative">
+            <span class="txt">选稿栏</span>
+            <span class="imgs"><img src="images/logo_icon_3.png"/></span>
+            <img style="position: absolute; top:8px;right: -4px;"src="images/conner_logo.png"/>
+        </li>
+        <li style="position: relative">
+            <span class="txt">消息</span>
+            <span class="imgs"><img src="images/logo_icon_4.png"/></span>
+            <img style="position: absolute; top:8px;right: -4px;" src="images/conner_logo.png"/>
+        </li>
+    </ul>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){
+            $("#side_bar li").bind("mouseenter",function(){
+                $(this).children(".txt").show();
+            })
+            $("#side_bar li").bind("mouseleave",function(){
+                $(this).children(".txt").hide();
+            })
+        })
+    </script>

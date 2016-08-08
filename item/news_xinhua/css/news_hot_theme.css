@@ -1,0 +1,306 @@
+/*新闻热点专题样式*/
+
+/*public css*/
+    .cl { zoom:1; }
+    .cl:after { content:''; display:block; clear:both; }
+    .fl { float:left; }
+    .fr { float:right; }
+    body{
+        font-family: "微软雅黑";
+    }
+/*end public css*/
+
+/*header css*/
+
+    a:hover{
+        color: red;
+    }
+
+/*content css*/
+    .content{
+        width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    .content .main{
+        width: 700px;
+    }
+    /*main1*/
+    .today_title{
+        width: 700px;
+        height: 36px;
+        padding-top: 14px;
+        position: relative;
+    }
+    .today_title a{
+        font-size: 14px;
+        color: #c2c2c2;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+    .news_content h3{
+        font-size: 22px;
+        color: #333333;
+        padding: 5px 0;
+    }
+    .news_content p{
+        font-size: 14px;
+        color: #666666;
+        padding: 10px 0;
+    }
+
+
+    /*main2*/
+    .news_pic_list .nav_list{
+        width:700px ;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .news_pic_list .nav_list li{
+        width: 74px;
+        height: 42px;
+        line-height: 42px;
+        padding: 4px 0 0;
+        float: left;
+        text-align: center;
+        color: #666666;
+        font-size: 16px;
+        margin-right: 42px;
+    }
+    .news_pic_list .pic_list{
+        padding: 20px 0;
+    }
+    .news_pic_list .pic_list li{
+        float: left;
+    }
+
+
+    /*main3*/
+    .box {
+
+        width: 220px; height: 150px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    /*.size {
+        *//* 广阔的海洋 *//*
+        width: 1000px; height: 1000px;
+        position: absolute; left: 50%; top: 50%;
+        margin: -500px 0 0 -500px;
+        *//* 水平居中 *//*
+        text-align: center;
+    }*/
+    .zoom {
+        width: 220px; height: 150px;
+        vertical-align: middle;
+        -webkit-transition: -webkit-transform .2s;
+        transition: transform .2s;
+    }
+    .box:hover .zoom {
+        /* hover放大 */
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        zoom: 1.05;
+    }
+    :root .box:hover .zoom {
+        zoom: 1;
+    }
+    .news_list_show ul .img{
+        padding: 20px 0px;
+        width: 220px;
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .news_list_show ul .text{
+        width: 420px;
+        padding: 20px;
+    }
+    .news_list_show .li_list{
+        border-top: 1px solid #dcdcdc;
+    }
+    .news_list_show ul .text h2{
+        font-size: 20px;
+        color: #333333;
+        height: 60px;
+        padding-top: 10px;
+
+    }
+    .news_list_show ul .text p{
+        height: 20px;
+        font-size: 14px;
+        color: #8d8d8d;
+    }
+    .news_list_show ul .text ul{
+        height: 60px;
+    }
+    .news_list_show ul .text li{
+        float: left;
+    }
+    .news_list_show .loading{
+        width: 700px;
+        height: 35px;
+        background: #e4e4e4;
+        position: relative;
+        line-height: 35px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .news_list_show .loading a{
+        color: #8d8d8d;
+    }
+    .news_list_show .loading img{
+        position: absolute;
+        top:9px;
+        left: 270px;
+    }
+
+/*side*/
+    .content .side{
+        width: 450px;
+    }
+    /*side1*/
+    .section_hot h2{
+        position: relative;
+        width: 440px;
+        border-left: 5px solid #cc3d3d;
+        margin: 16px 0;
+        padding-left: 10px;
+    }
+    .section_hot h2 span{
+        font-size: 20px;
+        color: #333333;
+        font-weight: bold;
+        line-height: 20px;
+    }
+    .section_hot h2 a{
+        position: absolute;
+        top:4px;
+        right: 0;
+        font-size: 14px;
+        color: #999999;
+    }
+    .section_content .text{
+        width: 310px;
+    }
+    .section_content .text h3{
+        font-size: 16px;
+        color: #333333;
+        padding-left:10px ;
+    }
+    .section_content .text p{
+        padding: 8px 10px;
+        font-size: 14px;
+        color: #666666;
+    }
+
+    .section_hot ul{
+        margin: 10px 0;
+    }
+    .section_hot ul li{
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+        color: #333333;
+
+    }
+    .section_hot ul li span{
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background: #7a7a7a;
+        border-radius: 50%;
+        margin: 2px 6px 2px 2px;
+    }
+
+
+    /*side3_video*/
+    .video_content ul li{
+        position: relative;
+    }
+    .video_content ul li .player{
+        position: absolute;
+        top:40px;
+        left: 84px;
+    }
+    .video_content ul li p{
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        color: #666666;
+    }
+    .section_video .list_1{
+        margin: 8px 0;
+    }
+    .section_video h2{
+        position: relative;
+        width: 440px;
+        border-left: 5px solid #cc3d3d ;
+        margin: 16px 0;
+        padding-left: 10px;
+    }
+    .section_video h2 span{
+        font-size: 20px;
+        color: #333333;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .carousel_figure {
+        width:450px;
+        height: 240px;
+        overflow: hidden;
+        margin:0 auto;
+        position: relative;
+    }
+    .carousel_figure ul{
+        width:450px;
+        height:240px;
+    }
+    .carousel_figure ul li{
+        width:450px;
+        height:240px;
+    }
+
+    .carousel_figure .p2{
+        width: 450px;
+        height: 30px;
+        line-height: 30px;
+        position: absolute;
+        bottom: 0;
+        background: #333333;
+        color: #ffffff;
+        opacity: 0.6;
+    }
+
+    .carousel_figure ul img{
+        width: 450px;
+        height: 240px;
+    }
+    .carousel_figure .p1{
+        width: 50px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .carousel_figure .p1 span{
+        display: inline-block;
+        width:12px;
+        height:12px;
+        background: #ffffff;
+        border-radius: 50%;
+    }
+    .carousel_figure .p1 .active {
+        background-color:#cc3d3d;
+    }
+    .carousel_figure .player{
+        position: absolute;
+        top:40px;
+        left: 84px;
+    }
+/*end content css*/

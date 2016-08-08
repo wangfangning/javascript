@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>信息提交成功</title>
+	<script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/choujiangstyle.css">
+    <script type="text/javascript">
+        var _self =  this ;
+        _self.width = 640; // 璁剧疆榛樿鏈€澶у搴�
+        _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+        _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        _self.changePage =  function (){
+        document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function (){_self.changePage();}, false );
+    </script>
+</head>
+<body>
+    
+    <div id='container_l' style='background: #fff4db;'>
+        <div class='bodycontent'>
+            <div id='infosucsub'>
+                <img src="images/choujiang1.png" class='sucinfoicon'>
+                <p class='tipsuc_T'>信息提交成功</p>
+                <div class='sucwarm_T'>
+                    <p>尊敬的用户，工作人员将在XX个工作日内为您寄送，请耐心等待。</p>
+                    <p class='MarT40'>既然运气这么好，再充一次接着抽吧!</p>
+                </div>
+                <div class='gorechargebtn' id='gorecharge'>
+                    <img src="images/choujiangbtn4.png" />
+                </div>
+                <div class='gorechargebtn' style='display:none;' id='goahead' onclick='window.location.href="Thechestindex.html"'>
+                    <img src="images/choujiangbtn5.png" />
+                </div>
+                <p class='checkdetilmenu'>您可以点击<a href='detailinfoshow.html'>“中奖信息查询”</a>查看奖品详情</p>
+            </div>
+            <div id='infofailsub' style='display:none;'>
+                <img src="images/failsub.png" class='sucinfoicon'>
+                <p class='tipfail_T'>信息提交失败</p>
+                <div class='gorechargebtn' id='gorecharge' onclick='window.location.href="writeinfo.html"'>
+                    <img src="images/choujiangbtn7.png" />
+                </div>
+            </div>
+            
+            <p class='nochoice' id='haschoice'>有抽奖机会</p>
+            <p class='nochoice' id='subfailshow'>提交失败</p>
+        </div>
+    </div>
+     <script type="text/javascript">
+        $(function(){
+            var windH = $(window).height();
+            $('#container_l').css('min-height',windH);
+            $('#haschoice').bind('click',function(){
+                $('#gorecharge').hide();
+                $('#goahead').show();
+                $('.sucwarm_T').children('.MarT40').hide();
+                $('.sucwarm_T').children('p').text('尊敬的用户，工作人员将在XX个工作日内为您寄送，请耐心等待。');
+            })
+            $('#subfailshow').bind('click',function(){
+                $('#infofailsub').show();
+                $('#infosucsub').hide();
+            })
+        })
+    </script>
+</body>
+</html>

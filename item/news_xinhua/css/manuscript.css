@@ -1,0 +1,370 @@
+.logoArea{
+	line-height: 97px;
+	height: 97px;
+	
+    margin-top: 15px;
+}
+.logoArea img{
+	margin-top: auto;
+	float: left;
+	margin-right: 22px;
+}
+.logoArea .text1{
+	font-size: 26px;
+	color: #005d98;
+}
+.deleteAll:hover{
+	color: red !important;
+
+}
+.deleteAll{
+	cursor: pointer;
+}
+.logoArea .text2{
+	font-size: 26px;
+	color: #666666;
+}
+.nav_container{
+	width: 100%;
+	border-bottom: 1px solid #dcdcdc;
+}
+.shoppingSelect{
+	position: absolute;
+	right: 58px;
+	bottom: 17px;
+}
+.manuPosition{
+	position: relative;
+}
+.shoppingSelect p{
+	font-size: 14px;
+	color: #666666;
+	margin-right: 18px;
+	line-height: 26px;
+}
+.shoppingSelect p span{
+	color: #cc3d3d;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.shoppingSelect input{
+	background: #cc3d3d;
+	color: #fff;
+	outline: none;
+	border:none;
+	font-size: 14px;
+	height: 26px;
+	line-height: 26px;
+	width: 56px;
+	border-radius: 2px;
+}
+.business_body{
+	width: 1200px;
+	margin:0 auto;
+}
+.option1{
+	height: 48px;
+	line-height: 48px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.body_part_Container{
+	padding-left: 43px;
+	overflow: hidden;
+}
+
+.body_part_Container .pro_show{
+	width: 246px;
+	text-align: left;
+	float: left;
+}
+.body_part_Container .showproImg{
+	width: 209px;
+}
+.detaile_Pro_manu{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.body_part_Container .optionText{
+	font-size: 14px;
+	color: #666666;
+}
+.body_part_Container .optionText2{
+	font-size: 14px;
+	color: #999999;
+}
+.body_part_Container .optionText3{
+	font-size: 16px;
+	color: #333333;
+	display: block;
+	cursor: pointer;
+}
+.optionText3:hover{
+	color: red;
+}
+.mar16{
+	margin-top: 16px;
+}
+.colcc3d3d{
+	color: #cc3d3d !important;
+}
+.body_part_Container .pro_intro{
+	width: 495px;
+	text-align: left;
+	float: left;
+}
+.body_part_Container .pro_intro .Pro_timeShow{
+	font-size: 16px;
+	color: #999999;
+	margin-top: 17px;
+}
+.body_part_Container .pro_intro .labelContainer{
+	background: #e6f5ff;
+	border-left: 1px solid #c3e0f3;
+	border-top: 1px solid #c3e0f3;
+	border-bottom: 1px solid #c3e0f3;
+	position: relative;
+	height: 16px;
+	display: inline;
+	font-size: 12px;
+	color: #45a4e0;
+	padding:3px;
+	margin-right: 23px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+.body_part_Container .labelArear{
+	margin-top: 20px;
+}
+.body_part_Container .pro_intro .labelContainer img{
+	position: absolute;
+	top: 50%;
+	margin-top: -14px;
+	right: -13px;
+}
+.body_part_Container .pro_cost{
+	width: 136px;
+	text-align: left;
+	float: left;
+}
+.body_part_Container .pro_style{
+	width: 146px;
+	text-align: left;
+	float: left;
+}
+.body_part_Container .pro_operation{
+	width: 98px;
+	text-align: left;
+	float: left;
+}
+.pro_list_manu ul li{
+	border-bottom: 1px solid #dcdcdc;
+}
+.busi_head{
+	height: 66px;
+	line-height: 66px;
+	border-bottom: 1px solid #dcdcdc;
+	padding-left: 27px;
+}
+.busi_head i{
+	width: 8px;
+	height: 24px;
+	background: #c2181f;
+	display: block;
+	float: left;
+	margin-top: 23px;
+	margin-right: 10px;
+}
+.busi_head span{
+	font-size: 20px;
+	color: #333333;
+	font-weight: bold;
+}
+.body_part_Container .checkbox{
+	width: 12px;
+	height: 12px;
+	border:1px solid #666666;
+	margin-right: 8px;
+	margin-top: 18px;
+	float: left;
+	position: relative;
+	cursor: pointer;
+}
+.checkbox .onIcon_manu{
+	position: absolute;
+	top: 50%;
+	margin-top: -4px;
+	left: 50%;
+	margin-left: -5px;
+}
+.onBg{
+	background: #fbfbfb;
+}
+.totalCost{
+	height: 64px;
+	line-height: 64px;
+	background: #f5f5f5;
+	margin-top: 47px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #dcdcdc;
+	border-top: 1px solid #dcdcdc;
+}
+.totalCost .checkbox{
+	margin-top: 26px !important;
+}
+.totalCost .pro_intro{
+	height: 60px;
+}
+.totalCost .pro_style{
+	height: 60px;
+}
+.totalCost .costStyle{
+	font-size: 22px;
+	color: #cc3d3d;
+	font-weight: bolder;
+}
+.totalCost .pro_cost{
+	font-size: 22px;
+	color: #cc3d3d;
+	font-weight: bolder;
+}
+.totalCost .uploadBtn{
+	width: 112px;
+	text-align: center;
+	background: #cc3d3d;
+	color: #fff;
+	height: 64px;
+	float: right;
+	cursor: pointer;
+	font-size: 22px;
+	display: block;
+}
+.totalCost .pro_operation{
+	width: 112px !important;
+	height: 100%;
+}
+.sliderContaier{
+	margin-top: 40px;
+	margin-bottom: 30px;
+	
+}
+.sliderContaier .sliderHeader{
+	padding-left: 23px;
+	
+	border-bottom: 1px solid #999999;
+}
+.sliderContaier .sliderHeader ul{
+	overflow: hidden;
+}
+.sliderContaier .sliderHeader ul li{
+	float: left;
+	font-size: 18px;
+	color: #666666;
+	width: 110px;
+
+	text-align: center;
+	height: 34px;
+	line-height: 34px;
+	cursor: pointer;
+}
+.sliderContaier .sliderHeader ul li span{
+	display: block;
+	width: 100%;
+	height: 26px;
+	line-height: 26px;
+
+}
+.borderLR{
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+}
+.ontabmanu{
+	border-bottom: 3px solid #cc3d3d;
+	color: #cc3d3d !important;
+}
+.information_main{
+	width: 1200px;
+	margin:0 auto;
+	margin-top: 30px;
+	height: 164px;
+	overflow: hidden;
+}
+.business_list {
+    float: left;
+    height: 164px;
+    width: 1200px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+.business_c {
+    float: left;
+    width: 1148px;
+    height: 164px;
+    overflow: hidden;
+    position: relative;
+}
+.business_list li {
+    float: left;
+    position: relative;
+    width: 214px;
+    margin-right: 21px;
+}
+.business_list li .business_yy{
+	margin:0 auto;
+}
+.business_list li .business_yy_b{
+	position: absolute;
+	bottom: 0;
+	height: 33px;
+	line-height: 33px;
+	background: #000;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	color: #fff;
+	width: 200px;
+	text-align: center;
+	font-size: 13px;
+}
+.business_list li img{
+    width: 200px;
+    height: 164px;
+}
+.business_l {
+    float: left;
+    cursor: pointer;
+    margin-right: 2px;
+    display: inline;
+    position: relative;
+    z-index: 99;
+    height: 164px;
+    width: 25px;
+    background: #fff;
+}
+.business_r {
+    float: right;
+    height: 164px;
+    width: 25px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+.business_l span {
+    float: left;
+    background: url(/images/business_l_img.jpg) no-repeat;
+    width: 15px;
+    height: 25px;
+    margin-top: 86px;
+    margin-left: 8px;
+    display: inline;
+}
+.business_r span {
+    float: right;
+    background: url(/images/business_l_img.jpg) no-repeat 0 -25px;
+    width: 15px;
+    height: 25px;
+    margin-top: 86px;
+    margin-right: 8px;
+    display: inline;
+}

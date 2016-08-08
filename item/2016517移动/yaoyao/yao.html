@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>仿微信摇一摇</title>
+	</head>
+	<body>
+
+		<audio id="audio" src="music/摇一摇音频.mp3" controls="controls" preload="auto">
+			亲，您的浏览器不支持html5的audio标签
+		</audio>
+	</body>
+	<script type="text/javascript">
+
+		//初始化
+		var x = y = z = last_x = last_y = last_z = 0;
+
+		function init() {             
+            if (window.DeviceMotionEvent) {
+                window.addEventListener("devicemotion", deviceMotionHandler, false);
+            } else {
+                alert("不支持移动事件");
+            }
+		}
+
+		var times = 0;
+        function deviceMotionHandler(eventData) {
+			var acceleration = eventData.accelerationIncludingGravity;
+			var curTime = new Date().getTime();
+			if ((curTime - last_update) > 100) {
+				var diffTime = curTime - last_update; last_update = curTime;
+				x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+			if (speed > SHAKE_THRESHOLD) { 
+				alert("摇动");
+				times++;
+				document.body.innerHTML = "摇动了"+times+"次"; 
+				// 可以获取到 Audio标签或者 video标签做视频和音频的处理等
+				// 
+				// 
+				doResult();
+			}
+            last_x = x;
+            last_y = y;
+            last_z = z;
+			} 
+		}
+
+		function doResult() {
+
+			// setTimeout(function() {
+			// 	document.getElementById("getprize3").style.display = "block";
+			// 	//document.getElementById("meng").style.display = "block";
+			// }, 1500);
+			document.getElementById("audio").play();
+			setTimeout(function() {
+				document.getElementById("audio").pause();
+			}, 1500);
+		}
+
+    </script>
+</html>
+
+	</script>
+</html>

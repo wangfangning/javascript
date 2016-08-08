@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Expires" content="0">
+  <title>517摇一摇登录页面</title>
+  <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/choujiangstyle.css">
+  <script type="text/javascript">
+    var _self = this;
+    _self.width = 640; // 璁剧疆榛樿鏈€澶у搴�
+    _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+    _self.widthProportion = function() {
+      var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+      return p > 1 ? 1 : p < 0.5 ? 0.5 : p;
+    };
+    _self.changePage = function() {
+      document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+    }
+    _self.changePage();
+    window.addEventListener('resize', function() {
+      _self.changePage();
+    }, false);
+  </script>
+</head>
+
+<body>
+  <div id='container_l' style='background:url("images/yyd1.jpg");background-size: contain;'>
+
+    <div class='boxcontaner'>
+      <img src="images/yy2.png">
+    </div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <p class="denglu" style='width: 5rem;margin: 0 auto;'>参加活动的小伙伴太多啦，请稍候再试，也可以先去看看其他优惠活动哦~</p>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='btnarea'>
+      <img src="./images/zhe9.png" style='width:100%;'>
+    </div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='space_10'></div>
+    <div class='rulesactivity'>
+      <div class='rulestopic'>
+        <hr class='bordergap' />
+        <span style="background-color:#362b43;">活动规则</span>
+      </div>
+      <div class='detailrules'>
+        <p>1、2016年5月17日0时—5月23日24时，处于正常使用状态的联通手机用户可登录联通手机营业厅客户端，参与摇一摇活动，有机会获得300MB免费省内流量包，并有机会获得天海邮轮豪华双人游、携程任我行礼品卡、宋仲基亚洲巡回粉丝见面会门票奖品。
+。</p>
+  <p>2、本次活动不适用于预付费20元卡用户、上网卡用户、流量随意享套餐用户及主副卡业务副卡用户，以及个别省特殊套餐用户（具体以本省规定为准）。</p>
+  <p>3、每个手机号码每天有5次摇奖机会。</p>
+  <p>4、用户摇一摇赢得300MB省内流量，并成功激活后，流量才能生效使用。成功激活后将通过短信通知用户。成功领取的300MB流量，请在2016年5月17日0时--5月26日24时内完成激活，逾期未激活流量将自动作废。</p>
+  <p>5、用户可以通过查看“我的中奖纪录”重新激活300MB流量包。</p>
+  <p>6、活动期间，每个手机号码只能摇中并激活一个300MB流量包，仅限2016年6月内使用。</p>
+  <p>7、部分用户由于业务原因无法成功激活300MB流量，具体请以当地联通公司业务规则为准。</p>
+  <p>8、当用户手机号码处于欠费停机、停机保号等非正常使用状态时，无法成功激活300MB流量。请先进行充值交费等操作将手机恢复为正常使用状态，再尝试激活流量。</p>
+  <p>9、本次活动的300MB流量不进行流量结转。</p>
+  <p>
+    	10、本次活动惊喜大奖由携程提供并负责兑奖事宜。奖品示例（仅供参考，以实际奖品为准）：
+    <img src="images/zhanshi.png" alt="" />
+  </p>
+      </div>
+      <!-- <div class='checkmychark'>
+        <a href="detailinfoshow.html">中奖信息查询&gt;&gt;</a>
+      </div>
+      <p class='nochoice' id='puple2'>未中奖（无抽奖机会）</p>
+      <p class='nochoice' id='puple3'>未中奖（有抽奖机会）</p>
+      <p class='nochoice' id='puple4'>未充值</p> -->
+    </div>
+    <div class='space_20'></div>
+    <div class='poubg'></div>
+
+
+  </div>
+  <script type="text/javascript">
+    $(function() {
+      var windH = $(window).height();
+      $('#container_l').css('min-height', windH);
+      $('.closewindow,#goaheadfor_award').bind('click', function() {
+        $(this).parents('.prizepoup').hide();
+        $('.poubg').hide();
+      })
+      $('#chestbtn').bind('click', function() {
+        $('#getprize').show();
+        $('.poubg').show();
+      });
+      $('#puple2').bind('click', function() {
+        $('#noprize_nochoce').show();
+        $('.poubg').show();
+      })
+      $('#puple3').bind('click', function() {
+        $('#noprize_haschoce').show();
+        $('.poubg').show();
+      })
+      $('#puple4').bind('click', function() {
+        $('#chongzhibtn').show();
+        $('#chongzhibtn').siblings('img').hide();
+        $('.chancesego').children('span').text('0');
+      })
+    })
+  </script>
+</body>
+
+</html>
