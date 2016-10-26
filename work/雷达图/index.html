@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>canvas雷达图-B5教程网www.bcty365.com</title>
+<script type="text/javascript" src="dj_js/jquery-1.11.3.min.js"></script>
+<!-- 雷达图 -->
+<script type="text/javascript" src="dj_js/Chart.min.js"></script>
+<!-- End -->
+
+<style>
+</style>
+</head>
+<body>
+<style>
+ul#bcty365_nav{padding-left:50px; margin-bottom:10px; border-bottom:2px solid #ccc; overflow:hidden; _zoom:1;}
+ul#bcty365_nav li{float:left; display:inline; margin:10px;}
+ul#bcty365_nav li a{display:block;color:#000000; font-size:16px;}
+ul#bcty365_nav li a,#wimoban_p,#wimoban_p a{ font-family:"微软雅黑";}
+ul#bcty365_nav li a:hover,#wimoban_p a:hover{color:red;}
+</style>	
+
+	<ul id="bcty365_nav">
+     <li><a target="top,_self" title="首页" href="http://www.bcty365.com/">首页</a></li>
+    <li><a target="top,_self"  title="网站开发" href="http://www.bcty365.com/list-9-1.html">网站开发</a></li>
+   <li><a target="top,_self" title="CMS教程" href="http://www.bcty365.com/list-100-1.html">CMS教程</a></li>
+    <li><a target="top,_self" title="数据库" href="http://www.bcty365.com/list-34-1.html">数据库</a></li>
+    <li><a target="top,_self" title="js特效代码" href="http://www.bcty365.com/list-12-1.html">js特效代码</a></li>
+    <li><a target="top,_self" title="网页特效" href="http://www.bcty365.com/list-61-1.html">网页特效</a></li>
+    <li><a target="top,_self" title="jQuery插件" href="http://www.bcty365.com/list-86-1.html">jQuery插件</a></li>
+    <li><a target="top,_self" title="站长学院" href="http://www.bcty365.com/list-96-1.html">站长学院</a></li>
+<li><script type="text/javascript" src="http://www.bcty365.com/statics/js/ad/show_400x25.js"></script></li></ul>
+<div style="width:40%; display:block; margin:0 auto">
+ <canvas id="myChart"></canvas>
+                    <script>
+                        var radarChartData = {
+                            labels: ["品牌", "做工", "材质", "款式", "新旧程度"],
+                            datasets: [
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [5,5,5,5,5]
+                                },
+                                {
+                                    label: "",
+                                    fillColor: "rgba(0,0,0,0)",
+                                    strokeColor: "rgba(0,0,0,0)",
+                                    pointColor: "rgba(0,0,0,0)",
+                                    pointStrokeColor: "rgba(0,0,0,0)",
+                                    pointHighlightFill: "rgba(0,0,0,0)",
+                                    pointHighlightStroke: "rgba(0,0,0,0)",
+                                    data: [null,null,null,null,true]
+                                },
+                                {
+                                    label: "变形玩具金刚4",
+                                    fillColor: "rgba(255,239,229,0.6)",
+                                    strokeColor: "rgba(227,211,201,0.6)",
+                                    pointColor: "rgba(255,95,1,1)",
+                                    pointStrokeColor: "#ff5f01",
+                                    pointHighlightFill: "#ff5f01",
+                                    pointHighlightStroke: "rgba(200,76,4,0.8)",
+                                    data: [4,5,5,2,5]
+                                }
+                            ]
+                        };
+                        window.onload = function(){
+                            window.myRadar = new Chart(document.getElementById("myChart").getContext("2d")).Radar(radarChartData, {
+                                responsive: true
+                            });
+                        }
+                    </script>
+					</div>
+</body>
+</html>
