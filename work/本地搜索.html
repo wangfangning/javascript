@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery实现的搜索列表过滤</title>
+	<style>
+		body {
+			background: #fff ;font-size: 13px;
+		}
+
+		#wrap {
+			position: relative;
+		}
+
+		.product-head h1 {
+			font-size: 14px;
+			font-family: Arial, Helvetica, sans-serif;
+			margin-bottom: 3px;
+			margin-left: 3px;
+		}
+
+		.product-head {
+			font-size: 12px;
+			padding: 4px;
+			background-color: #ccc;
+			width: 235px;
+		}
+
+		.filterform input {
+			font-size: 15px;
+			padding: 3px;
+			border: 1px solid #999;
+		}
+
+		li {
+			padding: 5px;
+			margin: 3px;
+			list-style: none;
+			width: 230px;
+			border-top: 1px solid #ccc;
+			display: none;
+		}
+
+		li a {
+			color: #000;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 11px;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		.clear {
+			clear: both;
+		}
+	</style>
+	<script src="jquery-2.1.1.js"></script>
+	<script>
+		(function($) {
+			jQuery.expr[':'].Contains = function(a, i, m) {
+				return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+			};
+
+			function filterList(header, list) {
+				var form = $("<form>").attr({
+						"class": "filterform",
+						"action": "#"
+					}),
+					input = $("<input>").attr({
+						"class": "filterinput",
+						"type": "text"
+					});
+				$(form).append(input).appendTo(header);
+				$(input)
+					.change(function() {
+						var filter = $(this).val();
+						if (filter) {
+							$matches = $(list).find('a:Contains(' + filter + ')').parent();
+							$('li', list).not($matches).slideUp();
+							$matches.slideDown();
+						} else {
+							$(list).find("li").slideUp();
+						}
+						return false;
+					})
+					.keyup(function() {
+						$(this).change();
+					});
+			}
+			$(function() {
+				filterList($("#form"), $("#list"));
+			});
+
+		}(jQuery));
+	</script>
+</head>
+
+<body>
+	<noscript><div id="noscript">需要开启浏览器的JavaScript功能才能查看更多效果!</div></noscript>
+	<div id="container">
+		<div id="wrap">
+			<div class="product-head">
+				<h1>搜索内容</h1>
+				<div id="form"></div>
+				<div class="clear"></div>
+			</div>
+			<ul id="list">
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/apple.png" width="30" height="30" align="absmiddle" /> <a href="#/Apple/">Apple</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/broccoli.png" width="30" height="30" align="absmiddle" /> <a href="#/Broccoli/">Broccoli</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/carrot.png" width="30" height="30" align="absmiddle" /> <a href="#/Carrot/">Carrot</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/celery.png" width="30" height="30" align="absmiddle" /> <a href="#/Celery/">Celery</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Lettuce/">Lettuce</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Mushroom/">Mushroom</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Onion/">Onion</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Onion/">Onfgn</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Onion/">Onhrt</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Onion/">wefwef</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Onion/">gdgag</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Onion/">hdbccx</a></li>
+				<li><img src="http://www.codefans.net/jscss/demoimg/201401/lettuce.png" width="30" height="30" align="absmiddle" /> <a href="#/Onion/">hhjgsgsfn</a></li>
+
+			</ul>
+		</div>
+</body>
+
+</html>
