@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <title>telephone</title>
+    <script src="jquery-1.11.3.js"></script>
+</head>
+<body>
+<div id="nav_1">
+    <div id="nav_2">
+        <form action="" method="post" >
+            <label id="nav_3">输入手机号码</label>
+            <textarea cols="15" rows="1" id="text"></textarea>
+            <input type="button" value="确定"  name="submit" id="submit" />
+            <input type="reset" value="重置"  name="reset" />
+            <div id="show"></div>
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $("#submit").click(function(){
+            var value=$("#text").val();
+            $.ajax({
+                url:"http://api.jisuapi.com/shouji/query",
+                dataType:"jsonp",
+                type:"get",
+                data:{
+                    shouji:value,
+                    appkey:"471e950103066cd5"
+                },
+                async:false,
+                DataType:"jsonp",
+                jsonCallback:"flightHandler",
+                success:function(data){
+                    var str = JSON.stringify(data.result);
+                    //console.log(data.result);
+                    $("#show").html(str);
+
+                },
+                error:function(error){
+                    console.log(error);
+                }
+            })
+        })
+    })
+
+   /* console.log(document.documentElement.clientHeight)
+    function getHeight(){
+        var nav_1 = document.getElementById("nav_1");
+        var height = document.documentElement.clientHeight;
+        nav_1.style.height = height + "px";
+    }
+    getHeight();
+
+
+
+//    console.log(Zhi);//将手机号码取出
+    document.getElementById("submit").onclick = function() {
+        var Zhi = document.getElementById("text").value;
+
+        jsonp({url: "http://api.jisuapi.com/shouji/query",
+            data: { shouji: Zhi, appkey:"471e950103066cd5",callback :"json"},
+
+            callback: function (response, xml) {
+                document.write("province");//成功的代码
+            },
+            fail: function (status) {
+                //此处放失败后执行的代码
+            }
+        });
+
+    };
+    function jsonp(options) {
+        options = options || {};
+        // console.log(options);
+        if (!options.url || !options.callback) {
+            throw new Error("参数不合法");
+        }
+
+        //创建 script 标签并加入到页面中
+        var callbackName = ('jsonp_' + Math.random()).replace(".", "");
+        var oHead = document.getElementsByTagName('head')[0];
+        options.data["callback"] = callbackName;
+        var params = formatParams(options.data);
+        var oS = document.createElement('script');
+        oHead.appendChild(oS);
+
+        //创建jsonp回调函数
+        window[callbackName] = function (json) {
+            oHead.removeChild(oS);
+            clearTimeout(oS.timer);
+            window[callbackName] = null;
+            options.success && options.success(json);
+           // console.log(json);
+        };
+
+        //发送请求
+        oS.src = options.url + '?' + params;
+
+        //超时处理
+        if (options.time) {
+            oS.timer = setTimeout(function () {
+                window[callbackName] = null;
+                oHead.removeChild(oS);
+                options.fail && options.fail({ message: "超时" });
+            }, time);
+        }
+    };
+
+    //格式化参数
+    function formatParams(data) {
+        var arr = [];
+        for (var name in data) {
+           // console.log(name);
+            arr.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+        }
+        alert(arr[2]);
+        return arr.join('&');
+    }*/
+
+</script>
+<html>
