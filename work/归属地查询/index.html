@@ -31,13 +31,10 @@
                     appkey:"471e950103066cd5"
                 },
                 async:false,
-                DataType:"jsonp",
                 jsonCallback:"flightHandler",
                 success:function(data){
                     var str = JSON.stringify(data.result);
-                    //console.log(data.result);
                     $("#show").html(str);
-
                 },
                 error:function(error){
                     console.log(error);
