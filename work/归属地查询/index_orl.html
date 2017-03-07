@@ -63,24 +63,12 @@
         var Zhi = document.getElementById("text").value;
 
         jsonp({url: "http://api.jisuapi.com/shouji/query",
-            data: { shouji: Zhi, appkey:"471e950103066cd5",callback :"json"},
-
-            callback: function (response, xml) {
-                document.write("province");//成功的代码
-            },
-            fail: function (status) {
-                //此处放失败后执行的代码
-            }
+            data: { shouji: Zhi, appkey:"471e950103066cd5",callback :"json"}
         });
 
     };
     function jsonp(options) {
         options = options || {};
-        // console.log(options);
-        if (!options.url || !options.callback) {
-            throw new Error("参数不合法");
-        }
-
         //创建 script 标签并加入到页面中
         var callbackName = ('jsonp_' + Math.random()).replace(".", "");
         var oHead = document.getElementsByTagName('head')[0];
